@@ -6,7 +6,7 @@ Dipakai sebagai cakupan screener di aplikasi **Jurnal IDX**.
 
 | File | Isi |
 |---|---|
-| `ihsg_tickers.csv` | Daftar kode saham (format `KODE.JK`) |
+| `ihsg_tickers.csv` | Daftar kode saham (format `KODE.JK`) + jumlah saham beredar (`Shares`, untuk market cap) |
 | `meta.json` | Tanggal pembaruan, jumlah saham, status |
 | `update_tickers.py` | Script penyaring (sumber daftar emiten: Wikipedia, data harga: Yahoo Finance) |
 | `.github/workflows/update_list.yml` | Jadwal: tanggal 1 setiap bulan, bisa juga dijalankan manual dari tab Actions |

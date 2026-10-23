@@ -69,6 +69,26 @@ def get_all_idx_tickers():
 
 
 # ==========================================
+# JUMLAH SAHAM BEREDAR (untuk Market Cap = harga x saham beredar di aplikasi)
+# ==========================================
+def ambil_saham_beredar(tickers):
+    print(f"🏢 Mengambil jumlah saham beredar untuk {len(tickers)} saham...")
+    hasil = {}
+    for i, t in enumerate(tickers, 1):
+        try:
+            n = yf.Ticker(t).fast_info["shares"]
+            if n and n > 0:
+                hasil[t] = int(n)
+        except Exception:
+            pass
+        if i % 50 == 0:
+            print(f"   {i}/{len(tickers)}")
+            time.sleep(1)
+    print(f"🏢 Saham beredar didapat untuk {len(hasil)} dari {len(tickers)} saham.")
+    return hasil
+
+
+# ==========================================
 # LANGKAH 2: FILTER LIKUIDITAS DENGAN YFINANCE (period="1mo")
 # ==========================================
 def update_ihsg_tickers():
@@ -117,7 +137,9 @@ def update_ihsg_tickers():
     # Pengaman: jangan timpa daftar lama jika hasil terlalu sedikit
     # (misalnya Yahoo Finance sedang bermasalah / sumber daftar emiten gagal diakses)
     if len(active_tickers) >= MIN_SAHAM:
-        df_result = pd.DataFrame({"Ticker": sorted(active_tickers)})
+        tickers_sorted = sorted(active_tickers)
+        shares = ambil_saham_beredar(tickers_sorted)
+        df_result = pd.DataFrame({"Ticker": tickers_sorted, "Shares": [shares.get(t) for t in tickers_sorted]})
         df_result.to_csv("ihsg_tickers.csv", index=False)
         print(f"💾 Berhasil menyimpan {len(active_tickers)} saham ke ihsg_tickers.csv!")
         status = "diperbarui"
