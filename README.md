@@ -14,3 +14,6 @@ Dipakai sebagai cakupan screener di aplikasi **Jurnal IDX**.
 Jika hasil penyaringan kurang dari 100 saham (misalnya sumber data sedang bermasalah), daftar lama dipertahankan.
 
 Bukan rekomendasi investasi.
+
+## Aturan ARA/ARB (`aturan.json`)
+Batas auto rejection BEI per periode, dipakai aplikasi Jurnal Saham untuk validasi harga. Bila BEI mengubah aturan, cukup tambahkan periode baru di file ini; aplikasi mengambilnya otomatis tanpa instal ulang.

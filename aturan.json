@@ -1,0 +1,11 @@
+{
+  "keterangan": "Batas auto rejection BEI (Papan Utama, Pengembangan, Ekonomi Baru). Tiap tingkat: [batas atas harga acuan (0 = tanpa batas), persen]. Persen 0 = hanya Rp1. Selisih minimal Rp1. ARA dibulatkan ke bawah, ARB ke atas sesuai fraksi.",
+  "diperbarui": "2026-10-24",
+  "sumber": "Pengumuman BEI: ARB 7% berlaku 20 Okt - 31 Des 2026; ARB simetris mulai 1 Jan 2027",
+  "periode": [
+    { "mulai": "2000-01-01", "ara": [[200, 35], [5000, 25], [0, 20]], "arb": [[200, 15], [5000, 15], [0, 15]] },
+    { "mulai": "2026-09-28", "ara": [[10, 0], [200, 35], [5000, 25], [0, 20]], "arb": [[10, 0], [200, 15], [5000, 15], [0, 15]] },
+    { "mulai": "2026-10-20", "ara": [[10, 0], [200, 35], [5000, 25], [0, 20]], "arb": [[14, 0], [200, 7], [5000, 7], [0, 7]] },
+    { "mulai": "2027-01-01", "ara": [[10, 0], [200, 35], [5000, 25], [0, 20]], "arb": [[10, 0], [200, 35], [5000, 25], [0, 20]] }
+  ]
+}
