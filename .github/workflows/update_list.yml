@@ -1,0 +1,36 @@
+name: Monthly Active Tickers Updater
+
+on:
+  schedule:
+    # Tanggal 1 setiap bulan, 18:00 UTC (01:00 WIB tanggal 2)
+    - cron: '0 18 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-tickers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Update Script
+        run: python update_tickers.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add ihsg_tickers.csv meta.json
+          git diff --staged --quiet || (git commit -m "chore: pembaruan bulanan daftar saham IHSG aktif" && git push)
