@@ -1,9 +1,9 @@
-name: Monthly Active Tickers Updater
+name: Weekly Active Tickers Updater
 
 on:
   schedule:
-    # Tanggal 1 setiap bulan, 18:00 UTC (01:00 WIB tanggal 2)
-    - cron: '0 18 1 * *'
+    # Setiap Jumat 18:00 UTC (Sabtu 01:00 WIB), setelah data Jumat lengkap
+    - cron: '0 18 * * 5'
   workflow_dispatch:
 
 permissions:
