@@ -474,6 +474,98 @@
     "rata_r": -0.1,
     "profit_factor": 0.69
    }
+  },
+  {
+   "id": "n_lapis2_awal_tren",
+   "jenis": "eksperimen",
+   "induk": "b_bandar",
+   "nama": "Eksperimen · Lapis Kedua Awal Tren",
+   "ihsg": null,
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "mcap",
+     "op": "<=",
+     "kananNilai": 10
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "dariLow52",
+     "op": ">=",
+     "kananNilai": 30
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 90
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2
+    }
+   ],
+   "syarat": "Market cap kecil–menengah yang sudah naik ≥30% dari low tahunan, masih 75–90% dari high, volume naik.",
+   "alasan": "Dirakit dari ide: Market cap kecil–menengah yang sudah naik ≥30% dari low tahunan, masih 75–90% dari high, volume naik. Minggu ini tidak ada eksperimen yang lolos semua syarat, jadi ini yang PALING DEKAT lolos (gagal: trade uji 23 < 60; tidak positif di kedua paruh uji; rata R latih tidak positif; 95% sinyalnya sama dengan preset lama). Diuji di semua kondisi IHSG: data uji 4 bulan terakhir rata +0.39R per trade (23 trade, win 34.8%); pilihan acak -0.06R. Pola keluar mengikuti Bandar (SL −5% / MA20 · TP high 52W). Belum teruji forward test — pakai ukuran posisi kecil.",
+   "dibuat": "2026-10-23",
+   "uji": {
+    "n_latih": 82,
+    "r_latih": -0.03,
+    "n_uji": 23,
+    "r_uji": 0.39,
+    "r_uji_paruh1": 1.25,
+    "r_uji_paruh2": -0.27,
+    "win_uji": 34.8,
+    "r_acak_uji": -0.06,
+    "tumpang_tindih": 0.95,
+    "terdekat": true,
+    "alasan_gagal": [
+     "trade uji 23 < 60",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "95% sinyalnya sama dengan preset lama"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 105,
+    "win_rate": 28.6,
+    "rata_r": 0.06,
+    "profit_factor": 1.05
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 105,
+    "win_rate": 28.6,
+    "rata_r": 0.06,
+    "profit_factor": 1.05
+   }
   }
  ]
 }

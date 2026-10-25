@@ -728,6 +728,40 @@
     "profit_factor": 0.81
    },
    "forward": null
+  },
+  "n_lapis2_awal_tren": {
+   "nama": "Eksperimen · Lapis Kedua Awal Tren",
+   "NAIK": {
+    "status": "aktif",
+    "n": 72,
+    "win_rate": 27.8,
+    "rata_r": 0.11,
+    "profit_factor": 1.08,
+    "dasar": "72 trade saat IHSG uptrend"
+   },
+   "SAMPING": {
+    "status": "aktif",
+    "n": 17,
+    "win_rate": 35.3,
+    "rata_r": 0.3,
+    "profit_factor": 1.66,
+    "dasar": "17 trade saat IHSG sideways"
+   },
+   "TURUN": {
+    "status": "istirahat",
+    "n": 16,
+    "win_rate": 25.0,
+    "rata_r": -0.43,
+    "profit_factor": 0.47,
+    "dasar": "16 trade saat IHSG downtrend"
+   },
+   "12_bulan": {
+    "n": 105,
+    "win_rate": 28.6,
+    "rata_r": 0.06,
+    "profit_factor": 1.05
+   },
+   "forward": null
   }
  },
  "situasi_kini": {
