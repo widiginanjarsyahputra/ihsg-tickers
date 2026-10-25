@@ -1,14 +1,71 @@
 {
  "diperbarui": "2026-10-25",
  "data_sampai": "2026-10-23",
- "keterangan": "Preset otomatis dari backtest mingguan (repo backtest-screener). jenis=varian: preset asli + satu syarat tambahan yang lolos uji walk-forward untuk satu kondisi IHSG (kondisi = kriteria induk + kondisi_tambahan). jenis=eksperimen: screener baru dirakit dari hipotesis trading (kondisi lengkap). Rumus SL/TP, skor, gaya, dan notifikasi mengikuti preset induk.",
+ "situasi_kini": {
+  "tanggal": "2026-10-23",
+  "ihsg": "TURUN",
+  "breadth": "SEMPIT",
+  "vol": "BERGEJOLAK",
+  "bulan": "AKHIR",
+  "laporan": "LAPORAN",
+  "hari": "JUMAT",
+  "breadth_pct": 18.8
+ },
+ "keterangan": "Preset otomatis dari backtest mingguan (repo backtest-screener). jenis=varian: preset asli + satu syarat tambahan yang lolos uji walk-forward untuk satu situasi pasar (field situasi: dimensi ihsg/breadth/vol/bulan/laporan/hari; kondisi = kriteria induk + kondisi_tambahan). situasi_kini = situasi hari bursa terakhir. jenis=eksperimen: screener baru dirakit dari hipotesis trading (kondisi lengkap). Rumus SL/TP, skor, gaya, dan notifikasi mengikuti preset induk.",
  "preset": [
+  {
+   "id": "o_sw_kor_vol_bergejolak",
+   "jenis": "varian",
+   "induk": "b_sw_kor",
+   "nama": "Swing · Beli Saat Koreksi · IHSG bergejolak+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "vol",
+    "nilai": "BERGEJOLAK",
+    "label": "IHSG bergejolak"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    }
+   ],
+   "syarat": "RSI (14) ≥ 55",
+   "alasan": "Saat IHSG bergejolak, menambah syarat \"RSI (14) ≥ 55\" ke Swing · Beli Saat Koreksi memperbaiki rata-rata dari -0.13R menjadi +0.40R per trade di data uji 4 bulan terakhir (45 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-10-23",
+   "uji": {
+    "latih_dasar": -0.14,
+    "latih_filter": 0.31,
+    "n_latih": 139,
+    "uji_dasar": -0.13,
+    "uji_filter": 0.4,
+    "n_uji": 45
+   },
+   "backtest_12_bulan": {
+    "n": 249,
+    "win_rate": 32.1,
+    "rata_r": -0.15,
+    "profit_factor": 0.8
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 132,
+    "win_rate": 34.1,
+    "rata_r": -0.13,
+    "profit_factor": 0.84
+   }
+  },
   {
    "id": "o_sw_kor_naik",
    "jenis": "varian",
    "induk": "b_sw_kor",
    "nama": "Swing · Beli Saat Koreksi · Uptrend+",
    "ihsg": "NAIK",
+   "situasi": {
+    "dimensi": "ihsg",
+    "nilai": "NAIK",
+    "label": "IHSG uptrend"
+   },
    "kondisi_tambahan": [
     {
      "kiri": "rsi",
@@ -20,9 +77,9 @@
    "alasan": "Saat IHSG uptrend, menambah syarat \"RSI (14) ≥ 55\" ke Swing · Beli Saat Koreksi memperbaiki rata-rata dari -0.04R menjadi +0.25R per trade di data uji 4 bulan terakhir (42 trade) — data yang tidak dipakai saat mencari filter.",
    "dibuat": "2026-10-23",
    "uji": {
-    "latih_dasar": 0.16,
-    "latih_filter": 0.37,
-    "n_latih": 101,
+    "latih_dasar": -0.07,
+    "latih_filter": 0.03,
+    "n_latih": 221,
     "uji_dasar": -0.04,
     "uji_filter": 0.25,
     "n_uji": 42
@@ -41,77 +98,171 @@
    }
   },
   {
-   "id": "o_sw_kor_samping",
+   "id": "o_sw_kuat_vol_bergejolak",
    "jenis": "varian",
-   "induk": "b_sw_kor",
-   "nama": "Swing · Beli Saat Koreksi · Sideways+",
-   "ihsg": "SAMPING",
+   "induk": "b_sw_kuat",
+   "nama": "Swing · Tren Super Kuat · IHSG bergejolak+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "vol",
+    "nilai": "BERGEJOLAK",
+    "label": "IHSG bergejolak"
+   },
    "kondisi_tambahan": [
     {
-     "kiri": "ma50Naik",
+     "kiri": "nilaiAvg20",
      "op": "<=",
-     "kananNilai": 3.1
+     "kananNilai": 40.0
     }
    ],
-   "syarat": "Kemiringan MA50 10 hari (%) ≤ 3,1",
-   "alasan": "Saat IHSG sideways, menambah syarat \"Kemiringan MA50 10 hari (%) ≤ 3,1\" ke Swing · Beli Saat Koreksi memperbaiki rata-rata dari -0.69R menjadi -0.54R per trade di data uji 4 bulan terakhir (42 trade) — data yang tidak dipakai saat mencari filter.",
+   "syarat": "Rata nilai 20 hari (Rp M) ≤ 40",
+   "alasan": "Saat IHSG bergejolak, menambah syarat \"Rata nilai 20 hari (Rp M) ≤ 40\" ke Swing · Tren Super Kuat memperbaiki rata-rata dari +0.24R menjadi +0.36R per trade di data uji 4 bulan terakhir (31 trade) — data yang tidak dipakai saat mencari filter.",
    "dibuat": "2026-10-23",
    "uji": {
-    "latih_dasar": 0.1,
-    "latih_filter": 0.41,
-    "n_latih": 50,
-    "uji_dasar": -0.69,
-    "uji_filter": -0.54,
-    "n_uji": 42
+    "latih_dasar": -0.16,
+    "latih_filter": -0.0,
+    "n_latih": 159,
+    "uji_dasar": 0.24,
+    "uji_filter": 0.36,
+    "n_uji": 31
    },
    "backtest_12_bulan": {
-    "n": 224,
-    "win_rate": 32.1,
-    "rata_r": -0.15,
-    "profit_factor": 0.64
-   },
-   "backtest_12_bulan_kondisi": {
-    "n": 58,
-    "win_rate": 41.4,
-    "rata_r": 0.37,
-    "profit_factor": 1.04
-   }
-  },
-  {
-   "id": "o_ilx_naik",
-   "jenis": "varian",
-   "induk": "b_ilx",
-   "nama": "Illusix · Uptrend+",
-   "ihsg": "NAIK",
-   "kondisi_tambahan": [
-    {
-     "kiri": "pctHigh52",
-     "op": ">=",
-     "kananNilai": 90.0
-    }
-   ],
-   "syarat": "% dari high 52 minggu ≥ 90",
-   "alasan": "Saat IHSG uptrend, menambah syarat \"% dari high 52 minggu ≥ 90\" ke Illusix memperbaiki rata-rata dari -0.57R menjadi -0.41R per trade di data uji 4 bulan terakhir (33 trade) — data yang tidak dipakai saat mencari filter.",
-   "dibuat": "2026-10-23",
-   "uji": {
-    "latih_dasar": -0.4,
-    "latih_filter": -0.23,
-    "n_latih": 222,
-    "uji_dasar": -0.57,
-    "uji_filter": -0.41,
-    "n_uji": 33
-   },
-   "backtest_12_bulan": {
-    "n": 232,
-    "win_rate": 29.7,
-    "rata_r": -0.33,
-    "profit_factor": 0.55
+    "n": 255,
+    "win_rate": 38.8,
+    "rata_r": -0.01,
+    "profit_factor": 1.0
    },
    "backtest_12_bulan_kondisi": {
     "n": 130,
-    "win_rate": 30.8,
-    "rata_r": -0.28,
-    "profit_factor": 0.57
+    "win_rate": 36.9,
+    "rata_r": 0.02,
+    "profit_factor": 1.0
+   }
+  },
+  {
+   "id": "o_dt_hari_rabu",
+   "jenis": "varian",
+   "induk": "b_dt",
+   "nama": "Day Trade · Hari Rabu+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "hari",
+    "nilai": "RABU",
+    "label": "hari Rabu"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "chg",
+     "op": "<=",
+     "kananNilai": 7.5
+    }
+   ],
+   "syarat": "Kenaikan hari ini (%) ≤ 7,5",
+   "alasan": "Saat hari Rabu, menambah syarat \"Kenaikan hari ini (%) ≤ 7,5\" ke Day Trade memperbaiki rata-rata dari -0.57R menjadi -0.34R per trade di data uji 4 bulan terakhir (48 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-10-23",
+   "uji": {
+    "latih_dasar": -0.58,
+    "latih_filter": -0.41,
+    "n_latih": 174,
+    "uji_dasar": -0.57,
+    "uji_filter": -0.34,
+    "n_uji": 48
+   },
+   "backtest_12_bulan": {
+    "n": 319,
+    "win_rate": 30.4,
+    "rata_r": -0.45,
+    "profit_factor": 0.36
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 62,
+    "win_rate": 33.9,
+    "rata_r": -0.33,
+    "profit_factor": 0.44
+   }
+  },
+  {
+   "id": "o_dt_laporan_laporan",
+   "jenis": "varian",
+   "induk": "b_dt",
+   "nama": "Day Trade · Musim laporan keuangan+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "laporan",
+    "nilai": "LAPORAN",
+    "label": "musim laporan keuangan"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 4.5
+    }
+   ],
+   "syarat": "Volatilitas 5 hari (%) ≤ 4,5",
+   "alasan": "Saat musim laporan keuangan, menambah syarat \"Volatilitas 5 hari (%) ≤ 4,5\" ke Day Trade memperbaiki rata-rata dari -0.50R menjadi -0.36R per trade di data uji 4 bulan terakhir (37 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-10-23",
+   "uji": {
+    "latih_dasar": -0.61,
+    "latih_filter": -0.41,
+    "n_latih": 132,
+    "uji_dasar": -0.5,
+    "uji_filter": -0.36,
+    "n_uji": 37
+   },
+   "backtest_12_bulan": {
+    "n": 302,
+    "win_rate": 29.5,
+    "rata_r": -0.46,
+    "profit_factor": 0.34
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 49,
+    "win_rate": 40.8,
+    "rata_r": -0.31,
+    "profit_factor": 0.55
+   }
+  },
+  {
+   "id": "o_ilx_laporan_laporan",
+   "jenis": "varian",
+   "induk": "b_ilx",
+   "nama": "Illusix · Musim laporan keuangan+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "laporan",
+    "nilai": "LAPORAN",
+    "label": "musim laporan keuangan"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 4.5
+    }
+   ],
+   "syarat": "Volatilitas 5 hari (%) ≤ 4,5",
+   "alasan": "Saat musim laporan keuangan, menambah syarat \"Volatilitas 5 hari (%) ≤ 4,5\" ke Illusix memperbaiki rata-rata dari -0.25R menjadi +0.06R per trade di data uji 4 bulan terakhir (44 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-10-23",
+   "uji": {
+    "latih_dasar": -0.51,
+    "latih_filter": -0.33,
+    "n_latih": 237,
+    "uji_dasar": -0.25,
+    "uji_filter": 0.06,
+    "n_uji": 44
+   },
+   "backtest_12_bulan": {
+    "n": 367,
+    "win_rate": 30.5,
+    "rata_r": -0.33,
+    "profit_factor": 0.54
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 51,
+    "win_rate": 41.2,
+    "rata_r": -0.02,
+    "profit_factor": 0.87
    }
   },
   {
@@ -120,6 +271,11 @@
    "induk": "b_ilx",
    "nama": "Illusix · Sideways+",
    "ihsg": "SAMPING",
+   "situasi": {
+    "dimensi": "ihsg",
+    "nilai": "SAMPING",
+    "label": "IHSG sideways"
+   },
    "kondisi_tambahan": [
     {
      "kiri": "chg",
@@ -131,9 +287,9 @@
    "alasan": "Saat IHSG sideways, menambah syarat \"Kenaikan hari ini (%) ≤ 6,5\" ke Illusix memperbaiki rata-rata dari -0.48R menjadi -0.12R per trade di data uji 4 bulan terakhir (116 trade) — data yang tidak dipakai saat mencari filter.",
    "dibuat": "2026-10-23",
    "uji": {
-    "latih_dasar": -0.39,
-    "latih_filter": -0.13,
-    "n_latih": 103,
+    "latih_dasar": -0.43,
+    "latih_filter": -0.3,
+    "n_latih": 329,
     "uji_dasar": -0.48,
     "uji_filter": -0.12,
     "n_uji": 116
@@ -141,14 +297,140 @@
    "backtest_12_bulan": {
     "n": 342,
     "win_rate": 30.4,
-    "rata_r": -0.32,
-    "profit_factor": 0.55
+    "rata_r": -0.33,
+    "profit_factor": 0.54
    },
    "backtest_12_bulan_kondisi": {
     "n": 109,
     "win_rate": 35.8,
+    "rata_r": -0.19,
+    "profit_factor": 0.69
+   }
+  },
+  {
+   "id": "o_aseng_vol_bergejolak",
+   "jenis": "varian",
+   "induk": "b_aseng",
+   "nama": "Aseng ACC · IHSG bergejolak+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "vol",
+    "nilai": "BERGEJOLAK",
+    "label": "IHSG bergejolak"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "posTutup",
+     "op": "<=",
+     "kananNilai": 88.0
+    }
+   ],
+   "syarat": "Posisi tutup di rentang hari (%) ≤ 88",
+   "alasan": "Saat IHSG bergejolak, menambah syarat \"Posisi tutup di rentang hari (%) ≤ 88\" ke Aseng ACC memperbaiki rata-rata dari -0.05R menjadi +0.07R per trade di data uji 4 bulan terakhir (31 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-10-23",
+   "uji": {
+    "latih_dasar": -0.23,
+    "latih_filter": -0.1,
+    "n_latih": 92,
+    "uji_dasar": -0.05,
+    "uji_filter": 0.07,
+    "n_uji": 31
+   },
+   "backtest_12_bulan": {
+    "n": 158,
+    "win_rate": 34.8,
+    "rata_r": -0.13,
+    "profit_factor": 0.68
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 76,
+    "win_rate": 34.2,
+    "rata_r": -0.14,
+    "profit_factor": 0.62
+   }
+  },
+  {
+   "id": "o_bandar_breadth_lebar",
+   "jenis": "varian",
+   "induk": "b_bandar",
+   "nama": "Bandar · Breadth lebar+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "breadth",
+    "nilai": "LEBAR",
+    "label": "breadth lebar"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 4.5
+    }
+   ],
+   "syarat": "Volatilitas 5 hari (%) ≤ 4,5",
+   "alasan": "Saat breadth lebar, menambah syarat \"Volatilitas 5 hari (%) ≤ 4,5\" ke Bandar memperbaiki rata-rata dari -0.22R menjadi -0.11R per trade di data uji 4 bulan terakhir (33 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-10-23",
+   "uji": {
+    "latih_dasar": -0.19,
+    "latih_filter": -0.03,
+    "n_latih": 96,
+    "uji_dasar": -0.22,
+    "uji_filter": -0.11,
+    "n_uji": 33
+   },
+   "backtest_12_bulan": {
+    "n": 119,
+    "win_rate": 31.1,
     "rata_r": -0.16,
-    "profit_factor": 0.71
+    "profit_factor": 0.81
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 49,
+    "win_rate": 26.5,
+    "rata_r": -0.31,
+    "profit_factor": 0.59
+   }
+  },
+  {
+   "id": "o_ftt_vol_bergejolak",
+   "jenis": "varian",
+   "induk": "b_ftt",
+   "nama": "Follow The Trend · IHSG bergejolak+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "vol",
+    "nilai": "BERGEJOLAK",
+    "label": "IHSG bergejolak"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "mcap",
+     "op": "<=",
+     "kananNilai": 8.9
+    }
+   ],
+   "syarat": "Market cap (Rp T) ≤ 8,9",
+   "alasan": "Saat IHSG bergejolak, menambah syarat \"Market cap (Rp T) ≤ 8,9\" ke Follow The Trend memperbaiki rata-rata dari +0.17R menjadi +0.38R per trade di data uji 4 bulan terakhir (30 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-10-23",
+   "uji": {
+    "latih_dasar": 0.07,
+    "latih_filter": 0.33,
+    "n_latih": 46,
+    "uji_dasar": 0.17,
+    "uji_filter": 0.38,
+    "n_uji": 30
+   },
+   "backtest_12_bulan": {
+    "n": 94,
+    "win_rate": 25.5,
+    "rata_r": -0.06,
+    "profit_factor": 0.93
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 49,
+    "win_rate": 32.7,
+    "rata_r": 0.28,
+    "profit_factor": 2.19
    }
   },
   {
@@ -157,35 +439,40 @@
    "induk": "b_ftt",
    "nama": "Follow The Trend · Uptrend+",
    "ihsg": "NAIK",
+   "situasi": {
+    "dimensi": "ihsg",
+    "nilai": "NAIK",
+    "label": "IHSG uptrend"
+   },
    "kondisi_tambahan": [
     {
-     "kiri": "lebar20",
-     "op": ">=",
-     "kananNilai": 16.0
+     "kiri": "nilai",
+     "op": "<=",
+     "kananNilai": 19.0
     }
    ],
-   "syarat": "Lebar konsolidasi 20 hari (%) ≥ 16",
-   "alasan": "Saat IHSG uptrend, menambah syarat \"Lebar konsolidasi 20 hari (%) ≥ 16\" ke Follow The Trend memperbaiki rata-rata dari -0.04R menjadi +0.08R per trade di data uji 4 bulan terakhir (30 trade) — data yang tidak dipakai saat mencari filter.",
+   "syarat": "Nilai transaksi (Rp M) ≤ 19",
+   "alasan": "Saat IHSG uptrend, menambah syarat \"Nilai transaksi (Rp M) ≤ 19\" ke Follow The Trend memperbaiki rata-rata dari -0.04R menjadi +0.21R per trade di data uji 4 bulan terakhir (31 trade) — data yang tidak dipakai saat mencari filter.",
    "dibuat": "2026-10-23",
    "uji": {
-    "latih_dasar": -0.24,
-    "latih_filter": 0.05,
-    "n_latih": 25,
+    "latih_dasar": 0.15,
+    "latih_filter": 0.26,
+    "n_latih": 77,
     "uji_dasar": -0.04,
-    "uji_filter": 0.08,
-    "n_uji": 30
+    "uji_filter": 0.21,
+    "n_uji": 31
    },
    "backtest_12_bulan": {
-    "n": 117,
-    "win_rate": 22.2,
-    "rata_r": -0.15,
-    "profit_factor": 0.58
+    "n": 105,
+    "win_rate": 26.7,
+    "rata_r": -0.07,
+    "profit_factor": 0.81
    },
    "backtest_12_bulan_kondisi": {
-    "n": 64,
-    "win_rate": 17.2,
-    "rata_r": -0.19,
-    "profit_factor": 0.53
+    "n": 58,
+    "win_rate": 24.1,
+    "rata_r": -0.1,
+    "profit_factor": 0.69
    }
   }
  ]
