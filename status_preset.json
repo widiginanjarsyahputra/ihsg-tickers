@@ -9,34 +9,39 @@
    "NAIK": {
     "status": "aktif",
     "n": 144,
-    "win_rate": 38.2,
-    "rata_r": 0.03,
-    "profit_factor": 1.11,
+    "win_rate": 38.9,
+    "rata_r": 0.06,
+    "profit_factor": 1.15,
     "dasar": "144 trade saat IHSG uptrend"
    },
    "SAMPING": {
     "status": "hati",
     "n": 80,
     "win_rate": 31.2,
-    "rata_r": -0.01,
-    "profit_factor": 0.62,
+    "rata_r": 0.04,
+    "profit_factor": 0.67,
     "dasar": "80 trade saat IHSG sideways"
    },
    "TURUN": {
     "status": "istirahat",
     "n": 79,
     "win_rate": 19.0,
-    "rata_r": -0.6,
+    "rata_r": -0.59,
     "profit_factor": 0.39,
     "dasar": "79 trade saat IHSG downtrend"
    },
    "12_bulan": {
     "n": 303,
-    "win_rate": 31.4,
-    "rata_r": -0.14,
-    "profit_factor": 0.73
+    "win_rate": 31.7,
+    "rata_r": -0.12,
+    "profit_factor": 0.76
    },
-   "forward": null
+   "forward": {
+    "selesai": 0,
+    "terbuka": 0,
+    "win_rate": null,
+    "rata_r": null
+   }
   },
   "b_sw_bo": {
    "nama": "Swing · Tembus Resistance",
@@ -44,33 +49,38 @@
     "status": "istirahat",
     "n": 45,
     "win_rate": 15.6,
-    "rata_r": -0.75,
+    "rata_r": -0.73,
     "profit_factor": 0.22,
     "dasar": "45 trade saat IHSG uptrend"
    },
    "SAMPING": {
     "status": "hati",
     "n": 25,
-    "win_rate": 36.0,
-    "rata_r": -0.09,
-    "profit_factor": 0.99,
+    "win_rate": 40.0,
+    "rata_r": -0.05,
+    "profit_factor": 1.1,
     "dasar": "25 trade saat IHSG sideways"
    },
    "TURUN": {
     "status": "istirahat",
     "n": 11,
     "win_rate": 18.2,
-    "rata_r": -0.93,
+    "rata_r": -0.87,
     "profit_factor": 0.05,
     "dasar": "sampel kecil (11 trade) — memakai hasil 12 bulan keseluruhan"
    },
    "12_bulan": {
     "n": 81,
-    "win_rate": 22.2,
-    "rata_r": -0.57,
-    "profit_factor": 0.37
+    "win_rate": 23.5,
+    "rata_r": -0.54,
+    "profit_factor": 0.38
    },
-   "forward": null
+   "forward": {
+    "selesai": 0,
+    "terbuka": 0,
+    "win_rate": null,
+    "rata_r": null
+   }
   },
   "b_sw_kuat": {
    "nama": "Swing · Tren Super Kuat",
@@ -86,7 +96,7 @@
     "status": "hati",
     "n": 91,
     "win_rate": 30.8,
-    "rata_r": -0.19,
+    "rata_r": -0.18,
     "profit_factor": 0.56,
     "dasar": "91 trade saat IHSG sideways"
    },
@@ -94,17 +104,22 @@
     "status": "istirahat",
     "n": 81,
     "win_rate": 19.8,
-    "rata_r": -0.5,
-    "profit_factor": 0.25,
+    "rata_r": -0.48,
+    "profit_factor": 0.26,
     "dasar": "81 trade saat IHSG downtrend"
    },
    "12_bulan": {
     "n": 321,
     "win_rate": 36.8,
     "rata_r": -0.09,
-    "profit_factor": 0.85
+    "profit_factor": 0.86
    },
-   "forward": null
+   "forward": {
+    "selesai": 0,
+    "terbuka": 0,
+    "win_rate": null,
+    "rata_r": null
+   }
   },
   "b_dt": {
    "nama": "Day Trade",
@@ -138,7 +153,12 @@
     "rata_r": -0.47,
     "profit_factor": 0.34
    },
-   "forward": null
+   "forward": {
+    "selesai": 0,
+    "terbuka": 0,
+    "win_rate": null,
+    "rata_r": null
+   }
   },
   "b_bsjp": {
    "nama": "BSJP · Beli Sore Jual Pagi",
@@ -172,7 +192,12 @@
     "rata_r": -0.34,
     "profit_factor": 0.5
    },
-   "forward": null
+   "forward": {
+    "selesai": 0,
+    "terbuka": 0,
+    "win_rate": null,
+    "rata_r": null
+   }
   },
   "b_ilx": {
    "nama": "Illusix",
@@ -206,7 +231,12 @@
     "rata_r": -0.35,
     "profit_factor": 0.51
    },
-   "forward": null
+   "forward": {
+    "selesai": 0,
+    "terbuka": 0,
+    "win_rate": null,
+    "rata_r": null
+   }
   },
   "b_aseng": {
    "nama": "Aseng ACC",
@@ -214,16 +244,16 @@
     "status": "istirahat",
     "n": 114,
     "win_rate": 28.1,
-    "rata_r": -0.3,
-    "profit_factor": 0.53,
+    "rata_r": -0.29,
+    "profit_factor": 0.54,
     "dasar": "114 trade saat IHSG uptrend"
    },
    "SAMPING": {
     "status": "istirahat",
     "n": 62,
-    "win_rate": 29.0,
-    "rata_r": -0.29,
-    "profit_factor": 0.49,
+    "win_rate": 30.6,
+    "rata_r": -0.23,
+    "profit_factor": 0.52,
     "dasar": "62 trade saat IHSG sideways"
    },
    "TURUN": {
@@ -236,11 +266,16 @@
    },
    "12_bulan": {
     "n": 202,
-    "win_rate": 26.7,
-    "rata_r": -0.35,
-    "profit_factor": 0.47
+    "win_rate": 27.2,
+    "rata_r": -0.32,
+    "profit_factor": 0.49
    },
-   "forward": null
+   "forward": {
+    "selesai": 0,
+    "terbuka": 0,
+    "win_rate": null,
+    "rata_r": null
+   }
   },
   "b_bandar": {
    "nama": "Bandar",
@@ -248,65 +283,245 @@
     "status": "hati",
     "n": 117,
     "win_rate": 35.0,
-    "rata_r": -0.12,
-    "profit_factor": 0.87,
+    "rata_r": -0.11,
+    "profit_factor": 0.88,
     "dasar": "117 trade saat IHSG uptrend"
    },
    "SAMPING": {
     "status": "istirahat",
     "n": 47,
     "win_rate": 25.5,
-    "rata_r": -0.25,
-    "profit_factor": 0.71,
+    "rata_r": -0.23,
+    "profit_factor": 0.73,
     "dasar": "47 trade saat IHSG sideways"
    },
    "TURUN": {
     "status": "istirahat",
     "n": 33,
     "win_rate": 27.3,
-    "rata_r": -0.56,
-    "profit_factor": 0.41,
+    "rata_r": -0.53,
+    "profit_factor": 0.43,
     "dasar": "33 trade saat IHSG downtrend"
    },
    "12_bulan": {
     "n": 197,
     "win_rate": 31.5,
-    "rata_r": -0.22,
-    "profit_factor": 0.75
+    "rata_r": -0.21,
+    "profit_factor": 0.76
    },
-   "forward": null
+   "forward": {
+    "selesai": 0,
+    "terbuka": 0,
+    "win_rate": null,
+    "rata_r": null
+   }
   },
   "b_ftt": {
    "nama": "Follow The Trend",
    "NAIK": {
-    "status": "istirahat",
+    "status": "hati",
     "n": 90,
     "win_rate": 17.8,
-    "rata_r": -0.21,
-    "profit_factor": 0.59,
+    "rata_r": -0.19,
+    "profit_factor": 0.61,
     "dasar": "90 trade saat IHSG uptrend"
    },
    "SAMPING": {
     "status": "hati",
     "n": 53,
     "win_rate": 24.5,
-    "rata_r": -0.18,
-    "profit_factor": 0.43,
+    "rata_r": -0.13,
+    "profit_factor": 0.5,
     "dasar": "53 trade saat IHSG sideways"
    },
    "TURUN": {
     "status": "hati",
     "n": 34,
-    "win_rate": 17.6,
-    "rata_r": -0.11,
-    "profit_factor": 0.86,
+    "win_rate": 23.5,
+    "rata_r": -0.05,
+    "profit_factor": 0.95,
     "dasar": "34 trade saat IHSG downtrend"
    },
    "12_bulan": {
     "n": 177,
-    "win_rate": 19.8,
-    "rata_r": -0.18,
-    "profit_factor": 0.59
+    "win_rate": 20.9,
+    "rata_r": -0.15,
+    "profit_factor": 0.64
+   },
+   "forward": {
+    "selesai": 0,
+    "terbuka": 0,
+    "win_rate": null,
+    "rata_r": null
+   }
+  },
+  "o_sw_kor_naik": {
+   "nama": "Swing · Beli Saat Koreksi · Uptrend+",
+   "NAIK": {
+    "status": "aktif",
+    "n": 122,
+    "win_rate": 39.3,
+    "rata_r": 0.1,
+    "profit_factor": 1.24,
+    "dasar": "122 trade saat IHSG uptrend"
+   },
+   "SAMPING": {
+    "status": "istirahat",
+    "n": 66,
+    "win_rate": 28.8,
+    "rata_r": -0.27,
+    "profit_factor": 0.6,
+    "dasar": "66 trade saat IHSG sideways"
+   },
+   "TURUN": {
+    "status": "istirahat",
+    "n": 61,
+    "win_rate": 21.3,
+    "rata_r": -0.53,
+    "profit_factor": 0.43,
+    "dasar": "61 trade saat IHSG downtrend"
+   },
+   "12_bulan": {
+    "n": 249,
+    "win_rate": 32.1,
+    "rata_r": -0.15,
+    "profit_factor": 0.8
+   },
+   "forward": null
+  },
+  "o_sw_kor_samping": {
+   "nama": "Swing · Beli Saat Koreksi · Sideways+",
+   "NAIK": {
+    "status": "hati",
+    "n": 111,
+    "win_rate": 36.9,
+    "rata_r": -0.1,
+    "profit_factor": 0.81,
+    "dasar": "111 trade saat IHSG uptrend"
+   },
+   "SAMPING": {
+    "status": "aktif",
+    "n": 58,
+    "win_rate": 41.4,
+    "rata_r": 0.37,
+    "profit_factor": 1.04,
+    "dasar": "58 trade saat IHSG sideways"
+   },
+   "TURUN": {
+    "status": "istirahat",
+    "n": 55,
+    "win_rate": 12.7,
+    "rata_r": -0.8,
+    "profit_factor": 0.21,
+    "dasar": "55 trade saat IHSG downtrend"
+   },
+   "12_bulan": {
+    "n": 224,
+    "win_rate": 32.1,
+    "rata_r": -0.15,
+    "profit_factor": 0.64
+   },
+   "forward": null
+  },
+  "o_ilx_naik": {
+   "nama": "Illusix · Uptrend+",
+   "NAIK": {
+    "status": "istirahat",
+    "n": 130,
+    "win_rate": 30.8,
+    "rata_r": -0.28,
+    "profit_factor": 0.57,
+    "dasar": "130 trade saat IHSG uptrend"
+   },
+   "SAMPING": {
+    "status": "istirahat",
+    "n": 56,
+    "win_rate": 30.4,
+    "rata_r": -0.34,
+    "profit_factor": 0.54,
+    "dasar": "56 trade saat IHSG sideways"
+   },
+   "TURUN": {
+    "status": "istirahat",
+    "n": 46,
+    "win_rate": 26.1,
+    "rata_r": -0.43,
+    "profit_factor": 0.49,
+    "dasar": "46 trade saat IHSG downtrend"
+   },
+   "12_bulan": {
+    "n": 232,
+    "win_rate": 29.7,
+    "rata_r": -0.33,
+    "profit_factor": 0.55
+   },
+   "forward": null
+  },
+  "o_ilx_samping": {
+   "nama": "Illusix · Sideways+",
+   "NAIK": {
+    "status": "istirahat",
+    "n": 136,
+    "win_rate": 30.1,
+    "rata_r": -0.29,
+    "profit_factor": 0.58,
+    "dasar": "136 trade saat IHSG uptrend"
+   },
+   "SAMPING": {
+    "status": "hati",
+    "n": 109,
+    "win_rate": 35.8,
+    "rata_r": -0.16,
+    "profit_factor": 0.71,
+    "dasar": "109 trade saat IHSG sideways"
+   },
+   "TURUN": {
+    "status": "istirahat",
+    "n": 97,
+    "win_rate": 24.7,
+    "rata_r": -0.55,
+    "profit_factor": 0.35,
+    "dasar": "97 trade saat IHSG downtrend"
+   },
+   "12_bulan": {
+    "n": 342,
+    "win_rate": 30.4,
+    "rata_r": -0.32,
+    "profit_factor": 0.55
+   },
+   "forward": null
+  },
+  "o_ftt_naik": {
+   "nama": "Follow The Trend · Uptrend+",
+   "NAIK": {
+    "status": "hati",
+    "n": 64,
+    "win_rate": 17.2,
+    "rata_r": -0.19,
+    "profit_factor": 0.53,
+    "dasar": "64 trade saat IHSG uptrend"
+   },
+   "SAMPING": {
+    "status": "hati",
+    "n": 31,
+    "win_rate": 35.5,
+    "rata_r": -0.08,
+    "profit_factor": 0.6,
+    "dasar": "31 trade saat IHSG sideways"
+   },
+   "TURUN": {
+    "status": "hati",
+    "n": 22,
+    "win_rate": 18.2,
+    "rata_r": -0.14,
+    "profit_factor": 0.74,
+    "dasar": "22 trade saat IHSG downtrend"
+   },
+   "12_bulan": {
+    "n": 117,
+    "win_rate": 22.2,
+    "rata_r": -0.15,
+    "profit_factor": 0.58
    },
    "forward": null
   }
