@@ -1,6 +1,6 @@
 {
- "diperbarui": "2026-11-16",
- "data_sampai": "2026-11-16",
+ "diperbarui": "2026-11-17",
+ "data_sampai": "2026-11-17",
  "dd25": 3,
  "zona": "normal",
  "masa": 25,
@@ -10,11 +10,6 @@
   "waspada": 5
  },
  "hari": [
-  {
-   "tgl": "2026-10-13",
-   "c": 5925.98,
-   "status": null
-  },
   {
    "tgl": "2026-10-14",
    "c": 5943.02,
@@ -134,11 +129,16 @@
    "tgl": "2026-11-16",
    "c": 5320.98,
    "status": null
+  },
+  {
+   "tgl": "2026-11-17",
+   "c": 5304.75,
+   "status": null
   }
  ],
  "akan_gugur": {
   "tgl": "2026-10-15",
-  "dalam": 3,
+  "dalam": 2,
   "menjadi": 2
  }
 }
