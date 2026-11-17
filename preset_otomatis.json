@@ -1,15 +1,15 @@
 {
- "diperbarui": "2026-11-13",
- "data_sampai": "2026-11-12",
+ "diperbarui": "2026-11-17",
+ "data_sampai": "2026-11-17",
  "situasi_kini": {
-  "tanggal": "2026-11-12",
+  "tanggal": "2026-11-16",
   "ihsg": "SAMPING",
   "breadth": "SEMPIT",
   "vol": "BERGEJOLAK",
   "bulan": "AKHIR",
   "laporan": "BIASA",
-  "hari": "KAMIS",
-  "breadth_pct": 17.9
+  "hari": "SENIN",
+  "breadth_pct": 19.7
  },
  "keterangan": "Preset otomatis dari backtest mingguan (repo backtest-screener). jenis=varian: preset asli + satu syarat tambahan yang lolos uji walk-forward untuk satu situasi pasar (field situasi: dimensi ihsg/breadth/vol/bulan/laporan/hari; kondisi = kriteria induk + kondisi_tambahan). situasi_kini = situasi hari bursa terakhir. jenis=eksperimen: screener baru dirakit dari hipotesis trading (kondisi lengkap). Rumus SL/TP, skor, gaya, dan notifikasi mengikuti preset induk.",
  "preset": [
@@ -43,100 +43,58 @@
     "n_uji": 39
    },
    "backtest_12_bulan": {
-    "n": 106,
-    "win_rate": 31.1,
-    "rata_r": 0.2,
-    "profit_factor": 1.36
+    "n": 100,
+    "win_rate": 31.0,
+    "rata_r": 0.01,
+    "profit_factor": 1.03
    },
    "backtest_12_bulan_kondisi": {
-    "n": 100,
+    "n": 94,
     "win_rate": 33.0,
-    "rata_r": 0.26,
-    "profit_factor": 1.48
+    "rata_r": 0.07,
+    "profit_factor": 1.12
    }
   },
   {
-   "id": "o_sw_kor_vol_bergejolak",
+   "id": "o_sw_kor_hari_selasa",
    "jenis": "varian",
    "induk": "b_sw_kor",
-   "nama": "Swing · Beli Saat Koreksi · IHSG bergejolak+",
+   "nama": "Swing · Beli Saat Koreksi · Hari Selasa+",
    "ihsg": null,
    "situasi": {
-    "dimensi": "vol",
-    "nilai": "BERGEJOLAK",
-    "label": "IHSG bergejolak"
+    "dimensi": "hari",
+    "nilai": "SELASA",
+    "label": "hari Selasa"
    },
    "kondisi_tambahan": [
     {
-     "kiri": "volRasio",
-     "op": ">=",
-     "kananNilai": 0.8
+     "kiri": "lebar20",
+     "op": "<=",
+     "kananNilai": 24.0
     }
    ],
-   "syarat": "Rasio volume 20 hari (×) ≥ 0,8",
-   "alasan": "Saat IHSG bergejolak, menambah syarat \"Rasio volume 20 hari (×) ≥ 0,8\" ke Swing · Beli Saat Koreksi memperbaiki rata-rata dari -0.18R menjadi -0.08R per trade di data uji 4 bulan terakhir (41 trade) — data yang tidak dipakai saat mencari filter.",
-   "dibuat": "2026-11-12",
+   "syarat": "Lebar konsolidasi 20 hari (%) ≤ 24",
+   "alasan": "Saat hari Selasa, menambah syarat \"Lebar konsolidasi 20 hari (%) ≤ 24\" ke Swing · Beli Saat Koreksi memperbaiki rata-rata dari +0.55R menjadi +0.86R per trade di data uji 4 bulan terakhir (30 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-17",
    "uji": {
-    "latih_dasar": 0.05,
-    "latih_filter": 0.32,
-    "n_latih": 152,
-    "uji_dasar": -0.18,
-    "uji_filter": -0.08,
-    "n_uji": 41
+    "latih_dasar": 0.24,
+    "latih_filter": 0.42,
+    "n_latih": 52,
+    "uji_dasar": 0.55,
+    "uji_filter": 0.86,
+    "n_uji": 30
    },
    "backtest_12_bulan": {
-    "n": 91,
-    "win_rate": 20.9,
-    "rata_r": -0.3,
-    "profit_factor": 0.75
+    "n": 32,
+    "win_rate": 25.0,
+    "rata_r": 0.1,
+    "profit_factor": 1.13
    },
    "backtest_12_bulan_kondisi": {
-    "n": 83,
-    "win_rate": 19.3,
-    "rata_r": -0.31,
-    "profit_factor": 0.75
-   }
-  },
-  {
-   "id": "o_bandar_breadth_lebar",
-   "jenis": "varian",
-   "induk": "b_bandar",
-   "nama": "Bandar · Breadth lebar+",
-   "ihsg": null,
-   "situasi": {
-    "dimensi": "breadth",
-    "nilai": "LEBAR",
-    "label": "breadth lebar"
-   },
-   "kondisi_tambahan": [
-    {
-     "kiri": "valRasio5",
-     "op": ">=",
-     "kananNilai": 1.5
-    }
-   ],
-   "syarat": "Rasio nilai 5 hari (×) ≥ 1,5",
-   "alasan": "Saat breadth lebar, menambah syarat \"Rasio nilai 5 hari (×) ≥ 1,5\" ke Bandar memperbaiki rata-rata dari -0.13R menjadi +0.02R per trade di data uji 4 bulan terakhir (35 trade) — data yang tidak dipakai saat mencari filter.",
-   "dibuat": "2026-10-30",
-   "uji": {
-    "latih_dasar": 0.23,
-    "latih_filter": 0.45,
-    "n_latih": 174,
-    "uji_dasar": -0.13,
-    "uji_filter": 0.02,
-    "n_uji": 35
-   },
-   "backtest_12_bulan": {
-    "n": 59,
-    "win_rate": 22.0,
-    "rata_r": -0.47,
-    "profit_factor": 0.49
-   },
-   "backtest_12_bulan_kondisi": {
-    "n": 54,
-    "win_rate": 24.1,
-    "rata_r": -0.41,
-    "profit_factor": 0.55
+    "n": 0,
+    "win_rate": null,
+    "rata_r": null,
+    "profit_factor": null
    }
   },
   {
@@ -152,33 +110,33 @@
    },
    "kondisi_tambahan": [
     {
-     "kiri": "nilaiAvg20",
+     "kiri": "mcap",
      "op": "<=",
-     "kananNilai": 18.0
+     "kananNilai": 14.0
     }
    ],
-   "syarat": "Rata nilai 20 hari (Rp M) ≤ 18",
-   "alasan": "Saat IHSG uptrend, menambah syarat \"Rata nilai 20 hari (Rp M) ≤ 18\" ke Follow The Trend memperbaiki rata-rata dari -0.07R menjadi +0.04R per trade di data uji 4 bulan terakhir (41 trade) — data yang tidak dipakai saat mencari filter.",
-   "dibuat": "2026-11-05",
+   "syarat": "Market cap (Rp T) ≤ 14",
+   "alasan": "Saat IHSG uptrend, menambah syarat \"Market cap (Rp T) ≤ 14\" ke Follow The Trend memperbaiki rata-rata dari -0.15R menjadi +0.02R per trade di data uji 4 bulan terakhir (40 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-17",
    "uji": {
-    "latih_dasar": 0.14,
+    "latih_dasar": 0.16,
     "latih_filter": 0.26,
-    "n_latih": 113,
-    "uji_dasar": -0.07,
-    "uji_filter": 0.04,
-    "n_uji": 41
+    "n_latih": 114,
+    "uji_dasar": -0.15,
+    "uji_filter": 0.02,
+    "n_uji": 40
    },
    "backtest_12_bulan": {
     "n": 69,
     "win_rate": 21.7,
-    "rata_r": -0.22,
-    "profit_factor": 0.62
+    "rata_r": -0.15,
+    "profit_factor": 0.84
    },
    "backtest_12_bulan_kondisi": {
     "n": 65,
     "win_rate": 23.1,
-    "rata_r": -0.2,
-    "profit_factor": 0.69
+    "rata_r": -0.12,
+    "profit_factor": 0.92
    }
   },
   {
@@ -194,33 +152,33 @@
    },
    "kondisi_tambahan": [
     {
-     "kiri": "nilai",
+     "kiri": "mcap",
      "op": "<=",
-     "kananNilai": 19.0
+     "kananNilai": 9.6
     }
    ],
-   "syarat": "Nilai transaksi (Rp M) ≤ 19",
-   "alasan": "Saat breadth lebar, menambah syarat \"Nilai transaksi (Rp M) ≤ 19\" ke Follow The Trend memperbaiki rata-rata dari -0.13R menjadi +0.03R per trade di data uji 4 bulan terakhir (37 trade) — data yang tidak dipakai saat mencari filter.",
-   "dibuat": "2026-11-12",
+   "syarat": "Market cap (Rp T) ≤ 9,6",
+   "alasan": "Saat breadth lebar, menambah syarat \"Market cap (Rp T) ≤ 9,6\" ke Follow The Trend memperbaiki rata-rata dari -0.18R menjadi -0.05R per trade di data uji 4 bulan terakhir (38 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-17",
    "uji": {
-    "latih_dasar": -0.0,
-    "latih_filter": 0.11,
-    "n_latih": 63,
-    "uji_dasar": -0.13,
-    "uji_filter": 0.03,
-    "n_uji": 37
+    "latih_dasar": 0.06,
+    "latih_filter": 0.16,
+    "n_latih": 74,
+    "uji_dasar": -0.18,
+    "uji_filter": -0.05,
+    "n_uji": 38
    },
    "backtest_12_bulan": {
-    "n": 53,
-    "win_rate": 28.3,
-    "rata_r": -0.18,
-    "profit_factor": 0.52
+    "n": 55,
+    "win_rate": 21.8,
+    "rata_r": -0.24,
+    "profit_factor": 0.63
    },
    "backtest_12_bulan_kondisi": {
-    "n": 53,
-    "win_rate": 28.3,
-    "rata_r": -0.18,
-    "profit_factor": 0.52
+    "n": 54,
+    "win_rate": 20.4,
+    "rata_r": -0.25,
+    "profit_factor": 0.61
    }
   },
   {
@@ -282,36 +240,36 @@
     }
    ],
    "syarat": "Market cap kecil–menengah yang sudah naik ≥30% dari low tahunan, masih 75–90% dari high, volume naik.",
-   "alasan": "Dirakit dari ide: Market cap kecil–menengah yang sudah naik ≥30% dari low tahunan, masih 75–90% dari high, volume naik. Minggu ini tidak ada eksperimen yang lolos semua syarat, jadi ini yang PALING DEKAT lolos (gagal: trade uji 21 < 60; tidak positif di kedua paruh uji; 97% sinyalnya sama dengan preset lama). Diuji di semua kondisi IHSG: data uji 4 bulan terakhir rata +0.54R per trade (21 trade, win 33.3%); pilihan acak -0.27R. Pola keluar mengikuti Bandar (SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W)). Belum teruji forward test — pakai ukuran posisi kecil.",
+   "alasan": "Dirakit dari ide: Market cap kecil–menengah yang sudah naik ≥30% dari low tahunan, masih 75–90% dari high, volume naik. Minggu ini tidak ada eksperimen yang lolos semua syarat, jadi ini yang PALING DEKAT lolos (gagal: trade uji 21 < 60; tidak positif di kedua paruh uji; 78% sinyalnya sama dengan preset lama). Diuji di semua kondisi IHSG: data uji 4 bulan terakhir rata +0.53R per trade (21 trade, win 33.3%); pilihan acak -0.35R. Pola keluar mengikuti Bandar (SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W)). Belum teruji forward test — pakai ukuran posisi kecil.",
    "dibuat": "2026-10-23",
    "uji": {
     "n_latih": 67,
-    "r_latih": 0.33,
+    "r_latih": 0.08,
     "n_uji": 21,
-    "r_uji": 0.54,
-    "r_uji_paruh1": 0.81,
+    "r_uji": 0.53,
+    "r_uji_paruh1": 0.92,
     "r_uji_paruh2": -1.11,
     "win_uji": 33.3,
-    "r_acak_uji": -0.27,
-    "tumpang_tindih": 0.97,
+    "r_acak_uji": -0.35,
+    "tumpang_tindih": 0.78,
     "terdekat": true,
     "alasan_gagal": [
      "trade uji 21 < 60",
      "tidak positif di kedua paruh uji",
-     "97% sinyalnya sama dengan preset lama"
+     "78% sinyalnya sama dengan preset lama"
     ]
    },
    "backtest_12_bulan": {
     "n": 88,
-    "win_rate": 20.5,
-    "rata_r": 0.38,
-    "profit_factor": 1.43
+    "win_rate": 19.3,
+    "rata_r": 0.19,
+    "profit_factor": 1.22
    },
    "backtest_12_bulan_kondisi": {
     "n": 88,
-    "win_rate": 20.5,
-    "rata_r": 0.38,
-    "profit_factor": 1.43
+    "win_rate": 19.3,
+    "rata_r": 0.19,
+    "profit_factor": 1.22
    }
   }
  ]
