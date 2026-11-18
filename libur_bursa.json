@@ -1,0 +1,177 @@
+{
+ "keterangan": "Hari libur bursa IDX (Senin–Jumat) — kalender resmi BEI. Akhir pekan tidak dicantumkan. Sumber transkripsi: repo fzn0x/idx data/holidays.csv (MIT, diperiksa terhadap jumlah hari bursa bulanan BEI).",
+ "tahun": [
+  "2026",
+  "2027"
+ ],
+ "libur": [
+  {
+   "tgl": "2026-01-01",
+   "nama": "Tahun Baru 2026 Masehi"
+  },
+  {
+   "tgl": "2026-01-16",
+   "nama": "Isra Mikraj Nabi Muhammad SAW"
+  },
+  {
+   "tgl": "2026-02-16",
+   "nama": "Cuti Bersama Tahun Baru Imlek 2577 Kongzili"
+  },
+  {
+   "tgl": "2026-02-17",
+   "nama": "Tahun Baru Imlek 2577 Kongzili"
+  },
+  {
+   "tgl": "2026-03-18",
+   "nama": "Cuti Bersama Hari Suci Nyepi Tahun Baru Saka 1948"
+  },
+  {
+   "tgl": "2026-03-19",
+   "nama": "Hari Suci Nyepi Tahun Baru Saka 1948"
+  },
+  {
+   "tgl": "2026-03-20",
+   "nama": "Cuti Bersama Idul Fitri 1447 Hijriah"
+  },
+  {
+   "tgl": "2026-03-23",
+   "nama": "Cuti Bersama Idul Fitri 1447 Hijriah"
+  },
+  {
+   "tgl": "2026-03-24",
+   "nama": "Cuti Bersama Idul Fitri 1447 Hijriah"
+  },
+  {
+   "tgl": "2026-04-03",
+   "nama": "Wafat Yesus Kristus"
+  },
+  {
+   "tgl": "2026-05-01",
+   "nama": "Hari Buruh Internasional"
+  },
+  {
+   "tgl": "2026-05-14",
+   "nama": "Kenaikan Yesus Kristus"
+  },
+  {
+   "tgl": "2026-05-15",
+   "nama": "Cuti Bersama Kenaikan Yesus Kristus"
+  },
+  {
+   "tgl": "2026-05-27",
+   "nama": "Idul Adha 1447 Hijriah"
+  },
+  {
+   "tgl": "2026-05-28",
+   "nama": "Cuti Bersama Hari Raya Idul Adha 1447 Hijriah"
+  },
+  {
+   "tgl": "2026-06-01",
+   "nama": "Hari Lahir Pancasila"
+  },
+  {
+   "tgl": "2026-06-16",
+   "nama": "1 Muharam Tahun Baru Islam 1448 Hijriah"
+  },
+  {
+   "tgl": "2026-08-17",
+   "nama": "Proklamasi Kemerdekaan"
+  },
+  {
+   "tgl": "2026-08-25",
+   "nama": "Maulid Nabi Muhammad SAW"
+  },
+  {
+   "tgl": "2026-12-24",
+   "nama": "Cuti Bersama Kelahiran Yesus Kristus"
+  },
+  {
+   "tgl": "2026-12-25",
+   "nama": "Kelahiran Yesus Kristus"
+  },
+  {
+   "tgl": "2026-12-31",
+   "nama": "Libur Bursa"
+  },
+  {
+   "tgl": "2027-01-01",
+   "nama": "Tahun Baru 2027 Masehi"
+  },
+  {
+   "tgl": "2027-01-05",
+   "nama": "Isra Mikraj Nabi Muhammad S.A.W. 1448 Hijriah"
+  },
+  {
+   "tgl": "2027-02-05",
+   "nama": "Cuti Bersama Tahun Baru Imlek 2578 Kongzili"
+  },
+  {
+   "tgl": "2027-03-08",
+   "nama": "Hari Suci Nyepi (Tahun Baru Saka 1949)"
+  },
+  {
+   "tgl": "2027-03-09",
+   "nama": "Cuti Bersama Idul Fitri 1448 Hijriah"
+  },
+  {
+   "tgl": "2027-03-10",
+   "nama": "Idul Fitri 1448 Hijriah"
+  },
+  {
+   "tgl": "2027-03-11",
+   "nama": "Idul Fitri 1448 Hijriah"
+  },
+  {
+   "tgl": "2027-03-12",
+   "nama": "Cuti Bersama Idul Fitri 1448 Hijriah"
+  },
+  {
+   "tgl": "2027-03-15",
+   "nama": "Cuti Bersama Idul Fitri 1448 Hijriah"
+  },
+  {
+   "tgl": "2027-03-25",
+   "nama": "Cuti Bersama Wafat Yesus Kristus"
+  },
+  {
+   "tgl": "2027-03-26",
+   "nama": "Wafat Yesus Kristus"
+  },
+  {
+   "tgl": "2027-05-06",
+   "nama": "Kenaikan Yesus Kristus"
+  },
+  {
+   "tgl": "2027-05-17",
+   "nama": "Idul Adha 1448 Hijriah"
+  },
+  {
+   "tgl": "2027-05-18",
+   "nama": "Cuti Bersama Idul Adha 1448 Hijriah"
+  },
+  {
+   "tgl": "2027-05-19",
+   "nama": "Cuti Bersama Hari Raya Waisak 2571 BE"
+  },
+  {
+   "tgl": "2027-05-20",
+   "nama": "Hari Raya Waisak 2571 BE"
+  },
+  {
+   "tgl": "2027-06-01",
+   "nama": "Hari Lahir Pancasila"
+  },
+  {
+   "tgl": "2027-08-17",
+   "nama": "Proklamasi Kemerdekaan"
+  },
+  {
+   "tgl": "2027-12-24",
+   "nama": "Cuti Bersama Kelahiran Yesus Kristus"
+  },
+  {
+   "tgl": "2027-12-31",
+   "nama": "Libur Bursa"
+  }
+ ]
+}
