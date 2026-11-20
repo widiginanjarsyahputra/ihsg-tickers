@@ -1,26 +1,26 @@
 {
- "diperbarui": "2026-11-17",
- "data_sampai": "2026-11-17",
+ "diperbarui": "2026-11-20",
+ "data_sampai": "2026-11-19",
  "ihsg_sekarang": "SAMPING",
  "keterangan": "Status preset per kondisi IHSG dari backtest 12 bulan (maks 2 saham/hari, skor v2). aktif = layak dipakai; hati = pakai dengan ukuran posisi kecil; istirahat = historis rugi. Hanya label pengingat: preset tetap bisa dipakai.",
  "preset": {
   "b_sw_kor": {
    "nama": "Swing · Beli Saat Koreksi",
    "NAIK": {
-    "status": "aktif",
-    "n": 113,
-    "win_rate": 31.9,
-    "rata_r": 0.13,
-    "profit_factor": 1.18,
-    "dasar": "113 trade saat IHSG uptrend"
+    "status": "hati",
+    "n": 109,
+    "win_rate": 32.1,
+    "rata_r": 0.0,
+    "profit_factor": 1.0,
+    "dasar": "109 trade saat IHSG uptrend"
    },
    "SAMPING": {
     "status": "hati",
-    "n": 33,
-    "win_rate": 30.3,
-    "rata_r": -0.11,
-    "profit_factor": 0.98,
-    "dasar": "33 trade saat IHSG sideways"
+    "n": 31,
+    "win_rate": 32.3,
+    "rata_r": -0.05,
+    "profit_factor": 1.09,
+    "dasar": "31 trade saat IHSG sideways"
    },
    "TURUN": {
     "status": "hati",
@@ -31,14 +31,14 @@
     "dasar": "sampel kecil (0 trade) — memakai hasil 12 bulan keseluruhan"
    },
    "12_bulan": {
-    "n": 146,
-    "win_rate": 31.5,
-    "rata_r": 0.07,
-    "profit_factor": 1.14
+    "n": 140,
+    "win_rate": 32.1,
+    "rata_r": -0.01,
+    "profit_factor": 1.02
    },
    "forward": {
-    "selesai": 6,
-    "terbuka": 5,
+    "selesai": 7,
+    "terbuka": 4,
     "win_rate": 0.0,
     "rata_r": -1.08
    },
@@ -47,23 +47,23 @@
     "alasan": "tetap 70 — batas lebih tinggi tidak terbukti lebih baik di data latih dan data uji",
     "dasar": {
      "batas": 70,
-     "latih_r": 0.35,
-     "n_latih": 213,
+     "latih_r": 0.38,
+     "n_latih": 210,
      "uji_r": -0.48,
      "n_uji": 36
     },
     "kandidat": [
      {
       "batas": 75,
-      "latih_r": 0.26,
-      "n_latih": 189,
+      "latih_r": 0.28,
+      "n_latih": 186,
       "uji_r": -0.46,
       "n_uji": 35
      },
      {
       "batas": 80,
-      "latih_r": 0.28,
-      "n_latih": 171,
+      "latih_r": 0.3,
+      "n_latih": 168,
       "uji_r": -0.44,
       "n_uji": 34
      },
@@ -88,37 +88,37 @@
    "nama": "Swing · Tembus Resistance",
    "NAIK": {
     "status": "istirahat",
-    "n": 40,
-    "win_rate": 15.0,
-    "rata_r": -0.74,
-    "profit_factor": 0.23,
-    "dasar": "40 trade saat IHSG uptrend"
+    "n": 35,
+    "win_rate": 25.7,
+    "rata_r": -0.48,
+    "profit_factor": 0.38,
+    "dasar": "35 trade saat IHSG uptrend"
    },
    "SAMPING": {
-    "status": "hati",
-    "n": 25,
-    "win_rate": 40.0,
-    "rata_r": -0.05,
-    "profit_factor": 1.09,
-    "dasar": "25 trade saat IHSG sideways"
+    "status": "aktif",
+    "n": 20,
+    "win_rate": 45.0,
+    "rata_r": 0.03,
+    "profit_factor": 1.19,
+    "dasar": "20 trade saat IHSG sideways"
    },
    "TURUN": {
     "status": "istirahat",
-    "n": 11,
-    "win_rate": 18.2,
-    "rata_r": -0.87,
-    "profit_factor": 0.05,
-    "dasar": "sampel kecil (11 trade) — memakai hasil 12 bulan keseluruhan"
+    "n": 14,
+    "win_rate": 35.7,
+    "rata_r": -0.29,
+    "profit_factor": 0.61,
+    "dasar": "sampel kecil (14 trade) — memakai hasil 12 bulan keseluruhan"
    },
    "12_bulan": {
-    "n": 76,
-    "win_rate": 23.7,
-    "rata_r": -0.53,
-    "profit_factor": 0.4
+    "n": 69,
+    "win_rate": 33.3,
+    "rata_r": -0.29,
+    "profit_factor": 0.58
    },
    "forward": {
     "selesai": 0,
-    "terbuka": 0,
+    "terbuka": 1,
     "win_rate": null,
     "rata_r": null
    },
@@ -127,39 +127,39 @@
     "alasan": "tetap 70 — batas lebih tinggi tidak terbukti lebih baik di data latih dan data uji",
     "dasar": {
      "batas": 70,
-     "latih_r": -0.5,
-     "n_latih": 66,
-     "uji_r": -0.13,
-     "n_uji": 22
+     "latih_r": -0.3,
+     "n_latih": 79,
+     "uji_r": 0.13,
+     "n_uji": 27
     },
     "kandidat": [
      {
       "batas": 75,
-      "latih_r": -0.67,
-      "n_latih": 33,
-      "uji_r": -0.45,
-      "n_uji": 11
+      "latih_r": -0.27,
+      "n_latih": 75,
+      "uji_r": 0.1,
+      "n_uji": 23
      },
      {
       "batas": 80,
-      "latih_r": -0.67,
-      "n_latih": 27,
-      "uji_r": -0.31,
-      "n_uji": 9
+      "latih_r": -0.36,
+      "n_latih": 60,
+      "uji_r": 0.23,
+      "n_uji": 15
      },
      {
       "batas": 85,
-      "latih_r": -0.67,
-      "n_latih": 27,
-      "uji_r": -0.72,
-      "n_uji": 8
+      "latih_r": -0.38,
+      "n_latih": 56,
+      "uji_r": 0.31,
+      "n_uji": 13
      },
      {
       "batas": 90,
-      "latih_r": -0.87,
-      "n_latih": 16,
-      "uji_r": -0.67,
-      "n_uji": 7
+      "latih_r": -0.33,
+      "n_latih": 41,
+      "uji_r": 0.33,
+      "n_uji": 11
      }
     ]
    }
@@ -168,11 +168,11 @@
    "nama": "Swing · Tren Super Kuat",
    "NAIK": {
     "status": "aktif",
-    "n": 111,
-    "win_rate": 54.1,
-    "rata_r": 0.21,
-    "profit_factor": 1.57,
-    "dasar": "111 trade saat IHSG uptrend"
+    "n": 106,
+    "win_rate": 54.7,
+    "rata_r": 0.24,
+    "profit_factor": 1.62,
+    "dasar": "106 trade saat IHSG uptrend"
    },
    "SAMPING": {
     "status": "aktif",
@@ -191,55 +191,55 @@
     "dasar": "sampel kecil (0 trade) — memakai hasil 12 bulan keseluruhan"
    },
    "12_bulan": {
-    "n": 145,
-    "win_rate": 52.4,
-    "rata_r": 0.2,
-    "profit_factor": 1.71
+    "n": 140,
+    "win_rate": 52.9,
+    "rata_r": 0.22,
+    "profit_factor": 1.77
    },
    "forward": {
-    "selesai": 6,
-    "terbuka": 7,
+    "selesai": 7,
+    "terbuka": 6,
     "win_rate": 0.0,
-    "rata_r": -1.34
+    "rata_r": -1.31
    },
    "siap_beli": {
     "siap_min": 70,
     "alasan": "tetap 70 — batas lebih tinggi tidak terbukti lebih baik di data latih dan data uji",
     "dasar": {
      "batas": 70,
-     "latih_r": 0.29,
-     "n_latih": 300,
-     "uji_r": 0.21,
-     "n_uji": 46
+     "latih_r": 0.32,
+     "n_latih": 306,
+     "uji_r": 0.2,
+     "n_uji": 43
     },
     "kandidat": [
      {
       "batas": 75,
-      "latih_r": 0.29,
-      "n_latih": 299,
-      "uji_r": 0.24,
-      "n_uji": 45
+      "latih_r": 0.33,
+      "n_latih": 302,
+      "uji_r": 0.23,
+      "n_uji": 42
      },
      {
       "batas": 80,
-      "latih_r": 0.29,
-      "n_latih": 285,
-      "uji_r": 0.19,
-      "n_uji": 40
+      "latih_r": 0.33,
+      "n_latih": 288,
+      "uji_r": 0.17,
+      "n_uji": 37
      },
      {
       "batas": 85,
-      "latih_r": 0.3,
-      "n_latih": 282,
-      "uji_r": 0.12,
-      "n_uji": 36
+      "latih_r": 0.34,
+      "n_latih": 285,
+      "uji_r": 0.09,
+      "n_uji": 33
      },
      {
       "batas": 90,
-      "latih_r": 0.29,
-      "n_latih": 223,
-      "uji_r": 0.35,
-      "n_uji": 22
+      "latih_r": 0.35,
+      "n_latih": 224,
+      "uji_r": 0.39,
+      "n_uji": 21
      }
     ]
    }
@@ -248,39 +248,39 @@
    "nama": "Day Trade",
    "NAIK": {
     "status": "istirahat",
-    "n": 114,
-    "win_rate": 32.5,
-    "rata_r": -0.39,
-    "profit_factor": 0.41,
+    "n": 110,
+    "win_rate": 31.8,
+    "rata_r": -0.4,
+    "profit_factor": 0.4,
     "dasar": "Diistirahatkan 17 Nov 2026: setelah biaya & selisih 1 tick tidak ada versi yang untung (eksperimen_pendek 1–4)"
    },
    "SAMPING": {
     "status": "istirahat",
-    "n": 125,
-    "win_rate": 30.4,
-    "rata_r": -0.46,
-    "profit_factor": 0.36,
+    "n": 126,
+    "win_rate": 29.4,
+    "rata_r": -0.48,
+    "profit_factor": 0.34,
     "dasar": "Diistirahatkan 17 Nov 2026: setelah biaya & selisih 1 tick tidak ada versi yang untung (eksperimen_pendek 1–4)"
    },
    "TURUN": {
     "status": "istirahat",
     "n": 109,
-    "win_rate": 21.1,
-    "rata_r": -0.66,
-    "profit_factor": 0.22,
+    "win_rate": 20.2,
+    "rata_r": -0.69,
+    "profit_factor": 0.21,
     "dasar": "Diistirahatkan 17 Nov 2026: setelah biaya & selisih 1 tick tidak ada versi yang untung (eksperimen_pendek 1–4)"
    },
    "12_bulan": {
-    "n": 349,
-    "win_rate": 28.1,
-    "rata_r": -0.5,
-    "profit_factor": 0.32
+    "n": 345,
+    "win_rate": 27.2,
+    "rata_r": -0.52,
+    "profit_factor": 0.31
    },
    "forward": {
-    "selesai": 14,
+    "selesai": 17,
     "terbuka": 0,
-    "win_rate": 7.1,
-    "rata_r": -0.88
+    "win_rate": 5.9,
+    "rata_r": -0.89
    },
    "siap_beli": {
     "siap_min": 70,
@@ -288,29 +288,29 @@
     "dasar": {
      "batas": 70,
      "latih_r": -0.46,
-     "n_latih": 413,
-     "uji_r": -0.33,
-     "n_uji": 87
+     "n_latih": 411,
+     "uji_r": -0.38,
+     "n_uji": 85
     },
     "kandidat": [
      {
       "batas": 75,
       "latih_r": -0.45,
-      "n_latih": 289,
-      "uji_r": -0.25,
+      "n_latih": 286,
+      "uji_r": -0.29,
       "n_uji": 58
      },
      {
       "batas": 80,
       "latih_r": -0.44,
-      "n_latih": 271,
-      "uji_r": -0.24,
+      "n_latih": 268,
+      "uji_r": -0.29,
       "n_uji": 54
      },
      {
       "batas": 85,
-      "latih_r": -0.5,
-      "n_latih": 119,
+      "latih_r": -0.51,
+      "n_latih": 117,
       "uji_r": 0.04,
       "n_uji": 21
      },
@@ -328,10 +328,10 @@
    "nama": "BSJP · Beli Sore Jual Pagi",
    "NAIK": {
     "status": "istirahat",
-    "n": 57,
-    "win_rate": 35.1,
-    "rata_r": 0.05,
-    "profit_factor": 1.29,
+    "n": 55,
+    "win_rate": 36.4,
+    "rata_r": 0.06,
+    "profit_factor": 1.41,
     "dasar": "Diistirahatkan 17 Nov 2026: jual di pembukaan ±0R sebelum biaya, −0,25R setelah biaya +0,3%/sisi di kedua periode (eksperimen_pendek)"
    },
    "SAMPING": {
@@ -351,10 +351,10 @@
     "dasar": "Diistirahatkan 17 Nov 2026: jual di pembukaan ±0R sebelum biaya, −0,25R setelah biaya +0,3%/sisi di kedua periode (eksperimen_pendek)"
    },
    "12_bulan": {
-    "n": 124,
-    "win_rate": 33.1,
-    "rata_r": -0.01,
-    "profit_factor": 0.95
+    "n": 122,
+    "win_rate": 33.6,
+    "rata_r": -0.0,
+    "profit_factor": 0.98
    },
    "forward": {
     "selesai": 4,
@@ -367,37 +367,37 @@
     "alasan": "tetap 70 — batas lebih tinggi tidak terbukti lebih baik di data latih dan data uji",
     "dasar": {
      "batas": 70,
-     "latih_r": 0.03,
-     "n_latih": 115,
-     "uji_r": -0.04,
-     "n_uji": 31
+     "latih_r": 0.02,
+     "n_latih": 116,
+     "uji_r": -0.03,
+     "n_uji": 29
     },
     "kandidat": [
      {
       "batas": 75,
-      "latih_r": -0.09,
-      "n_latih": 57,
+      "latih_r": -0.1,
+      "n_latih": 59,
       "uji_r": -0.15,
-      "n_uji": 15
-     },
-     {
-      "batas": 80,
-      "latih_r": -0.09,
-      "n_latih": 53,
-      "uji_r": -0.11,
       "n_uji": 13
      },
      {
+      "batas": 80,
+      "latih_r": -0.1,
+      "n_latih": 54,
+      "uji_r": -0.11,
+      "n_uji": 12
+     },
+     {
       "batas": 85,
-      "latih_r": -0.08,
-      "n_latih": 7,
+      "latih_r": -0.05,
+      "n_latih": 8,
       "uji_r": -0.48,
       "n_uji": 1
      },
      {
       "batas": 90,
-      "latih_r": -0.05,
-      "n_latih": 5,
+      "latih_r": -0.02,
+      "n_latih": 6,
       "uji_r": -0.48,
       "n_uji": 1
      }
@@ -408,11 +408,11 @@
    "nama": "Aseng ACC",
    "NAIK": {
     "status": "istirahat",
-    "n": 63,
-    "win_rate": 27.0,
-    "rata_r": -0.37,
+    "n": 61,
+    "win_rate": 26.2,
+    "rata_r": -0.38,
     "profit_factor": 0.47,
-    "dasar": "63 trade saat IHSG uptrend"
+    "dasar": "61 trade saat IHSG uptrend"
    },
    "SAMPING": {
     "status": "aktif",
@@ -431,9 +431,9 @@
     "dasar": "sampel kecil (0 trade) — memakai hasil 12 bulan keseluruhan"
    },
    "12_bulan": {
-    "n": 83,
-    "win_rate": 33.7,
-    "rata_r": -0.18,
+    "n": 81,
+    "win_rate": 33.3,
+    "rata_r": -0.19,
     "profit_factor": 0.63
    },
    "forward": {
@@ -447,37 +447,37 @@
     "alasan": "tetap 70 — batas lebih tinggi tidak terbukti lebih baik di data latih dan data uji",
     "dasar": {
      "batas": 70,
-     "latih_r": -0.2,
-     "n_latih": 136,
-     "uji_r": -0.1,
-     "n_uji": 29
+     "latih_r": -0.17,
+     "n_latih": 138,
+     "uji_r": -0.17,
+     "n_uji": 28
     },
     "kandidat": [
      {
       "batas": 75,
-      "latih_r": -0.15,
-      "n_latih": 125,
-      "uji_r": -0.22,
-      "n_uji": 27
+      "latih_r": -0.12,
+      "n_latih": 127,
+      "uji_r": -0.3,
+      "n_uji": 26
      },
      {
       "batas": 80,
-      "latih_r": -0.14,
-      "n_latih": 112,
-      "uji_r": -0.28,
-      "n_uji": 22
+      "latih_r": -0.1,
+      "n_latih": 114,
+      "uji_r": -0.38,
+      "n_uji": 21
      },
      {
       "batas": 85,
-      "latih_r": -0.11,
-      "n_latih": 100,
-      "uji_r": -0.45,
-      "n_uji": 19
+      "latih_r": -0.07,
+      "n_latih": 102,
+      "uji_r": -0.58,
+      "n_uji": 18
      },
      {
       "batas": 90,
-      "latih_r": -0.16,
-      "n_latih": 83,
+      "latih_r": -0.14,
+      "n_latih": 84,
       "uji_r": -0.64,
       "n_uji": 14
      }
@@ -488,11 +488,11 @@
    "nama": "Bandar",
    "NAIK": {
     "status": "aktif",
-    "n": 61,
-    "win_rate": 26.2,
-    "rata_r": 0.35,
-    "profit_factor": 1.35,
-    "dasar": "61 trade saat IHSG uptrend"
+    "n": 60,
+    "win_rate": 26.7,
+    "rata_r": 0.37,
+    "profit_factor": 1.38,
+    "dasar": "60 trade saat IHSG uptrend"
    },
    "SAMPING": {
     "status": "hati",
@@ -511,10 +511,10 @@
     "dasar": "sampel kecil (0 trade) — memakai hasil 12 bulan keseluruhan"
    },
    "12_bulan": {
-    "n": 74,
-    "win_rate": 27.0,
-    "rata_r": 0.32,
-    "profit_factor": 1.35
+    "n": 73,
+    "win_rate": 27.4,
+    "rata_r": 0.34,
+    "profit_factor": 1.37
    },
    "forward": {
     "selesai": 2,
@@ -527,8 +527,8 @@
     "alasan": "tetap 70 — batas lebih tinggi tidak terbukti lebih baik di data latih dan data uji",
     "dasar": {
      "batas": 70,
-     "latih_r": 0.81,
-     "n_latih": 148,
+     "latih_r": 0.82,
+     "n_latih": 147,
      "uji_r": 0.34,
      "n_uji": 19
     },
@@ -549,15 +549,15 @@
      },
      {
       "batas": 85,
-      "latih_r": 1.39,
-      "n_latih": 54,
+      "latih_r": 1.49,
+      "n_latih": 52,
       "uji_r": -0.5,
       "n_uji": 3
      },
      {
       "batas": 90,
-      "latih_r": 1.52,
-      "n_latih": 51,
+      "latih_r": 1.62,
+      "n_latih": 49,
       "uji_r": -1.07,
       "n_uji": 2
      }
@@ -568,37 +568,37 @@
    "nama": "Follow The Trend",
    "NAIK": {
     "status": "istirahat",
-    "n": 95,
-    "win_rate": 17.9,
-    "rata_r": -0.27,
-    "profit_factor": 0.49,
-    "dasar": "95 trade saat IHSG uptrend"
+    "n": 92,
+    "win_rate": 17.4,
+    "rata_r": -0.26,
+    "profit_factor": 0.52,
+    "dasar": "92 trade saat IHSG uptrend"
    },
    "SAMPING": {
-    "status": "istirahat",
-    "n": 62,
-    "win_rate": 19.4,
-    "rata_r": -0.22,
-    "profit_factor": 0.36,
-    "dasar": "62 trade saat IHSG sideways"
+    "status": "hati",
+    "n": 60,
+    "win_rate": 21.7,
+    "rata_r": -0.17,
+    "profit_factor": 0.45,
+    "dasar": "60 trade saat IHSG sideways"
    },
    "TURUN": {
     "status": "hati",
-    "n": 38,
-    "win_rate": 23.7,
-    "rata_r": -0.07,
-    "profit_factor": 0.94,
-    "dasar": "38 trade saat IHSG downtrend"
+    "n": 37,
+    "win_rate": 24.3,
+    "rata_r": -0.05,
+    "profit_factor": 1.08,
+    "dasar": "37 trade saat IHSG downtrend"
    },
    "12_bulan": {
-    "n": 195,
-    "win_rate": 19.5,
-    "rata_r": -0.22,
-    "profit_factor": 0.52
+    "n": 189,
+    "win_rate": 20.1,
+    "rata_r": -0.19,
+    "profit_factor": 0.58
    },
    "forward": {
     "selesai": 1,
-    "terbuka": 4,
+    "terbuka": 5,
     "win_rate": 0.0,
     "rata_r": -0.55
    },
@@ -607,38 +607,38 @@
     "alasan": "tetap 70 — batas lebih tinggi tidak terbukti lebih baik di data latih dan data uji",
     "dasar": {
      "batas": 70,
-     "latih_r": 0.18,
-     "n_latih": 293,
-     "uji_r": -0.4,
-     "n_uji": 66
+     "latih_r": 0.16,
+     "n_latih": 290,
+     "uji_r": -0.31,
+     "n_uji": 65
     },
     "kandidat": [
      {
       "batas": 75,
-      "latih_r": 0.16,
-      "n_latih": 279,
-      "uji_r": -0.4,
-      "n_uji": 66
+      "latih_r": 0.15,
+      "n_latih": 276,
+      "uji_r": -0.31,
+      "n_uji": 65
      },
      {
       "batas": 80,
-      "latih_r": 0.18,
-      "n_latih": 239,
-      "uji_r": -0.36,
-      "n_uji": 60
+      "latih_r": 0.16,
+      "n_latih": 236,
+      "uji_r": -0.26,
+      "n_uji": 59
      },
      {
       "batas": 85,
-      "latih_r": 0.19,
-      "n_latih": 205,
-      "uji_r": -0.38,
+      "latih_r": 0.17,
+      "n_latih": 202,
+      "uji_r": -0.27,
       "n_uji": 50
      },
      {
       "batas": 90,
-      "latih_r": 0.14,
-      "n_latih": 155,
-      "uji_r": -0.34,
+      "latih_r": 0.11,
+      "n_latih": 154,
+      "uji_r": -0.25,
       "n_uji": 36
      }
     ]
@@ -647,12 +647,12 @@
   "o_sw_kor_naik": {
    "nama": "Swing · Beli Saat Koreksi · Uptrend+",
    "NAIK": {
-    "status": "aktif",
-    "n": 94,
-    "win_rate": 33.0,
-    "rata_r": 0.07,
-    "profit_factor": 1.12,
-    "dasar": "94 trade saat IHSG uptrend"
+    "status": "hati",
+    "n": 89,
+    "win_rate": 33.7,
+    "rata_r": -0.07,
+    "profit_factor": 0.92,
+    "dasar": "89 trade saat IHSG uptrend"
    },
    "SAMPING": {
     "status": "hati",
@@ -671,10 +671,10 @@
     "dasar": "sampel kecil (0 trade) — memakai hasil 12 bulan keseluruhan"
    },
    "12_bulan": {
-    "n": 100,
-    "win_rate": 31.0,
-    "rata_r": 0.01,
-    "profit_factor": 1.03
+    "n": 95,
+    "win_rate": 31.6,
+    "rata_r": -0.12,
+    "profit_factor": 0.84
    },
    "forward": null,
    "siap_beli": {
@@ -682,23 +682,23 @@
     "alasan": "tetap 70 — batas lebih tinggi tidak terbukti lebih baik di data latih dan data uji",
     "dasar": {
      "batas": 70,
-     "latih_r": 0.21,
-     "n_latih": 191,
+     "latih_r": 0.23,
+     "n_latih": 189,
      "uji_r": -0.21,
      "n_uji": 36
     },
     "kandidat": [
      {
       "batas": 75,
-      "latih_r": 0.04,
-      "n_latih": 169,
+      "latih_r": 0.06,
+      "n_latih": 168,
       "uji_r": -0.21,
       "n_uji": 36
      },
      {
       "batas": 80,
-      "latih_r": 0.03,
-      "n_latih": 161,
+      "latih_r": 0.05,
+      "n_latih": 160,
       "uji_r": -0.21,
       "n_uji": 36
      },
@@ -719,26 +719,26 @@
     ]
    }
   },
-  "o_sw_kor_hari_selasa": {
-   "nama": "Swing · Beli Saat Koreksi · Hari Selasa+",
+  "o_sw_kor_breadth_lebar": {
+   "nama": "Swing · Beli Saat Koreksi · Breadth lebar+",
    "NAIK": {
-    "status": "aktif",
-    "n": 23,
-    "win_rate": 26.1,
-    "rata_r": 0.07,
-    "profit_factor": 1.11,
-    "dasar": "23 trade saat IHSG uptrend"
+    "status": "istirahat",
+    "n": 61,
+    "win_rate": 29.5,
+    "rata_r": -0.29,
+    "profit_factor": 0.58,
+    "dasar": "61 trade saat IHSG uptrend"
    },
    "SAMPING": {
-    "status": "hati",
-    "n": 9,
-    "win_rate": 22.2,
-    "rata_r": 0.18,
-    "profit_factor": 1.18,
-    "dasar": "sampel kecil (9 trade) — memakai hasil 12 bulan keseluruhan"
+    "status": "istirahat",
+    "n": 16,
+    "win_rate": 31.2,
+    "rata_r": -0.39,
+    "profit_factor": 0.42,
+    "dasar": "16 trade saat IHSG sideways"
    },
    "TURUN": {
-    "status": "hati",
+    "status": "istirahat",
     "n": 0,
     "win_rate": null,
     "rata_r": null,
@@ -746,10 +746,10 @@
     "dasar": "sampel kecil (0 trade) — memakai hasil 12 bulan keseluruhan"
    },
    "12_bulan": {
-    "n": 32,
-    "win_rate": 25.0,
-    "rata_r": 0.1,
-    "profit_factor": 1.13
+    "n": 77,
+    "win_rate": 29.9,
+    "rata_r": -0.31,
+    "profit_factor": 0.55
    },
    "forward": null,
    "siap_beli": {
@@ -757,25 +757,25 @@
     "alasan": "tetap 70 — batas lebih tinggi tidak terbukti lebih baik di data latih dan data uji",
     "dasar": {
      "batas": 70,
-     "latih_r": 0.22,
-     "n_latih": 45,
-     "uji_r": -0.32,
-     "n_uji": 6
+     "latih_r": -0.13,
+     "n_latih": 114,
+     "uji_r": -0.24,
+     "n_uji": 34
     },
     "kandidat": [
      {
       "batas": 75,
-      "latih_r": 0.19,
-      "n_latih": 43,
-      "uji_r": -0.32,
-      "n_uji": 6
+      "latih_r": -0.2,
+      "n_latih": 106,
+      "uji_r": -0.24,
+      "n_uji": 34
      },
      {
       "batas": 80,
-      "latih_r": 0.19,
-      "n_latih": 43,
-      "uji_r": -0.32,
-      "n_uji": 6
+      "latih_r": -0.19,
+      "n_latih": 101,
+      "uji_r": -0.21,
+      "n_uji": 33
      },
      {
       "batas": 85,
@@ -798,19 +798,19 @@
    "nama": "Follow The Trend · Uptrend+",
    "NAIK": {
     "status": "hati",
-    "n": 65,
-    "win_rate": 23.1,
-    "rata_r": -0.12,
-    "profit_factor": 0.92,
-    "dasar": "65 trade saat IHSG uptrend"
+    "n": 62,
+    "win_rate": 24.2,
+    "rata_r": -0.09,
+    "profit_factor": 1.01,
+    "dasar": "62 trade saat IHSG uptrend"
    },
    "SAMPING": {
     "status": "hati",
-    "n": 4,
+    "n": 3,
     "win_rate": 0.0,
-    "rata_r": -0.64,
+    "rata_r": -0.51,
     "profit_factor": 0.0,
-    "dasar": "sampel kecil (4 trade) — memakai hasil 12 bulan keseluruhan"
+    "dasar": "sampel kecil (3 trade) — memakai hasil 12 bulan keseluruhan"
    },
    "TURUN": {
     "status": "hati",
@@ -821,10 +821,10 @@
     "dasar": "sampel kecil (0 trade) — memakai hasil 12 bulan keseluruhan"
    },
    "12_bulan": {
-    "n": 69,
-    "win_rate": 21.7,
-    "rata_r": -0.15,
-    "profit_factor": 0.84
+    "n": 65,
+    "win_rate": 23.1,
+    "rata_r": -0.11,
+    "profit_factor": 0.96
    },
    "forward": null,
    "siap_beli": {
@@ -832,38 +832,38 @@
     "alasan": "tetap 70 — batas lebih tinggi tidak terbukti lebih baik di data latih dan data uji",
     "dasar": {
      "batas": 70,
-     "latih_r": 0.22,
-     "n_latih": 109,
-     "uji_r": -0.12,
+     "latih_r": 0.23,
+     "n_latih": 103,
+     "uji_r": -0.02,
      "n_uji": 32
     },
     "kandidat": [
      {
       "batas": 75,
-      "latih_r": 0.22,
-      "n_latih": 109,
-      "uji_r": -0.12,
+      "latih_r": 0.23,
+      "n_latih": 103,
+      "uji_r": -0.02,
       "n_uji": 32
      },
      {
       "batas": 80,
-      "latih_r": 0.23,
-      "n_latih": 108,
-      "uji_r": -0.12,
+      "latih_r": 0.24,
+      "n_latih": 102,
+      "uji_r": -0.02,
       "n_uji": 32
      },
      {
       "batas": 85,
-      "latih_r": 0.24,
-      "n_latih": 107,
-      "uji_r": -0.08,
+      "latih_r": 0.25,
+      "n_latih": 101,
+      "uji_r": 0.03,
       "n_uji": 30
      },
      {
       "batas": 90,
       "latih_r": 0.25,
-      "n_latih": 93,
-      "uji_r": -0.07,
+      "n_latih": 90,
+      "uji_r": 0.06,
       "n_uji": 26
      }
     ]
@@ -872,23 +872,23 @@
   "o_ftt_breadth_lebar": {
    "nama": "Follow The Trend · Breadth lebar+",
    "NAIK": {
-    "status": "istirahat",
-    "n": 45,
-    "win_rate": 17.8,
-    "rata_r": -0.23,
-    "profit_factor": 0.72,
-    "dasar": "45 trade saat IHSG uptrend"
+    "status": "hati",
+    "n": 44,
+    "win_rate": 20.5,
+    "rata_r": -0.16,
+    "profit_factor": 0.84,
+    "dasar": "44 trade saat IHSG uptrend"
    },
    "SAMPING": {
-    "status": "istirahat",
-    "n": 10,
-    "win_rate": 40.0,
-    "rata_r": -0.29,
-    "profit_factor": 0.24,
-    "dasar": "sampel kecil (10 trade) — memakai hasil 12 bulan keseluruhan"
+    "status": "hati",
+    "n": 8,
+    "win_rate": 37.5,
+    "rata_r": -0.24,
+    "profit_factor": 0.3,
+    "dasar": "sampel kecil (8 trade) — memakai hasil 12 bulan keseluruhan"
    },
    "TURUN": {
-    "status": "istirahat",
+    "status": "hati",
     "n": 0,
     "win_rate": null,
     "rata_r": null,
@@ -896,49 +896,49 @@
     "dasar": "sampel kecil (0 trade) — memakai hasil 12 bulan keseluruhan"
    },
    "12_bulan": {
-    "n": 55,
-    "win_rate": 21.8,
-    "rata_r": -0.24,
-    "profit_factor": 0.63
+    "n": 52,
+    "win_rate": 23.1,
+    "rata_r": -0.18,
+    "profit_factor": 0.76
    },
    "forward": null,
    "siap_beli": {
-    "siap_min": 90,
-    "alasan": "skor ≥ 90 memperbaiki rata R dari +0.03 → +0.14 (latih, 53 trade) dan +0.07 → +0.19 (uji 4 bulan terakhir, 20 trade)",
+    "siap_min": 70,
+    "alasan": "tetap 70 — batas lebih tinggi tidak terbukti lebih baik di data latih dan data uji",
     "dasar": {
      "batas": 70,
-     "latih_r": 0.03,
-     "n_latih": 72,
-     "uji_r": 0.07,
-     "n_uji": 32
+     "latih_r": 0.04,
+     "n_latih": 68,
+     "uji_r": 0.18,
+     "n_uji": 30
     },
     "kandidat": [
      {
       "batas": 75,
       "latih_r": 0.04,
-      "n_latih": 71,
-      "uji_r": 0.07,
-      "n_uji": 32
+      "n_latih": 67,
+      "uji_r": 0.18,
+      "n_uji": 30
      },
      {
       "batas": 80,
-      "latih_r": 0.06,
-      "n_latih": 68,
-      "uji_r": 0.08,
-      "n_uji": 29
+      "latih_r": 0.07,
+      "n_latih": 64,
+      "uji_r": 0.21,
+      "n_uji": 28
      },
      {
       "batas": 85,
-      "latih_r": 0.07,
-      "n_latih": 63,
-      "uji_r": 0.13,
-      "n_uji": 26
+      "latih_r": 0.04,
+      "n_latih": 58,
+      "uji_r": 0.27,
+      "n_uji": 25
      },
      {
       "batas": 90,
-      "latih_r": 0.14,
-      "n_latih": 53,
-      "uji_r": 0.19,
+      "latih_r": 0.1,
+      "n_latih": 49,
+      "uji_r": 0.31,
       "n_uji": 20
      }
     ]
@@ -948,33 +948,33 @@
    "nama": "Eksperimen · Lapis Kedua Awal Tren",
    "NAIK": {
     "status": "aktif",
-    "n": 56,
-    "win_rate": 19.6,
-    "rata_r": 0.45,
-    "profit_factor": 1.51,
-    "dasar": "56 trade saat IHSG uptrend"
+    "n": 52,
+    "win_rate": 19.2,
+    "rata_r": 0.46,
+    "profit_factor": 1.5,
+    "dasar": "52 trade saat IHSG uptrend"
    },
    "SAMPING": {
     "status": "aktif",
-    "n": 16,
-    "win_rate": 25.0,
-    "rata_r": 0.09,
-    "profit_factor": 1.4,
-    "dasar": "16 trade saat IHSG sideways"
+    "n": 15,
+    "win_rate": 26.7,
+    "rata_r": 0.17,
+    "profit_factor": 1.55,
+    "dasar": "15 trade saat IHSG sideways"
    },
    "TURUN": {
     "status": "istirahat",
-    "n": 16,
-    "win_rate": 12.5,
-    "rata_r": -0.63,
-    "profit_factor": 0.25,
-    "dasar": "16 trade saat IHSG downtrend"
+    "n": 15,
+    "win_rate": 13.3,
+    "rata_r": -0.6,
+    "profit_factor": 0.27,
+    "dasar": "15 trade saat IHSG downtrend"
    },
    "12_bulan": {
-    "n": 88,
-    "win_rate": 19.3,
-    "rata_r": 0.19,
-    "profit_factor": 1.22
+    "n": 82,
+    "win_rate": 19.5,
+    "rata_r": 0.21,
+    "profit_factor": 1.24
    },
    "forward": {
     "selesai": 1,
@@ -987,37 +987,37 @@
     "alasan": "tetap 70 — batas lebih tinggi tidak terbukti lebih baik di data latih dan data uji",
     "dasar": {
      "batas": 70,
-     "latih_r": 1.64,
-     "n_latih": 102,
+     "latih_r": 1.73,
+     "n_latih": 99,
      "uji_r": 0.42,
      "n_uji": 15
     },
     "kandidat": [
      {
       "batas": 75,
-      "latih_r": 1.78,
-      "n_latih": 86,
+      "latih_r": 1.82,
+      "n_latih": 85,
       "uji_r": 0.46,
       "n_uji": 13
      },
      {
       "batas": 80,
-      "latih_r": 1.65,
-      "n_latih": 65,
+      "latih_r": 1.69,
+      "n_latih": 64,
       "uji_r": -0.4,
       "n_uji": 7
      },
      {
       "batas": 85,
-      "latih_r": 0.32,
-      "n_latih": 36,
+      "latih_r": 0.41,
+      "n_latih": 34,
       "uji_r": -1.08,
       "n_uji": 1
      },
      {
       "batas": 90,
-      "latih_r": 0.5,
-      "n_latih": 32,
+      "latih_r": 0.6,
+      "n_latih": 30,
       "uji_r": -1.08,
       "n_uji": 1
      }
@@ -1026,13 +1026,13 @@
   }
  },
  "situasi_kini": {
-  "tanggal": "2026-11-16",
+  "tanggal": "2026-11-19",
   "ihsg": "SAMPING",
   "breadth": "SEMPIT",
   "vol": "BERGEJOLAK",
   "bulan": "AKHIR",
   "laporan": "BIASA",
-  "hari": "SENIN",
-  "breadth_pct": 19.7
+  "hari": "KAMIS",
+  "breadth_pct": 20.5
  }
 }
