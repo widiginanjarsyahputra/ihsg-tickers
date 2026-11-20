@@ -1,6 +1,6 @@
 {
- "diperbarui": "2026-11-19",
- "data_sampai": "2026-11-19",
+ "diperbarui": "2026-11-20",
+ "data_sampai": "2026-11-20",
  "aturan": "maks 2 saham per preset per hari (skor tertinggi), beli open esok hari; sama dengan forward test",
  "pilihan": [
   {
@@ -48,7 +48,7 @@
   {
    "tanggal": "2026-10-26",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "SSMS",
    "label": "PANTAU",
    "status": "selesai",
@@ -62,7 +62,7 @@
   {
    "tanggal": "2026-10-26",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "BLES",
    "label": "PANTAU",
    "status": "selesai",
@@ -132,7 +132,7 @@
   {
    "tanggal": "2026-10-26",
    "preset": "o_ilx_laporan_laporan",
-   "nama": "o_ilx_laporan_laporan",
+   "nama": "Illusix · Musim laporan keuangan+ (arsip)",
    "kode": "SSMS",
    "label": "PANTAU",
    "status": "selesai",
@@ -146,7 +146,7 @@
   {
    "tanggal": "2026-10-26",
    "preset": "o_ilx_laporan_laporan",
-   "nama": "o_ilx_laporan_laporan",
+   "nama": "Illusix · Musim laporan keuangan+ (arsip)",
    "kode": "BLES",
    "label": "PANTAU",
    "status": "selesai",
@@ -197,7 +197,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.09
+   "ret_berjalan": -0.39
   },
   {
    "tanggal": "2026-10-27",
@@ -258,7 +258,7 @@
   {
    "tanggal": "2026-10-27",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "ESSA",
    "label": "SIAP",
    "status": "selesai",
@@ -272,7 +272,7 @@
   {
    "tanggal": "2026-10-27",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "PWON",
    "label": "SIAP",
    "status": "selesai",
@@ -309,7 +309,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.78
+   "ret_berjalan": -6.18
   },
   {
    "tanggal": "2026-10-27",
@@ -356,7 +356,7 @@
   {
    "tanggal": "2026-10-27",
    "preset": "o_ilx_laporan_laporan",
-   "nama": "o_ilx_laporan_laporan",
+   "nama": "Illusix · Musim laporan keuangan+ (arsip)",
    "kode": "ESSA",
    "label": "SIAP",
    "status": "selesai",
@@ -370,7 +370,7 @@
   {
    "tanggal": "2026-10-27",
    "preset": "o_ilx_laporan_laporan",
-   "nama": "o_ilx_laporan_laporan",
+   "nama": "Illusix · Musim laporan keuangan+ (arsip)",
    "kode": "PWON",
    "label": "SIAP",
    "status": "selesai",
@@ -468,7 +468,7 @@
   {
    "tanggal": "2026-10-28",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "SMDR",
    "label": "SIAP",
    "status": "selesai",
@@ -482,7 +482,7 @@
   {
    "tanggal": "2026-10-28",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "NISP",
    "label": "SIAP",
    "status": "selesai",
@@ -594,7 +594,7 @@
   {
    "tanggal": "2026-10-28",
    "preset": "o_ilx_laporan_laporan",
-   "nama": "o_ilx_laporan_laporan",
+   "nama": "Illusix · Musim laporan keuangan+ (arsip)",
    "kode": "SMDR",
    "label": "SIAP",
    "status": "selesai",
@@ -608,7 +608,7 @@
   {
    "tanggal": "2026-10-28",
    "preset": "o_ilx_laporan_laporan",
-   "nama": "o_ilx_laporan_laporan",
+   "nama": "Illusix · Musim laporan keuangan+ (arsip)",
    "kode": "NISP",
    "label": "SIAP",
    "status": "selesai",
@@ -631,7 +631,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -2.58
+   "ret_berjalan": -6.95
   },
   {
    "tanggal": "2026-10-29",
@@ -659,7 +659,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 1.05
+   "ret_berjalan": 0.57
   },
   {
    "tanggal": "2026-10-30",
@@ -715,7 +715,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 8.81
+   "ret_berjalan": 6.71
   },
   {
    "tanggal": "2026-10-30",
@@ -748,7 +748,7 @@
   {
    "tanggal": "2026-10-30",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "MARK",
    "label": "SIAP",
    "status": "selesai",
@@ -762,7 +762,7 @@
   {
    "tanggal": "2026-10-30",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "POWR",
    "label": "SIAP",
    "status": "selesai",
@@ -813,7 +813,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 8.81
+   "ret_berjalan": 6.71
   },
   {
    "tanggal": "2026-10-30",
@@ -846,7 +846,7 @@
   {
    "tanggal": "2026-10-30",
    "preset": "o_ilx_laporan_laporan",
-   "nama": "o_ilx_laporan_laporan",
+   "nama": "Illusix · Musim laporan keuangan+ (arsip)",
    "kode": "MARK",
    "label": "SIAP",
    "status": "selesai",
@@ -860,7 +860,7 @@
   {
    "tanggal": "2026-10-30",
    "preset": "o_ilx_laporan_laporan",
-   "nama": "o_ilx_laporan_laporan",
+   "nama": "Illusix · Musim laporan keuangan+ (arsip)",
    "kode": "POWR",
    "label": "SIAP",
    "status": "selesai",
@@ -883,12 +883,12 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.9
+   "ret_berjalan": 1.16
   },
   {
    "tanggal": "2026-11-02",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "RMKE",
    "label": "PANTAU",
    "status": "selesai",
@@ -902,7 +902,7 @@
   {
    "tanggal": "2026-11-02",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "SILO",
    "label": "PANTAU",
    "status": "selesai",
@@ -916,7 +916,7 @@
   {
    "tanggal": "2026-11-04",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "NCKL",
    "label": "SIAP",
    "status": "selesai",
@@ -930,7 +930,7 @@
   {
    "tanggal": "2026-11-04",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "CLEO",
    "label": "SIAP",
    "status": "selesai",
@@ -953,7 +953,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.56
+   "ret_berjalan": 0.09
   },
   {
    "tanggal": "2026-11-05",
@@ -967,7 +967,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 9.27
+   "ret_berjalan": 7.17
   },
   {
    "tanggal": "2026-11-05",
@@ -1000,7 +1000,7 @@
   {
    "tanggal": "2026-11-05",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "UNVR",
    "label": "SIAP",
    "status": "selesai",
@@ -1014,7 +1014,7 @@
   {
    "tanggal": "2026-11-05",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "MPMX",
    "label": "SIAP",
    "status": "selesai",
@@ -1037,7 +1037,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.56
+   "ret_berjalan": 0.09
   },
   {
    "tanggal": "2026-11-06",
@@ -1121,7 +1121,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 3.58
+   "ret_berjalan": 1.59
   },
   {
    "tanggal": "2026-11-09",
@@ -1154,7 +1154,7 @@
   {
    "tanggal": "2026-11-09",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "SRTG",
    "label": "SIAP",
    "status": "selesai",
@@ -1168,7 +1168,7 @@
   {
    "tanggal": "2026-11-09",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "ALII",
    "label": "PANTAU",
    "status": "selesai",
@@ -1182,7 +1182,7 @@
   {
    "tanggal": "2026-11-10",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "SMGR",
    "label": "PANTAU",
    "status": "selesai",
@@ -1196,7 +1196,7 @@
   {
    "tanggal": "2026-11-10",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "CUAN",
    "label": "PANTAU",
    "status": "selesai",
@@ -1233,12 +1233,12 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.9
+   "ret_berjalan": 1.16
   },
   {
    "tanggal": "2026-11-11",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "MYOR",
    "label": "SIAP",
    "status": "selesai",
@@ -1252,7 +1252,7 @@
   {
    "tanggal": "2026-11-11",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "ENRG",
    "label": "PANTAU",
    "status": "selesai",
@@ -1275,7 +1275,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.9
+   "ret_berjalan": 1.16
   },
   {
    "tanggal": "2026-11-12",
@@ -1289,7 +1289,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 6.9
+   "ret_berjalan": 4.75
   },
   {
    "tanggal": "2026-11-12",
@@ -1308,7 +1308,7 @@
   {
    "tanggal": "2026-11-12",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "BUMI",
    "label": "SIAP",
    "status": "selesai",
@@ -1322,7 +1322,7 @@
   {
    "tanggal": "2026-11-12",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "DMAS",
    "label": "SIAP",
    "status": "selesai",
@@ -1345,7 +1345,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -2.31
+   "ret_berjalan": -6.69
   },
   {
    "tanggal": "2026-11-12",
@@ -1359,12 +1359,12 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 6.9
+   "ret_berjalan": 4.75
   },
   {
    "tanggal": "2026-11-12",
    "preset": "o_ilx_samping",
-   "nama": "o_ilx_samping",
+   "nama": "Illusix · Sideways+ (arsip)",
    "kode": "BUMI",
    "label": "SIAP",
    "status": "selesai",
@@ -1378,7 +1378,7 @@
   {
    "tanggal": "2026-11-12",
    "preset": "o_ilx_samping",
-   "nama": "o_ilx_samping",
+   "nama": "Illusix · Sideways+ (arsip)",
    "kode": "DMAS",
    "label": "SIAP",
    "status": "selesai",
@@ -1434,7 +1434,7 @@
   {
    "tanggal": "2026-11-13",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "ISAT",
    "label": "SIAP",
    "status": "terbuka",
@@ -1448,7 +1448,7 @@
   {
    "tanggal": "2026-11-13",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "HRUM",
    "label": "SIAP",
    "status": "batal",
@@ -1499,7 +1499,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -2.16
+   "ret_berjalan": -1.91
   },
   {
    "tanggal": "2026-11-13",
@@ -1513,7 +1513,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 2.48
+   "ret_berjalan": 0.42
   },
   {
    "tanggal": "2026-11-13",
@@ -1532,7 +1532,7 @@
   {
    "tanggal": "2026-11-13",
    "preset": "o_ilx_samping",
-   "nama": "o_ilx_samping",
+   "nama": "Illusix · Sideways+ (arsip)",
    "kode": "ISAT",
    "label": "SIAP",
    "status": "terbuka",
@@ -1546,7 +1546,7 @@
   {
    "tanggal": "2026-11-13",
    "preset": "o_ilx_samping",
-   "nama": "o_ilx_samping",
+   "nama": "Illusix · Sideways+ (arsip)",
    "kode": "HRUM",
    "label": "SIAP",
    "status": "batal",
@@ -1588,7 +1588,7 @@
   {
    "tanggal": "2026-11-16",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "MNCN",
    "label": "SIAP",
    "status": "selesai",
@@ -1602,7 +1602,7 @@
   {
    "tanggal": "2026-11-16",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "CLEO",
    "label": "SIAP",
    "status": "terbuka",
@@ -1616,7 +1616,7 @@
   {
    "tanggal": "2026-11-16",
    "preset": "o_ilx_samping",
-   "nama": "o_ilx_samping",
+   "nama": "Illusix · Sideways+ (arsip)",
    "kode": "MNCN",
    "label": "SIAP",
    "status": "selesai",
@@ -1630,7 +1630,7 @@
   {
    "tanggal": "2026-11-16",
    "preset": "o_ilx_samping",
-   "nama": "o_ilx_samping",
+   "nama": "Illusix · Sideways+ (arsip)",
    "kode": "CLEO",
    "label": "SIAP",
    "status": "terbuka",
@@ -1672,7 +1672,7 @@
   {
    "tanggal": "2026-11-17",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "BRIS",
    "label": "SIAP",
    "status": "menunggu",
@@ -1686,7 +1686,7 @@
   {
    "tanggal": "2026-11-17",
    "preset": "b_ilx",
-   "nama": "b_ilx",
+   "nama": "Illusix (arsip)",
    "kode": "MPXL",
    "label": "SIAP",
    "status": "menunggu",
@@ -1709,12 +1709,12 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.34
+   "ret_berjalan": -0.4
   },
   {
    "tanggal": "2026-11-17",
    "preset": "o_ilx_samping",
-   "nama": "o_ilx_samping",
+   "nama": "Illusix · Sideways+ (arsip)",
    "kode": "PNBN",
    "label": "PANTAU",
    "status": "menunggu",
@@ -1737,7 +1737,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -0.01
+   "ret_berjalan": -1.94
   },
   {
    "tanggal": "2026-11-18",
@@ -1752,6 +1752,212 @@
    "r": -1.09,
    "ret": -4.71,
    "ret_berjalan": null
+  }
+ ],
+ "pantauan": [
+  {
+   "id": "p_bandar_kuat",
+   "nama": "Pantau · Bandar · Saham Terkuat",
+   "induk": "b_bandar",
+   "sejak": null,
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_aseng_tt",
+   "nama": "Pantau · Aseng ACC · Trend Template",
+   "induk": "b_aseng",
+   "sejak": null,
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_kuat_dd",
+   "nama": "Pantau · Tren Super Kuat · Pasar Sehat",
+   "induk": "b_sw_kuat",
+   "sejak": "2026-11-16",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 2,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_potensi_l20",
+   "nama": "Pantau · Potential Reversal (SL/TP level 20D)",
+   "induk": "b_aseng",
+   "sejak": "2026-11-13",
+   "belum_mulai": false,
+   "selesai": 1,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": -1.05,
+   "induk_stat": {
+    "selesai": 1,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": -1.18
+   }
+  },
+  {
+   "id": "p_aseng_tenang",
+   "nama": "Pantau · Aseng ACC · Akumulasi Tenang",
+   "induk": "b_aseng",
+   "sejak": null,
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_bandar_antre",
+   "nama": "Pantau · Bandar · Antre −1,5%",
+   "induk": "b_bandar",
+   "sejak": null,
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_52w_aseng",
+   "nama": "Pantau · 52W High · keluar ala Aseng ACC",
+   "induk": "b_aseng",
+   "sejak": "2026-11-19",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_ma50_sw_bo",
+   "nama": "Pantau · Tembus Resistance · IHSG > MA50",
+   "induk": "b_sw_bo",
+   "sejak": null,
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_ma50_ftt",
+   "nama": "Pantau · Follow The Trend · IHSG > MA50",
+   "induk": "b_ftt",
+   "sejak": null,
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_bandar_aroon",
+   "nama": "Pantau · Bandar · Aroon Naik",
+   "induk": "b_bandar",
+   "sejak": "2026-11-19",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_pocket_pivot",
+   "nama": "Pantau · Pocket Pivot · keluar ala Aseng ACC",
+   "induk": "b_aseng",
+   "sejak": "2026-11-19",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_bandar_aroon_sektor",
+   "nama": "Pantau · Bandar · Aroon · Ranking Sektor",
+   "induk": "p_bandar_aroon",
+   "sejak": "2026-11-20",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
   }
  ]
 }
