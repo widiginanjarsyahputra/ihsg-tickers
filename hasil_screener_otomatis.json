@@ -1,1 +1,486 @@
-{"versi":1,"data_sampai":"2026-11-20","ihsg":"Downtrend","cakupan":336,"total":340,"alasan":"Risiko pasar tinggi atau indikator pasar belum lengkap","breadth_pct":16.7,"vol":"BERGEJOLAK","dd25":3,"zona_distribusi":"normal","sektor":[{"nama":"Retail trade","n":11,"rs20":6.41},{"nama":"Finance","n":58,"rs20":-0.4},{"nama":"Consumer non-durables","n":20,"rs20":-1.62}],"status_valid":true,"preset":[{"id":"b_sw_kor","nama":"Swing · Beli Saat Koreksi","riset":true,"aktif":false,"selesai":7,"rata_r":-1.08,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"b_sw_bo","nama":"Swing · Tembus Resistance","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"b_sw_kuat","nama":"Swing · Tren Super Kuat","riset":false,"aktif":false,"selesai":7,"rata_r":-1.31,"kandidat":[],"backtest_lolos":true,"bukti_backtest":{"data_sampai":"2026-11-19","lolos":true,"n12":141,"n24":218,"r12":0.16,"r24":0.37,"stress12":0.08,"stress24":0.26,"regime":{"NAIK":{"n":107,"r":0.17,"lolos":true},"SAMPING":{"n":34,"r":0.16,"lolos":true},"TURUN":{"n":0,"r":null,"lolos":false}}}},{"id":"b_aseng","nama":"Aseng ACC","riset":true,"aktif":false,"selesai":1,"rata_r":-1.18,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"b_bandar","nama":"Bandar","riset":true,"aktif":false,"selesai":2,"rata_r":-1.08,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"b_ftt","nama":"Follow The Trend","riset":true,"aktif":false,"selesai":1,"rata_r":-0.55,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"o_sw_kor_naik","nama":"Swing · Beli Saat Koreksi · Uptrend+","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"o_sw_kor_hari_selasa","nama":"Swing · Beli Saat Koreksi · Hari Selasa+","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"o_ftt_naik","nama":"Follow The Trend · Uptrend+","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"o_ftt_breadth_lebar","nama":"Follow The Trend · Breadth lebar+","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"n_lapis2_awal_tren","nama":"Eksperimen · Lapis Kedua Awal Tren","riset":true,"aktif":false,"selesai":1,"rata_r":-1.1,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"p_bandar_kuat","nama":"Pantau · Bandar · Saham Terkuat","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"p_aseng_tt","nama":"Pantau · Aseng ACC · Trend Template","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"p_kuat_dd","nama":"Pantau · Tren Super Kuat · Pasar Sehat","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"p_potensi_l20","nama":"Pantau · Potential Reversal (SL/TP level 20D)","riset":true,"aktif":false,"selesai":1,"rata_r":-1.05,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"p_aseng_tenang","nama":"Pantau · Aseng ACC · Akumulasi Tenang","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"p_bandar_antre","nama":"Pantau · Bandar · Antre −1,5%","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"p_52w_aseng","nama":"52W High · Swing (riset)","riset":false,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":true,"bukti_backtest":{"data_sampai":"2026-11-19","lolos":true,"n12":109,"n24":152,"r12":0.14,"r24":0.22,"stress12":0.04,"stress24":0.11,"regime":{"NAIK":{"n":93,"r":0.1,"lolos":true},"SAMPING":{"n":16,"r":0.41,"lolos":true},"TURUN":{"n":0,"r":null,"lolos":false}}}},{"id":"p_ma50_sw_bo","nama":"Pantau · Tembus Resistance · IHSG > MA50","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"p_ma50_ftt","nama":"Pantau · Follow The Trend · IHSG > MA50","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"p_bandar_aroon","nama":"Bandar · Aroon (riset)","riset":false,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":true,"bukti_backtest":{"data_sampai":"2026-11-19","lolos":true,"n12":65,"n24":94,"r12":0.59,"r24":1.19,"stress12":0.27,"stress24":0.89,"regime":{"NAIK":{"n":53,"r":0.68,"lolos":true},"SAMPING":{"n":12,"r":0.17,"lolos":false},"TURUN":{"n":0,"r":null,"lolos":false}}}},{"id":"p_pocket_pivot","nama":"Pocket Pivot · Swing (riset)","riset":false,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":true,"bukti_backtest":{"data_sampai":"2026-11-19","lolos":true,"n12":177,"n24":266,"r12":0.35,"r24":0.2,"stress12":0.23,"stress24":0.07,"regime":{"NAIK":{"n":126,"r":0.43,"lolos":true},"SAMPING":{"n":51,"r":0.17,"lolos":true},"TURUN":{"n":0,"r":null,"lolos":false}}}},{"id":"p_bandar_aroon_sektor","nama":"Pantau · Bandar · Aroon · Ranking Sektor","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null},{"id":"p_bandar_aroon_ihsg_hijau","nama":"Bandar · Aroon · IHSG Hijau","riset":false,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":true,"bukti_backtest":{"data_sampai":"2026-11-19","lolos":true,"n12":44,"n24":66,"r12":1.0,"r24":1.36,"stress12":0.66,"stress24":1.05,"regime":{"NAIK":{"n":36,"r":1.04,"lolos":true},"SAMPING":{"n":8,"r":0.8,"lolos":false},"TURUN":{"n":0,"r":null,"lolos":false}}}},{"id":"p_bandar_trend_following","nama":"Pantau · Bandar Trend Following · 40 sesi","riset":true,"aktif":false,"selesai":0,"rata_r":null,"kandidat":[],"backtest_lolos":false,"bukti_backtest":null}],"top":[]}
+{
+ "versi": 1,
+ "data_sampai": "2026-11-20",
+ "ihsg": "Downtrend",
+ "cakupan": 336,
+ "total": 340,
+ "alasan": "Risiko pasar tinggi atau indikator pasar belum lengkap",
+ "breadth_pct": 16.7,
+ "vol": "BERGEJOLAK",
+ "dd25": 3,
+ "zona_distribusi": "normal",
+ "sektor": [
+  {
+   "nama": "Retail trade",
+   "n": 11,
+   "rs20": 6.41
+  },
+  {
+   "nama": "Finance",
+   "n": 58,
+   "rs20": -0.4
+  },
+  {
+   "nama": "Consumer non-durables",
+   "n": 20,
+   "rs20": -1.62
+  }
+ ],
+ "status_valid": true,
+ "preset": [
+  {
+   "id": "b_sw_kor",
+   "nama": "Swing · Beli Saat Koreksi",
+   "riset": true,
+   "aktif": false,
+   "selesai": 7,
+   "rata_r": -1.08,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "b_sw_bo",
+   "nama": "Swing · Tembus Resistance",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "b_sw_kuat",
+   "nama": "Swing · Tren Super Kuat",
+   "riset": false,
+   "aktif": false,
+   "selesai": 7,
+   "rata_r": -1.31,
+   "kandidat": [],
+   "backtest_lolos": true,
+   "bukti_backtest": {
+    "data_sampai": "2026-11-19",
+    "lolos": true,
+    "n12": 141,
+    "n24": 218,
+    "r12": 0.16,
+    "r24": 0.37,
+    "stress12": 0.08,
+    "stress24": 0.26,
+    "regime": {
+     "NAIK": {
+      "n": 107,
+      "r": 0.17,
+      "lolos": true
+     },
+     "SAMPING": {
+      "n": 34,
+      "r": 0.16,
+      "lolos": true
+     },
+     "TURUN": {
+      "n": 0,
+      "r": null,
+      "lolos": false
+     }
+    }
+   }
+  },
+  {
+   "id": "b_aseng",
+   "nama": "Aseng ACC",
+   "riset": true,
+   "aktif": false,
+   "selesai": 1,
+   "rata_r": -1.18,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "b_bandar",
+   "nama": "Bandar",
+   "riset": true,
+   "aktif": false,
+   "selesai": 2,
+   "rata_r": -1.08,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "b_ftt",
+   "nama": "Follow The Trend",
+   "riset": true,
+   "aktif": false,
+   "selesai": 1,
+   "rata_r": -0.55,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "o_sw_kor_naik",
+   "nama": "Swing · Beli Saat Koreksi · Uptrend+",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "o_sw_kor_hari_selasa",
+   "nama": "Swing · Beli Saat Koreksi · Hari Selasa+",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "o_ftt_naik",
+   "nama": "Follow The Trend · Uptrend+",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "o_ftt_breadth_lebar",
+   "nama": "Follow The Trend · Breadth lebar+",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "n_lapis2_awal_tren",
+   "nama": "Eksperimen · Lapis Kedua Awal Tren",
+   "riset": true,
+   "aktif": false,
+   "selesai": 1,
+   "rata_r": -1.1,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "p_bandar_kuat",
+   "nama": "Pantau · Bandar · Saham Terkuat",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "p_aseng_tt",
+   "nama": "Pantau · Aseng ACC · Trend Template",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "p_kuat_dd",
+   "nama": "Pantau · Tren Super Kuat · Pasar Sehat",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "p_potensi_l20",
+   "nama": "Pantau · Potential Reversal (SL/TP level 20D)",
+   "riset": true,
+   "aktif": false,
+   "selesai": 1,
+   "rata_r": -1.05,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "p_aseng_tenang",
+   "nama": "Pantau · Aseng ACC · Akumulasi Tenang",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "p_bandar_antre",
+   "nama": "Pantau · Bandar · Antre −1,5%",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "p_52w_aseng",
+   "nama": "52W High · Swing (riset)",
+   "riset": false,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": true,
+   "bukti_backtest": {
+    "data_sampai": "2026-11-19",
+    "lolos": true,
+    "n12": 109,
+    "n24": 152,
+    "r12": 0.14,
+    "r24": 0.22,
+    "stress12": 0.04,
+    "stress24": 0.11,
+    "regime": {
+     "NAIK": {
+      "n": 93,
+      "r": 0.1,
+      "lolos": true
+     },
+     "SAMPING": {
+      "n": 16,
+      "r": 0.41,
+      "lolos": true
+     },
+     "TURUN": {
+      "n": 0,
+      "r": null,
+      "lolos": false
+     }
+    }
+   }
+  },
+  {
+   "id": "p_ma50_sw_bo",
+   "nama": "Pantau · Tembus Resistance · IHSG > MA50",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "p_ma50_ftt",
+   "nama": "Pantau · Follow The Trend · IHSG > MA50",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "p_bandar_aroon",
+   "nama": "Bandar · Aroon (riset)",
+   "riset": false,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": true,
+   "bukti_backtest": {
+    "data_sampai": "2026-11-19",
+    "lolos": true,
+    "n12": 65,
+    "n24": 94,
+    "r12": 0.59,
+    "r24": 1.19,
+    "stress12": 0.27,
+    "stress24": 0.89,
+    "regime": {
+     "NAIK": {
+      "n": 53,
+      "r": 0.68,
+      "lolos": true
+     },
+     "SAMPING": {
+      "n": 12,
+      "r": 0.17,
+      "lolos": false
+     },
+     "TURUN": {
+      "n": 0,
+      "r": null,
+      "lolos": false
+     }
+    }
+   }
+  },
+  {
+   "id": "p_pocket_pivot",
+   "nama": "Pocket Pivot · Swing (riset)",
+   "riset": false,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": true,
+   "bukti_backtest": {
+    "data_sampai": "2026-11-19",
+    "lolos": true,
+    "n12": 177,
+    "n24": 266,
+    "r12": 0.35,
+    "r24": 0.2,
+    "stress12": 0.23,
+    "stress24": 0.07,
+    "regime": {
+     "NAIK": {
+      "n": 126,
+      "r": 0.43,
+      "lolos": true
+     },
+     "SAMPING": {
+      "n": 51,
+      "r": 0.17,
+      "lolos": true
+     },
+     "TURUN": {
+      "n": 0,
+      "r": null,
+      "lolos": false
+     }
+    }
+   }
+  },
+  {
+   "id": "p_bandar_aroon_sektor",
+   "nama": "Pantau · Bandar · Aroon · Ranking Sektor",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "p_bandar_aroon_ihsg_hijau",
+   "nama": "Bandar · Aroon · IHSG Hijau",
+   "riset": false,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": true,
+   "bukti_backtest": {
+    "data_sampai": "2026-11-19",
+    "lolos": true,
+    "n12": 44,
+    "n24": 66,
+    "r12": 1.0,
+    "r24": 1.36,
+    "stress12": 0.66,
+    "stress24": 1.05,
+    "regime": {
+     "NAIK": {
+      "n": 36,
+      "r": 1.04,
+      "lolos": true
+     },
+     "SAMPING": {
+      "n": 8,
+      "r": 0.8,
+      "lolos": false
+     },
+     "TURUN": {
+      "n": 0,
+      "r": null,
+      "lolos": false
+     }
+    }
+   }
+  },
+  {
+   "id": "p_bandar_trend_following",
+   "nama": "Pantau · Bandar Trend Following · 40 sesi",
+   "riset": true,
+   "aktif": false,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": [],
+   "backtest_lolos": false,
+   "bukti_backtest": null
+  },
+  {
+   "id": "p_golden_cross_dasar",
+   "nama": "Pantau · Golden Cross MA20/50 dasar",
+   "riset": true,
+   "aktif": false,
+   "backtest_lolos": false,
+   "bukti_backtest": null,
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": []
+  },
+  {
+   "id": "p_golden_cross_momentum",
+   "nama": "Golden Cross · Momentum 60",
+   "riset": false,
+   "aktif": false,
+   "backtest_lolos": true,
+   "bukti_backtest": {
+    "data_sampai": "2026-11-19",
+    "lolos": true,
+    "n12": 38,
+    "n24": 41,
+    "r12": 0.48,
+    "r24": 0.49,
+    "stress12": 0.37,
+    "stress24": 0.42,
+    "regime": {
+     "NAIK": {
+      "n": 19,
+      "r": 0.65,
+      "lolos": true
+     },
+     "SAMPING": {
+      "n": 19,
+      "r": 0.3,
+      "lolos": true
+     },
+     "TURUN": {
+      "n": 0,
+      "r": null,
+      "lolos": false
+     }
+    }
+   },
+   "selesai": 0,
+   "rata_r": null,
+   "kandidat": []
+  }
+ ],
+ "top": []
+}

@@ -1958,6 +1958,40 @@
     "menunggu": 0,
     "rata_r": null
    }
+  },
+  {
+   "id": "p_golden_cross_dasar",
+   "nama": "Pantau · Golden Cross MA20/50 dasar",
+   "induk": "b_ftt",
+   "sejak": "2026-11-23",
+   "belum_mulai": true,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_golden_cross_momentum",
+   "nama": "Golden Cross · Momentum 60",
+   "induk": "p_golden_cross_dasar",
+   "sejak": "2026-11-23",
+   "belum_mulai": true,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
   }
  ]
 }
