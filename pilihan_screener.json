@@ -1,6 +1,6 @@
 {
- "diperbarui": "2026-11-20",
- "data_sampai": "2026-11-20",
+ "diperbarui": "2026-11-23",
+ "data_sampai": "2026-11-23",
  "aturan": "maks 2 saham per preset per hari (skor tertinggi), beli open esok hari; sama dengan forward test",
  "pilihan": [
   {
@@ -197,7 +197,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -0.39
+   "ret_berjalan": -1.34
   },
   {
    "tanggal": "2026-10-27",
@@ -309,7 +309,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -6.18
+   "ret_berjalan": -7.83
   },
   {
    "tanggal": "2026-10-27",
@@ -435,7 +435,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -7.96
+   "ret_berjalan": -5.89
   },
   {
    "tanggal": "2026-10-28",
@@ -533,7 +533,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -7.96
+   "ret_berjalan": -5.89
   },
   {
    "tanggal": "2026-10-28",
@@ -631,7 +631,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -6.95
+   "ret_berjalan": -8.59
   },
   {
    "tanggal": "2026-10-29",
@@ -659,7 +659,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.57
+   "ret_berjalan": -0.39
   },
   {
    "tanggal": "2026-10-30",
@@ -715,7 +715,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 6.71
+   "ret_berjalan": 4.2
   },
   {
    "tanggal": "2026-10-30",
@@ -813,7 +813,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 6.71
+   "ret_berjalan": 4.2
   },
   {
    "tanggal": "2026-10-30",
@@ -883,7 +883,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 1.16
+   "ret_berjalan": -0.66
   },
   {
    "tanggal": "2026-11-02",
@@ -953,7 +953,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.09
+   "ret_berjalan": -0.87
   },
   {
    "tanggal": "2026-11-05",
@@ -967,7 +967,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 7.17
+   "ret_berjalan": 4.64
   },
   {
    "tanggal": "2026-11-05",
@@ -1037,7 +1037,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.09
+   "ret_berjalan": -0.87
   },
   {
    "tanggal": "2026-11-06",
@@ -1121,7 +1121,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 1.59
+   "ret_berjalan": -0.8
   },
   {
    "tanggal": "2026-11-09",
@@ -1233,7 +1233,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 1.16
+   "ret_berjalan": -0.66
   },
   {
    "tanggal": "2026-11-11",
@@ -1275,7 +1275,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 1.16
+   "ret_berjalan": -0.66
   },
   {
    "tanggal": "2026-11-12",
@@ -1345,7 +1345,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -6.69
+   "ret_berjalan": -8.33
   },
   {
    "tanggal": "2026-11-12",
@@ -1499,7 +1499,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.91
+   "ret_berjalan": -3.67
   },
   {
    "tanggal": "2026-11-13",
@@ -1709,7 +1709,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -0.4
+   "ret_berjalan": 0.54
   },
   {
    "tanggal": "2026-11-17",
@@ -1731,13 +1731,13 @@
    "nama": "Swing · Tembus Resistance",
    "kode": "ASGR",
    "label": "SIAP",
-   "status": "terbuka",
+   "status": "selesai",
    "masuk": "2026-11-19",
-   "keluar": null,
-   "alasan": null,
-   "r": null,
-   "ret": null,
-   "ret_berjalan": -1.94
+   "keluar": "2026-11-23",
+   "alasan": "SL",
+   "r": -1.08,
+   "ret": -5.4,
+   "ret_berjalan": null
   },
   {
    "tanggal": "2026-11-18",
@@ -1751,6 +1751,34 @@
    "alasan": "SL",
    "r": -1.09,
    "ret": -4.71,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-23",
+   "preset": "b_dt",
+   "nama": "Day Trade",
+   "kode": "BREN",
+   "label": "SIAP",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-23",
+   "preset": "b_dt",
+   "nama": "Day Trade",
+   "kode": "MBMA",
+   "label": "PANTAU",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
    "ret_berjalan": null
   }
  ],
@@ -1795,10 +1823,10 @@
    "induk": "b_sw_kuat",
    "sejak": "2026-11-16",
    "belum_mulai": false,
-   "selesai": 0,
-   "terbuka": 2,
+   "selesai": 1,
+   "terbuka": 1,
    "menunggu": 0,
-   "rata_r": null,
+   "rata_r": -1.2,
    "induk_stat": {
     "selesai": 0,
     "terbuka": 0,
@@ -1960,14 +1988,48 @@
    }
   },
   {
+   "id": "p_bandar_aroon_ihsg_hijau",
+   "nama": "Pantau · Bandar · Aroon · IHSG Hijau",
+   "induk": "p_bandar_aroon",
+   "sejak": "2026-11-23",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_bandar_trend_following",
+   "nama": "Pantau · Bandar Trend Following · 40 sesi",
+   "induk": "p_bandar_aroon_ihsg_hijau",
+   "sejak": "2026-11-23",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
    "id": "p_golden_cross_dasar",
    "nama": "Pantau · Golden Cross MA20/50 dasar",
    "induk": "b_ftt",
    "sejak": "2026-11-23",
-   "belum_mulai": true,
+   "belum_mulai": false,
    "selesai": 0,
    "terbuka": 0,
-   "menunggu": 0,
+   "menunggu": 2,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
@@ -1981,7 +2043,160 @@
    "nama": "Golden Cross · Momentum 60",
    "induk": "p_golden_cross_dasar",
    "sejak": "2026-11-23",
-   "belum_mulai": true,
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 2,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_ftt_momentum80",
+   "nama": "Pantau · Follow The Trend · Momentum 80",
+   "induk": "p_cmp_ftt_momentum80",
+   "sejak": "2026-11-23",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_ftt_momentum70_ihsg",
+   "nama": "Pantau · Follow The Trend · Momentum 70 · IHSG > MA50",
+   "induk": "p_cmp_ftt_momentum80",
+   "sejak": "2026-11-23",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_golden_cross_bawah_ma50",
+   "nama": "Pantau · Golden Cross · IHSG < MA50",
+   "induk": "p_golden_cross_momentum",
+   "sejak": "2026-11-23",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 2,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_rebut_ma50",
+   "nama": "Pantau · Rebut MA50 · IHSG > MA50",
+   "induk": "b_sw_kor",
+   "sejak": "2026-11-23",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_review15_b_bandar",
+   "nama": "Pantau · Bandar · Review 15 sesi",
+   "induk": "p_cmp_review15_b_bandar",
+   "sejak": "2026-11-23",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_review15_b_sw_kuat",
+   "nama": "Pantau · Swing · Tren Super Kuat · Review 15 sesi",
+   "induk": "p_cmp_review15_b_sw_kuat",
+   "sejak": "2026-11-23",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_review15_p_bandar_aroon",
+   "nama": "Pantau · Bandar · Aroon Naik · Review 15 sesi",
+   "induk": "p_cmp_review15_p_bandar_aroon",
+   "sejak": "2026-11-23",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_review15_p_bandar_aroon_ihsg_hijau",
+   "nama": "Pantau · Bandar · Aroon · IHSG Hijau · Review 15 sesi",
+   "induk": "p_cmp_review15_p_bandar_aroon_ihsg_hijau",
+   "sejak": "2026-11-23",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_review15_p_golden_cross_momentum",
+   "nama": "Pantau · Golden Cross · Momentum 60 · Review 15 sesi",
+   "induk": "p_cmp_review15_p_golden_cross_momentum",
+   "sejak": "2026-11-23",
+   "belum_mulai": false,
    "selesai": 0,
    "terbuka": 0,
    "menunggu": 0,
