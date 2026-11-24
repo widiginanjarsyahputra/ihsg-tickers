@@ -1,5 +1,5 @@
 {
- "diperbarui": "2026-11-23",
+ "diperbarui": "2026-11-24",
  "data_sampai": "2026-11-23",
  "aturan": "maks 2 saham per preset per hari (skor tertinggi), beli open esok hari; sama dengan forward test",
  "pilihan": [
@@ -2112,6 +2112,125 @@
    "induk": "b_sw_kor",
    "sejak": "2026-11-23",
    "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_donchian_terfilter",
+   "nama": "Pantau · Donchian 55 · tren & breadth",
+   "induk": "p_cmp_donchian_dasar",
+   "sejak": "2026-11-24",
+   "belum_mulai": true,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_cmp_donchian_dasar",
+   "nama": "Pembanding · Donchian 55 polos",
+   "induk": "b_ftt",
+   "sejak": "2026-11-24",
+   "belum_mulai": true,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_rank60_baru",
+   "nama": "Pantau · Rank60 baru masuk 10% teratas",
+   "induk": "b_sw_kor",
+   "sejak": "2026-11-25",
+   "belum_mulai": true,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_turun3_tren",
+   "nama": "Pantau · Turun 3 hari dalam tren",
+   "induk": "b_sw_kor",
+   "sejak": "2026-11-25",
+   "belum_mulai": true,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_koreksi_reli20",
+   "nama": "Pantau · Koreksi setelah reli 20%",
+   "induk": "b_sw_kor",
+   "sejak": "2026-11-25",
+   "belum_mulai": true,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_lanjutan_lonjakan",
+   "nama": "Pantau · Lanjutan sehari setelah lonjakan",
+   "induk": "b_sw_kor",
+   "sejak": "2026-11-25",
+   "belum_mulai": true,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_lanjutan_kuat",
+   "nama": "Pantau · Lanjutan lonjakan · dekat high 52W + volume",
+   "induk": "b_sw_kor",
+   "sejak": "2026-11-25",
+   "belum_mulai": true,
    "selesai": 0,
    "terbuka": 0,
    "menunggu": 0,
