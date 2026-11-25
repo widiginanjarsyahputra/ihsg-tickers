@@ -1,5 +1,5 @@
 {
- "diperbarui": "2026-11-24",
+ "diperbarui": "2026-11-25",
  "data_sampai": "2026-11-23",
  "aturan": "maks 2 saham per preset per hari (skor tertinggi), beli open esok hari; sama dengan forward test",
  "pilihan": [
@@ -191,13 +191,13 @@
    "nama": "Swing · Tren Super Kuat",
    "kode": "ULTJ",
    "label": "SIAP",
-   "status": "terbuka",
+   "status": "selesai",
    "masuk": "2026-10-28",
-   "keluar": null,
-   "alasan": null,
-   "r": null,
-   "ret": null,
-   "ret_berjalan": -1.34
+   "keluar": "2026-11-24",
+   "alasan": "Batas waktu",
+   "r": -0.03,
+   "ret": -0.39,
+   "ret_berjalan": null
   },
   {
    "tanggal": "2026-10-27",
@@ -303,13 +303,13 @@
    "nama": "Swing · Tren Super Kuat · IHSG bergejolak+",
    "kode": "PRDA",
    "label": "SIAP",
-   "status": "terbuka",
+   "status": "selesai",
    "masuk": "2026-10-28",
-   "keluar": null,
-   "alasan": null,
-   "r": null,
-   "ret": null,
-   "ret_berjalan": -7.83
+   "keluar": "2026-11-24",
+   "alasan": "Batas waktu",
+   "r": -0.4,
+   "ret": -8.38,
+   "ret_berjalan": null
   },
   {
    "tanggal": "2026-10-27",
@@ -435,7 +435,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -5.89
+   "ret_berjalan": -3.49
   },
   {
    "tanggal": "2026-10-28",
@@ -533,7 +533,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -5.89
+   "ret_berjalan": -3.49
   },
   {
    "tanggal": "2026-10-28",
@@ -631,7 +631,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -8.59
+   "ret_berjalan": -9.13
   },
   {
    "tanggal": "2026-10-29",
@@ -659,7 +659,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -0.39
+   "ret_berjalan": 0.57
   },
   {
    "tanggal": "2026-10-30",
@@ -715,7 +715,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 4.2
+   "ret_berjalan": 7.55
   },
   {
    "tanggal": "2026-10-30",
@@ -813,7 +813,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 4.2
+   "ret_berjalan": 7.55
   },
   {
    "tanggal": "2026-10-30",
@@ -883,7 +883,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -0.66
+   "ret_berjalan": -1.44
   },
   {
    "tanggal": "2026-11-02",
@@ -953,7 +953,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -0.87
+   "ret_berjalan": 0.09
   },
   {
    "tanggal": "2026-11-05",
@@ -967,7 +967,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 4.64
+   "ret_berjalan": 8.01
   },
   {
    "tanggal": "2026-11-05",
@@ -1037,7 +1037,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -0.87
+   "ret_berjalan": 0.09
   },
   {
    "tanggal": "2026-11-06",
@@ -1121,7 +1121,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -0.8
+   "ret_berjalan": 2.39
   },
   {
    "tanggal": "2026-11-09",
@@ -1233,7 +1233,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -0.66
+   "ret_berjalan": -1.44
   },
   {
    "tanggal": "2026-11-11",
@@ -1275,7 +1275,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -0.66
+   "ret_berjalan": -1.44
   },
   {
    "tanggal": "2026-11-12",
@@ -1289,7 +1289,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 4.75
+   "ret_berjalan": 4.32
   },
   {
    "tanggal": "2026-11-12",
@@ -1345,7 +1345,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -8.33
+   "ret_berjalan": -8.88
   },
   {
    "tanggal": "2026-11-12",
@@ -1359,7 +1359,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 4.75
+   "ret_berjalan": 4.32
   },
   {
    "tanggal": "2026-11-12",
@@ -1499,7 +1499,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -3.67
+   "ret_berjalan": -4.42
   },
   {
    "tanggal": "2026-11-13",
@@ -1513,7 +1513,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.42
+   "ret_berjalan": 0.01
   },
   {
    "tanggal": "2026-11-13",
@@ -1709,7 +1709,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.54
+   "ret_berjalan": 3.38
   },
   {
    "tanggal": "2026-11-17",
@@ -1759,12 +1759,12 @@
    "nama": "Day Trade",
    "kode": "BREN",
    "label": "SIAP",
-   "status": "menunggu",
-   "masuk": null,
-   "keluar": null,
-   "alasan": null,
-   "r": null,
-   "ret": null,
+   "status": "selesai",
+   "masuk": "2026-11-24",
+   "keluar": "2026-11-24",
+   "alasan": "SL",
+   "r": -1.16,
+   "ret": -2.92,
    "ret_berjalan": null
   },
   {
@@ -1773,12 +1773,12 @@
    "nama": "Day Trade",
    "kode": "MBMA",
    "label": "PANTAU",
-   "status": "menunggu",
-   "masuk": null,
-   "keluar": null,
-   "alasan": null,
-   "r": null,
-   "ret": null,
+   "status": "selesai",
+   "masuk": "2026-11-24",
+   "keluar": "2026-11-24",
+   "alasan": "SL",
+   "r": -1.14,
+   "ret": -3.15,
    "ret_berjalan": null
   }
  ],
@@ -2028,8 +2028,8 @@
    "sejak": "2026-11-23",
    "belum_mulai": false,
    "selesai": 0,
-   "terbuka": 0,
-   "menunggu": 2,
+   "terbuka": 2,
+   "menunggu": 0,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
@@ -2050,8 +2050,8 @@
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
-    "terbuka": 0,
-    "menunggu": 2,
+    "terbuka": 2,
+    "menunggu": 0,
     "rata_r": null
    }
   },
@@ -2096,8 +2096,8 @@
    "sejak": "2026-11-23",
    "belum_mulai": false,
    "selesai": 0,
-   "terbuka": 0,
-   "menunggu": 2,
+   "terbuka": 2,
+   "menunggu": 0,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
