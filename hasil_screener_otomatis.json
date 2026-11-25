@@ -1,29 +1,29 @@
 {
  "versi": 1,
- "data_sampai": "2026-11-23",
+ "data_sampai": "2026-11-24",
  "ihsg": "Sideways",
  "cakupan": 322,
  "total": 322,
  "alasan": "Risiko pasar tinggi atau indikator pasar belum lengkap",
- "breadth_pct": 20.5,
- "vol": "BERGEJOLAK",
+ "breadth_pct": 23.0,
+ "vol": "NORMAL",
  "dd25": 3,
  "zona_distribusi": "normal",
  "sektor": [
   {
-   "nama": "Retail trade",
-   "n": 12,
-   "rs20": 3.51
-  },
-  {
    "nama": "Utilities",
    "n": 6,
-   "rs20": 2.35
+   "rs20": 4.4
   },
   {
    "nama": "Finance",
    "n": 57,
-   "rs20": 0.53
+   "rs20": 0.43
+  },
+  {
+   "nama": "Consumer non-durables",
+   "n": 21,
+   "rs20": -1.53
   }
  ],
  "status_valid": true,
@@ -107,7 +107,16 @@
    "bukti_backtest": null,
    "selesai": 1,
    "rata_r": -0.55,
-   "kandidat": []
+   "kandidat": [
+    {
+     "kode": "PWON",
+     "skor": 87,
+     "close": 302.0,
+     "sl": 250,
+     "tp": 458,
+     "prioritas": false
+    }
+   ]
   },
   {
    "id": "n_lapis2_awal_tren",
@@ -363,19 +372,19 @@
    "rata_r": null,
    "kandidat": [
     {
-     "kode": "LSIP",
+     "kode": "MYOR",
      "skor": 75,
-     "close": 1605.0,
-     "sl": 1375,
-     "tp": 2300,
+     "close": 1535.0,
+     "sl": 1265,
+     "tp": 2350,
      "prioritas": false
     },
     {
-     "kode": "ACES",
+     "kode": "INDF",
      "skor": 72,
-     "close": 350.0,
-     "sl": 318,
-     "tp": 446,
+     "close": 7175.0,
+     "sl": 6200,
+     "tp": 10100,
      "prioritas": false
     }
    ]
@@ -450,19 +459,19 @@
    "rata_r": null,
    "kandidat": [
     {
-     "kode": "LSIP",
+     "kode": "MYOR",
      "skor": 75,
-     "close": 1605.0,
-     "sl": 1375,
-     "tp": 2300,
+     "close": 1535.0,
+     "sl": 1265,
+     "tp": 2350,
      "prioritas": false
     },
     {
-     "kode": "ACES",
+     "kode": "INDF",
      "skor": 72,
-     "close": 350.0,
-     "sl": 318,
-     "tp": 446,
+     "close": 7175.0,
+     "sl": 6200,
+     "tp": 10100,
      "prioritas": false
     }
    ]
@@ -498,7 +507,24 @@
    "bukti_backtest": null,
    "selesai": 0,
    "rata_r": null,
-   "kandidat": []
+   "kandidat": [
+    {
+     "kode": "BTPS",
+     "skor": 87,
+     "close": 1095.0,
+     "sl": 1035,
+     "tp": 1275,
+     "prioritas": false
+    },
+    {
+     "kode": "PWON",
+     "skor": 87,
+     "close": 302.0,
+     "sl": 284,
+     "tp": 356,
+     "prioritas": false
+    }
+   ]
   },
   {
    "id": "p_rank60_baru",

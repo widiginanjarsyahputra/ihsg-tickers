@@ -1,6 +1,6 @@
 {
  "diperbarui": "2026-11-25",
- "data_sampai": "2026-11-23",
+ "data_sampai": "2026-11-24",
  "aturan": "maks 2 saham per preset per hari (skor tertinggi), beli open esok hari; sama dengan forward test",
  "pilihan": [
   {
@@ -1780,6 +1780,76 @@
    "r": -1.14,
    "ret": -3.15,
    "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-24",
+   "preset": "b_dt",
+   "nama": "Day Trade",
+   "kode": "UNIQ",
+   "label": "SIAP",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-24",
+   "preset": "b_dt",
+   "nama": "Day Trade",
+   "kode": "MPXL",
+   "label": "PANTAU",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-24",
+   "preset": "b_bsjp",
+   "nama": "BSJP · Beli Sore Jual Pagi",
+   "kode": "INDF",
+   "label": "SIAP",
+   "status": "terbuka",
+   "masuk": "2026-11-24",
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": -0.4
+  },
+  {
+   "tanggal": "2026-11-24",
+   "preset": "b_bsjp",
+   "nama": "BSJP · Beli Sore Jual Pagi",
+   "kode": "ASGR",
+   "label": "PANTAU",
+   "status": "terbuka",
+   "masuk": "2026-11-24",
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": -0.4
+  },
+  {
+   "tanggal": "2026-11-24",
+   "preset": "b_ftt",
+   "nama": "Follow The Trend",
+   "kode": "PWON",
+   "label": "SIAP",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
   }
  ],
  "pantauan": [
@@ -2029,12 +2099,12 @@
    "belum_mulai": false,
    "selesai": 0,
    "terbuka": 2,
-   "menunggu": 0,
+   "menunggu": 2,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
     "terbuka": 0,
-    "menunggu": 0,
+    "menunggu": 1,
     "rata_r": null
    }
   },
@@ -2051,7 +2121,7 @@
    "induk_stat": {
     "selesai": 0,
     "terbuka": 2,
-    "menunggu": 0,
+    "menunggu": 2,
     "rata_r": null
    }
   },
@@ -2097,7 +2167,7 @@
    "belum_mulai": false,
    "selesai": 0,
    "terbuka": 2,
-   "menunggu": 0,
+   "menunggu": 2,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
@@ -2128,7 +2198,7 @@
    "nama": "Pantau · Donchian 55 · tren & breadth",
    "induk": "p_cmp_donchian_dasar",
    "sejak": "2026-11-24",
-   "belum_mulai": true,
+   "belum_mulai": false,
    "selesai": 0,
    "terbuka": 0,
    "menunggu": 0,
@@ -2136,7 +2206,7 @@
    "induk_stat": {
     "selesai": 0,
     "terbuka": 0,
-    "menunggu": 0,
+    "menunggu": 2,
     "rata_r": null
    }
   },
@@ -2145,15 +2215,15 @@
    "nama": "Pembanding · Donchian 55 polos",
    "induk": "b_ftt",
    "sejak": "2026-11-24",
-   "belum_mulai": true,
+   "belum_mulai": false,
    "selesai": 0,
    "terbuka": 0,
-   "menunggu": 0,
+   "menunggu": 2,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
     "terbuka": 0,
-    "menunggu": 0,
+    "menunggu": 1,
     "rata_r": null
    }
   },
