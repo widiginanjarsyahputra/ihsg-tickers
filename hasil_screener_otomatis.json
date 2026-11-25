@@ -2,30 +2,14 @@
  "versi": 1,
  "data_sampai": "2026-11-25",
  "ihsg": "Sideways",
- "cakupan": 321,
+ "cakupan": 0,
  "total": 322,
- "alasan": "Risiko pasar tinggi atau indikator pasar belum lengkap",
- "breadth_pct": 20.9,
+ "alasan": "Cakupan candle kurang dari 90%",
+ "breadth_pct": null,
  "vol": "NORMAL",
  "dd25": 3,
  "zona_distribusi": "normal",
- "sektor": [
-  {
-   "nama": "Utilities",
-   "n": 6,
-   "rs20": 4.19
-  },
-  {
-   "nama": "Finance",
-   "n": 57,
-   "rs20": 0.99
-  },
-  {
-   "nama": "Retail trade",
-   "n": 12,
-   "rs20": -0.75
-  }
- ],
+ "sektor": [],
  "status_valid": true,
  "preset": [
   {
@@ -107,24 +91,7 @@
    "bukti_backtest": null,
    "selesai": 1,
    "rata_r": -0.55,
-   "kandidat": [
-    {
-     "kode": "BUKA",
-     "skor": 87,
-     "close": 117.0,
-     "sl": 90,
-     "tp": 198,
-     "prioritas": false
-    },
-    {
-     "kode": "KLBF",
-     "skor": 87,
-     "close": 800.0,
-     "sl": 710,
-     "tp": 1070,
-     "prioritas": false
-    }
-   ]
+   "kandidat": []
   },
   {
    "id": "n_lapis2_awal_tren",
@@ -135,16 +102,7 @@
    "bukti_backtest": null,
    "selesai": 1,
    "rata_r": -1.1,
-   "kandidat": [
-    {
-     "kode": "BTPS",
-     "skor": 70,
-     "close": 1135.0,
-     "sl": 1075,
-     "tp": 1390,
-     "prioritas": false
-    }
-   ]
+   "kandidat": []
   },
   {
    "id": "p_bandar_kuat",
@@ -387,16 +345,7 @@
    "bukti_backtest": null,
    "selesai": 0,
    "rata_r": null,
-   "kandidat": [
-    {
-     "kode": "BBNI",
-     "skor": 72,
-     "close": 3580.0,
-     "sl": 3160,
-     "tp": 4840,
-     "prioritas": false
-    }
-   ]
+   "kandidat": []
   },
   {
    "id": "p_golden_cross_momentum",
@@ -466,16 +415,7 @@
    "bukti_backtest": null,
    "selesai": 0,
    "rata_r": null,
-   "kandidat": [
-    {
-     "kode": "BBNI",
-     "skor": 72,
-     "close": 3580.0,
-     "sl": 3160,
-     "tp": 4840,
-     "prioritas": false
-    }
-   ]
+   "kandidat": []
   },
   {
    "id": "p_rebut_ma50",
@@ -622,62 +562,5 @@
   }
  ],
  "top": [],
- "tertahan": [
-  {
-   "kode": "BUKA",
-   "skor": 87,
-   "close": 117.0,
-   "sl": 90,
-   "tp": 198,
-   "prioritas": false,
-   "preset": "b_ftt",
-   "nama": "Follow The Trend",
-   "alasan": [
-    "breadth 21% < 40%"
-   ],
-   "jenis": "riset"
-  },
-  {
-   "kode": "KLBF",
-   "skor": 87,
-   "close": 800.0,
-   "sl": 710,
-   "tp": 1070,
-   "prioritas": false,
-   "preset": "b_ftt",
-   "nama": "Follow The Trend",
-   "alasan": [
-    "breadth 21% < 40%"
-   ],
-   "jenis": "riset"
-  },
-  {
-   "kode": "BBNI",
-   "skor": 72,
-   "close": 3580.0,
-   "sl": 3160,
-   "tp": 4840,
-   "prioritas": false,
-   "preset": "p_golden_cross_bawah_ma50",
-   "nama": "Pantau · Golden Cross · IHSG < MA50",
-   "alasan": [
-    "breadth 21% < 40%"
-   ],
-   "jenis": "riset"
-  },
-  {
-   "kode": "BTPS",
-   "skor": 70,
-   "close": 1135.0,
-   "sl": 1075,
-   "tp": 1390,
-   "prioritas": false,
-   "preset": "n_lapis2_awal_tren",
-   "nama": "Eksperimen · Lapis Kedua Awal Tren",
-   "alasan": [
-    "breadth 21% < 40%"
-   ],
-   "jenis": "riset"
-  }
- ]
+ "tertahan": []
 }
