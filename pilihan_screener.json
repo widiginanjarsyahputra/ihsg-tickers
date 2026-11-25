@@ -1,6 +1,6 @@
 {
  "diperbarui": "2026-11-25",
- "data_sampai": "2026-11-24",
+ "data_sampai": "2026-11-25",
  "aturan": "maks 2 saham per preset per hari (skor tertinggi), beli open esok hari; sama dengan forward test",
  "pilihan": [
   {
@@ -429,13 +429,13 @@
    "nama": "Swing · Tren Super Kuat",
    "kode": "PKPK",
    "label": "SIAP",
-   "status": "terbuka",
+   "status": "selesai",
    "masuk": "2026-10-29",
-   "keluar": null,
-   "alasan": null,
-   "r": null,
-   "ret": null,
-   "ret_berjalan": -3.49
+   "keluar": "2026-11-25",
+   "alasan": "Batas waktu",
+   "r": -0.12,
+   "ret": -3.15,
+   "ret_berjalan": null
   },
   {
    "tanggal": "2026-10-28",
@@ -527,13 +527,13 @@
    "nama": "Swing · Tren Super Kuat · IHSG bergejolak+",
    "kode": "PKPK",
    "label": "SIAP",
-   "status": "terbuka",
+   "status": "selesai",
    "masuk": "2026-10-29",
-   "keluar": null,
-   "alasan": null,
-   "r": null,
-   "ret": null,
-   "ret_berjalan": -3.49
+   "keluar": "2026-11-25",
+   "alasan": "Batas waktu",
+   "r": -0.12,
+   "ret": -3.15,
+   "ret_berjalan": null
   },
   {
    "tanggal": "2026-10-28",
@@ -631,7 +631,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -9.13
+   "ret_berjalan": -7.22
   },
   {
    "tanggal": "2026-10-29",
@@ -659,7 +659,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.57
+   "ret_berjalan": 0.09
   },
   {
    "tanggal": "2026-10-30",
@@ -715,7 +715,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 7.55
+   "ret_berjalan": 7.13
   },
   {
    "tanggal": "2026-10-30",
@@ -813,7 +813,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 7.55
+   "ret_berjalan": 7.13
   },
   {
    "tanggal": "2026-10-30",
@@ -883,7 +883,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.44
+   "ret_berjalan": -2.47
   },
   {
    "tanggal": "2026-11-02",
@@ -953,7 +953,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.09
+   "ret_berjalan": -0.39
   },
   {
    "tanggal": "2026-11-05",
@@ -967,7 +967,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 8.01
+   "ret_berjalan": 7.59
   },
   {
    "tanggal": "2026-11-05",
@@ -1037,7 +1037,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.09
+   "ret_berjalan": -0.39
   },
   {
    "tanggal": "2026-11-06",
@@ -1121,7 +1121,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 2.39
+   "ret_berjalan": 1.99
   },
   {
    "tanggal": "2026-11-09",
@@ -1233,7 +1233,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.44
+   "ret_berjalan": -2.47
   },
   {
    "tanggal": "2026-11-11",
@@ -1275,7 +1275,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.44
+   "ret_berjalan": -2.47
   },
   {
    "tanggal": "2026-11-12",
@@ -1289,7 +1289,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 4.32
+   "ret_berjalan": 6.9
   },
   {
    "tanggal": "2026-11-12",
@@ -1345,7 +1345,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -8.88
+   "ret_berjalan": -6.97
   },
   {
    "tanggal": "2026-11-12",
@@ -1359,7 +1359,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 4.32
+   "ret_berjalan": 6.9
   },
   {
    "tanggal": "2026-11-12",
@@ -1499,7 +1499,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -4.42
+   "ret_berjalan": -5.43
   },
   {
    "tanggal": "2026-11-13",
@@ -1513,7 +1513,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.01
+   "ret_berjalan": 2.48
   },
   {
    "tanggal": "2026-11-13",
@@ -1709,7 +1709,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 3.38
+   "ret_berjalan": 7.15
   },
   {
    "tanggal": "2026-11-17",
@@ -1787,12 +1787,12 @@
    "nama": "Day Trade",
    "kode": "UNIQ",
    "label": "SIAP",
-   "status": "menunggu",
-   "masuk": null,
-   "keluar": null,
-   "alasan": null,
-   "r": null,
-   "ret": null,
+   "status": "selesai",
+   "masuk": "2026-11-25",
+   "keluar": "2026-11-25",
+   "alasan": "TP",
+   "r": 1.27,
+   "ret": 3.9,
    "ret_berjalan": null
   },
   {
@@ -1801,6 +1801,62 @@
    "nama": "Day Trade",
    "kode": "MPXL",
    "label": "PANTAU",
+   "status": "selesai",
+   "masuk": "2026-11-25",
+   "keluar": "2026-11-25",
+   "alasan": "SL",
+   "r": -1.11,
+   "ret": -3.81,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-24",
+   "preset": "b_bsjp",
+   "nama": "BSJP · Beli Sore Jual Pagi",
+   "kode": "INDF",
+   "label": "SIAP",
+   "status": "selesai",
+   "masuk": "2026-11-24",
+   "keluar": "2026-11-25",
+   "alasan": "Jual pembukaan",
+   "r": -0.19,
+   "ret": -0.4,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-24",
+   "preset": "b_bsjp",
+   "nama": "BSJP · Beli Sore Jual Pagi",
+   "kode": "ASGR",
+   "label": "PANTAU",
+   "status": "selesai",
+   "masuk": "2026-11-24",
+   "keluar": "2026-11-25",
+   "alasan": "TP (gap)",
+   "r": 1.49,
+   "ret": 3.48,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-24",
+   "preset": "b_ftt",
+   "nama": "Follow The Trend",
+   "kode": "PWON",
+   "label": "SIAP",
+   "status": "terbuka",
+   "masuk": "2026-11-25",
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": -1.06
+  },
+  {
+   "tanggal": "2026-11-25",
+   "preset": "b_ftt",
+   "nama": "Follow The Trend",
+   "kode": "KLBF",
+   "label": "SIAP",
    "status": "menunggu",
    "masuk": null,
    "keluar": null,
@@ -1810,38 +1866,24 @@
    "ret_berjalan": null
   },
   {
-   "tanggal": "2026-11-24",
-   "preset": "b_bsjp",
-   "nama": "BSJP · Beli Sore Jual Pagi",
-   "kode": "INDF",
-   "label": "SIAP",
-   "status": "terbuka",
-   "masuk": "2026-11-24",
-   "keluar": null,
-   "alasan": null,
-   "r": null,
-   "ret": null,
-   "ret_berjalan": -0.4
-  },
-  {
-   "tanggal": "2026-11-24",
-   "preset": "b_bsjp",
-   "nama": "BSJP · Beli Sore Jual Pagi",
-   "kode": "ASGR",
-   "label": "PANTAU",
-   "status": "terbuka",
-   "masuk": "2026-11-24",
-   "keluar": null,
-   "alasan": null,
-   "r": null,
-   "ret": null,
-   "ret_berjalan": -0.4
-  },
-  {
-   "tanggal": "2026-11-24",
+   "tanggal": "2026-11-25",
    "preset": "b_ftt",
    "nama": "Follow The Trend",
-   "kode": "PWON",
+   "kode": "BUKA",
+   "label": "SIAP",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-25",
+   "preset": "n_lapis2_awal_tren",
+   "nama": "Eksperimen · Lapis Kedua Awal Tren",
+   "kode": "BTPS",
    "label": "SIAP",
    "status": "menunggu",
    "masuk": null,
@@ -2098,13 +2140,13 @@
    "sejak": "2026-11-23",
    "belum_mulai": false,
    "selesai": 0,
-   "terbuka": 2,
-   "menunggu": 2,
+   "terbuka": 4,
+   "menunggu": 1,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
-    "terbuka": 0,
-    "menunggu": 1,
+    "terbuka": 1,
+    "menunggu": 2,
     "rata_r": null
    }
   },
@@ -2120,8 +2162,8 @@
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
-    "terbuka": 2,
-    "menunggu": 2,
+    "terbuka": 4,
+    "menunggu": 1,
     "rata_r": null
    }
   },
@@ -2166,8 +2208,8 @@
    "sejak": "2026-11-23",
    "belum_mulai": false,
    "selesai": 0,
-   "terbuka": 2,
-   "menunggu": 2,
+   "terbuka": 4,
+   "menunggu": 1,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
@@ -2205,8 +2247,8 @@
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
-    "terbuka": 0,
-    "menunggu": 2,
+    "terbuka": 2,
+    "menunggu": 0,
     "rata_r": null
    }
   },
@@ -2217,13 +2259,13 @@
    "sejak": "2026-11-24",
    "belum_mulai": false,
    "selesai": 0,
-   "terbuka": 0,
-   "menunggu": 2,
+   "terbuka": 2,
+   "menunggu": 0,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
-    "terbuka": 0,
-    "menunggu": 1,
+    "terbuka": 1,
+    "menunggu": 2,
     "rata_r": null
    }
   },
@@ -2232,7 +2274,7 @@
    "nama": "Pantau · Rank60 baru masuk 10% teratas",
    "induk": "b_sw_kor",
    "sejak": "2026-11-25",
-   "belum_mulai": true,
+   "belum_mulai": false,
    "selesai": 0,
    "terbuka": 0,
    "menunggu": 0,
@@ -2249,7 +2291,7 @@
    "nama": "Pantau · Turun 3 hari dalam tren",
    "induk": "b_sw_kor",
    "sejak": "2026-11-25",
-   "belum_mulai": true,
+   "belum_mulai": false,
    "selesai": 0,
    "terbuka": 0,
    "menunggu": 0,
@@ -2266,7 +2308,7 @@
    "nama": "Pantau · Koreksi setelah reli 20%",
    "induk": "b_sw_kor",
    "sejak": "2026-11-25",
-   "belum_mulai": true,
+   "belum_mulai": false,
    "selesai": 0,
    "terbuka": 0,
    "menunggu": 0,
@@ -2283,7 +2325,7 @@
    "nama": "Pantau · Lanjutan sehari setelah lonjakan",
    "induk": "b_sw_kor",
    "sejak": "2026-11-25",
-   "belum_mulai": true,
+   "belum_mulai": false,
    "selesai": 0,
    "terbuka": 0,
    "menunggu": 0,
@@ -2300,7 +2342,7 @@
    "nama": "Pantau · Lanjutan lonjakan · dekat high 52W + volume",
    "induk": "b_sw_kor",
    "sejak": "2026-11-25",
-   "belum_mulai": true,
+   "belum_mulai": false,
    "selesai": 0,
    "terbuka": 0,
    "menunggu": 0,
