@@ -637,5 +637,63 @@
    "kandidat": []
   }
  ],
- "top": []
+ "top": [],
+ "tertahan": [
+  {
+   "kode": "BTPS",
+   "skor": 87,
+   "close": 1095.0,
+   "sl": 1035,
+   "tp": 1275,
+   "prioritas": false,
+   "preset": "p_cmp_donchian_dasar",
+   "nama": "Pembanding · Donchian 55 polos",
+   "alasan": [
+    "breadth 23% < 40%"
+   ],
+   "jenis": "riset"
+  },
+  {
+   "kode": "PWON",
+   "skor": 87,
+   "close": 302.0,
+   "sl": 250,
+   "tp": 458,
+   "prioritas": false,
+   "preset": "b_ftt",
+   "nama": "Follow The Trend",
+   "alasan": [
+    "breadth 23% < 40%"
+   ],
+   "jenis": "riset"
+  },
+  {
+   "kode": "MYOR",
+   "skor": 75,
+   "close": 1535.0,
+   "sl": 1265,
+   "tp": 2350,
+   "prioritas": false,
+   "preset": "p_golden_cross_bawah_ma50",
+   "nama": "Pantau · Golden Cross · IHSG < MA50",
+   "alasan": [
+    "breadth 23% < 40%"
+   ],
+   "jenis": "riset"
+  },
+  {
+   "kode": "INDF",
+   "skor": 72,
+   "close": 7175.0,
+   "sl": 6200,
+   "tp": 10100,
+   "prioritas": false,
+   "preset": "p_golden_cross_bawah_ma50",
+   "nama": "Pantau · Golden Cross · IHSG < MA50",
+   "alasan": [
+    "breadth 23% < 40%"
+   ],
+   "jenis": "riset"
+  }
+ ]
 }
