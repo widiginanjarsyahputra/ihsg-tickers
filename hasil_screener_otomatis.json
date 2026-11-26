@@ -1,11 +1,11 @@
 {
  "versi": 1,
- "data_sampai": "2026-11-25",
+ "data_sampai": "2026-11-26",
  "ihsg": "Sideways",
- "cakupan": 322,
+ "cakupan": 321,
  "total": 322,
  "alasan": "Risiko pasar tinggi atau indikator pasar belum lengkap",
- "breadth_pct": 21.1,
+ "breadth_pct": 22.4,
  "vol": "NORMAL",
  "dd25": 3,
  "zona_distribusi": "normal",
@@ -13,17 +13,17 @@
   {
    "nama": "Utilities",
    "n": 6,
-   "rs20": 4.19
+   "rs20": 3.74
+  },
+  {
+   "nama": "Commercial services",
+   "n": 13,
+   "rs20": 0.4
   },
   {
    "nama": "Finance",
    "n": 57,
-   "rs20": 0.99
-  },
-  {
-   "nama": "Retail trade",
-   "n": 12,
-   "rs20": -0.75
+   "rs20": 0.33
   }
  ],
  "status_valid": true,
@@ -35,8 +35,8 @@
    "aktif": false,
    "backtest_lolos": false,
    "bukti_backtest": null,
-   "selesai": 7,
-   "rata_r": -1.08,
+   "selesai": 9,
+   "rata_r": -0.71,
    "kandidat": []
   },
   {
@@ -83,8 +83,8 @@
      }
     }
    },
-   "selesai": 9,
-   "rata_r": -1.03,
+   "selesai": 10,
+   "rata_r": -0.97,
    "kandidat": []
   },
   {
@@ -107,24 +107,7 @@
    "bukti_backtest": null,
    "selesai": 1,
    "rata_r": -0.55,
-   "kandidat": [
-    {
-     "kode": "BUKA",
-     "skor": 87,
-     "close": 117.0,
-     "sl": 90,
-     "tp": 198,
-     "prioritas": false
-    },
-    {
-     "kode": "KLBF",
-     "skor": 87,
-     "close": 800.0,
-     "sl": 710,
-     "tp": 1070,
-     "prioritas": false
-    }
-   ]
+   "kandidat": []
   },
   {
    "id": "n_lapis2_awal_tren",
@@ -135,16 +118,7 @@
    "bukti_backtest": null,
    "selesai": 1,
    "rata_r": -1.1,
-   "kandidat": [
-    {
-     "kode": "BTPS",
-     "skor": 70,
-     "close": 1135.0,
-     "sl": 1075,
-     "tp": 1390,
-     "prioritas": false
-    }
-   ]
+   "kandidat": []
   },
   {
    "id": "p_bandar_kuat",
@@ -389,11 +363,19 @@
    "rata_r": null,
    "kandidat": [
     {
-     "kode": "BBNI",
-     "skor": 72,
-     "close": 3580.0,
-     "sl": 3160,
-     "tp": 4840,
+     "kode": "ICBP",
+     "skor": 82,
+     "close": 7150.0,
+     "sl": 5400,
+     "tp": 12400,
+     "prioritas": false
+    },
+    {
+     "kode": "AYAM",
+     "skor": 80,
+     "close": 520.0,
+     "sl": 464,
+     "tp": 690,
      "prioritas": false
     }
    ]
@@ -468,11 +450,19 @@
    "rata_r": null,
    "kandidat": [
     {
-     "kode": "BBNI",
-     "skor": 72,
-     "close": 3580.0,
-     "sl": 3160,
-     "tp": 4840,
+     "kode": "ICBP",
+     "skor": 82,
+     "close": 7150.0,
+     "sl": 5400,
+     "tp": 12400,
+     "prioritas": false
+    },
+    {
+     "kode": "AYAM",
+     "skor": 80,
+     "close": 520.0,
+     "sl": 464,
+     "tp": 690,
      "prioritas": false
     }
    ]
@@ -508,7 +498,24 @@
    "bukti_backtest": null,
    "selesai": 0,
    "rata_r": null,
-   "kandidat": []
+   "kandidat": [
+    {
+     "kode": "UNIQ",
+     "skor": 87,
+     "close": 171.0,
+     "sl": 148,
+     "tp": 240,
+     "prioritas": false
+    },
+    {
+     "kode": "IDEA",
+     "skor": 80,
+     "close": 476.0,
+     "sl": 400,
+     "tp": 705,
+     "prioritas": false
+    }
+   ]
   },
   {
    "id": "p_rank60_baru",
@@ -624,58 +631,58 @@
  "top": [],
  "tertahan": [
   {
-   "kode": "BUKA",
+   "kode": "UNIQ",
    "skor": 87,
-   "close": 117.0,
-   "sl": 90,
-   "tp": 198,
+   "close": 171.0,
+   "sl": 148,
+   "tp": 240,
    "prioritas": false,
-   "preset": "b_ftt",
-   "nama": "Follow The Trend",
+   "preset": "p_cmp_donchian_dasar",
+   "nama": "Pembanding · Donchian 55 polos",
    "alasan": [
-    "breadth 21% < 40%"
+    "breadth 22% < 40%"
    ],
    "jenis": "riset"
   },
   {
-   "kode": "KLBF",
-   "skor": 87,
-   "close": 800.0,
-   "sl": 710,
-   "tp": 1070,
-   "prioritas": false,
-   "preset": "b_ftt",
-   "nama": "Follow The Trend",
-   "alasan": [
-    "breadth 21% < 40%"
-   ],
-   "jenis": "riset"
-  },
-  {
-   "kode": "BBNI",
-   "skor": 72,
-   "close": 3580.0,
-   "sl": 3160,
-   "tp": 4840,
+   "kode": "ICBP",
+   "skor": 82,
+   "close": 7150.0,
+   "sl": 5400,
+   "tp": 12400,
    "prioritas": false,
    "preset": "p_golden_cross_bawah_ma50",
    "nama": "Pantau · Golden Cross · IHSG < MA50",
    "alasan": [
-    "breadth 21% < 40%"
+    "breadth 22% < 40%"
    ],
    "jenis": "riset"
   },
   {
-   "kode": "BTPS",
-   "skor": 70,
-   "close": 1135.0,
-   "sl": 1075,
-   "tp": 1390,
+   "kode": "AYAM",
+   "skor": 80,
+   "close": 520.0,
+   "sl": 464,
+   "tp": 690,
    "prioritas": false,
-   "preset": "n_lapis2_awal_tren",
-   "nama": "Eksperimen · Lapis Kedua Awal Tren",
+   "preset": "p_golden_cross_bawah_ma50",
+   "nama": "Pantau · Golden Cross · IHSG < MA50",
    "alasan": [
-    "breadth 21% < 40%"
+    "breadth 22% < 40%"
+   ],
+   "jenis": "riset"
+  },
+  {
+   "kode": "IDEA",
+   "skor": 80,
+   "close": 476.0,
+   "sl": 400,
+   "tp": 705,
+   "prioritas": false,
+   "preset": "p_cmp_donchian_dasar",
+   "nama": "Pembanding · Donchian 55 polos",
+   "alasan": [
+    "breadth 22% < 40%"
    ],
    "jenis": "riset"
   }
