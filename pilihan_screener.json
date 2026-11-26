@@ -715,7 +715,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 5.46
+   "ret_berjalan": 7.13
   },
   {
    "tanggal": "2026-10-30",
@@ -813,7 +813,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 5.46
+   "ret_berjalan": 7.13
   },
   {
    "tanggal": "2026-10-30",
@@ -883,7 +883,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.7
+   "ret_berjalan": -2.47
   },
   {
    "tanggal": "2026-11-02",
@@ -1121,7 +1121,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.4
+   "ret_berjalan": 1.99
   },
   {
    "tanggal": "2026-11-09",
@@ -1233,7 +1233,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.7
+   "ret_berjalan": -2.47
   },
   {
    "tanggal": "2026-11-11",
@@ -1275,7 +1275,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.7
+   "ret_berjalan": -2.47
   },
   {
    "tanggal": "2026-11-12",
@@ -1289,7 +1289,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 6.47
+   "ret_berjalan": 6.9
   },
   {
    "tanggal": "2026-11-12",
@@ -1345,7 +1345,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -8.33
+   "ret_berjalan": -6.97
   },
   {
    "tanggal": "2026-11-12",
@@ -1359,7 +1359,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 6.47
+   "ret_berjalan": 6.9
   },
   {
    "tanggal": "2026-11-12",
@@ -1499,7 +1499,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -4.68
+   "ret_berjalan": -5.43
   },
   {
    "tanggal": "2026-11-13",
@@ -1513,7 +1513,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 2.07
+   "ret_berjalan": 2.48
   },
   {
    "tanggal": "2026-11-13",
@@ -1709,7 +1709,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 4.32
+   "ret_berjalan": 7.15
   },
   {
    "tanggal": "2026-11-17",
@@ -1849,7 +1849,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 1.58
+   "ret_berjalan": -1.06
   },
   {
    "tanggal": "2026-11-25",
@@ -1857,7 +1857,7 @@
    "nama": "Follow The Trend",
    "kode": "KLBF",
    "label": "SIAP",
-   "status": "terbuka",
+   "status": "menunggu",
    "masuk": "2026-11-26",
    "keluar": null,
    "alasan": null,
@@ -1871,7 +1871,7 @@
    "nama": "Follow The Trend",
    "kode": "BUKA",
    "label": "SIAP",
-   "status": "terbuka",
+   "status": "menunggu",
    "masuk": "2026-11-26",
    "keluar": null,
    "alasan": null,
@@ -1885,7 +1885,7 @@
    "nama": "Eksperimen · Lapis Kedua Awal Tren",
    "kode": "BTPS",
    "label": "SIAP",
-   "status": "terbuka",
+   "status": "menunggu",
    "masuk": "2026-11-26",
    "keluar": null,
    "alasan": null,
@@ -2168,13 +2168,13 @@
    "sejak": "2026-11-23",
    "belum_mulai": false,
    "selesai": 0,
-   "terbuka": 5,
-   "menunggu": 2,
+   "terbuka": 4,
+   "menunggu": 3,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
-    "terbuka": 3,
-    "menunggu": 0,
+    "terbuka": 1,
+    "menunggu": 2,
     "rata_r": null
    }
   },
@@ -2190,8 +2190,8 @@
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
-    "terbuka": 5,
-    "menunggu": 2,
+    "terbuka": 4,
+    "menunggu": 3,
     "rata_r": null
    }
   },
@@ -2236,8 +2236,8 @@
    "sejak": "2026-11-23",
    "belum_mulai": false,
    "selesai": 0,
-   "terbuka": 5,
-   "menunggu": 2,
+   "terbuka": 4,
+   "menunggu": 3,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
@@ -2292,8 +2292,8 @@
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
-    "terbuka": 3,
-    "menunggu": 0,
+    "terbuka": 1,
+    "menunggu": 2,
     "rata_r": null
    }
   },

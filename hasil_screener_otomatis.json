@@ -2,30 +2,14 @@
  "versi": 1,
  "data_sampai": "2026-11-26",
  "ihsg": "Sideways",
- "cakupan": 321,
+ "cakupan": 0,
  "total": 322,
- "alasan": "Risiko pasar tinggi atau indikator pasar belum lengkap",
- "breadth_pct": 22.4,
+ "alasan": "Cakupan candle kurang dari 90%",
+ "breadth_pct": null,
  "vol": "NORMAL",
  "dd25": 3,
  "zona_distribusi": "normal",
- "sektor": [
-  {
-   "nama": "Utilities",
-   "n": 6,
-   "rs20": 3.74
-  },
-  {
-   "nama": "Commercial services",
-   "n": 13,
-   "rs20": 0.4
-  },
-  {
-   "nama": "Finance",
-   "n": 57,
-   "rs20": 0.33
-  }
- ],
+ "sektor": [],
  "status_valid": true,
  "preset": [
   {
@@ -361,24 +345,7 @@
    "bukti_backtest": null,
    "selesai": 0,
    "rata_r": null,
-   "kandidat": [
-    {
-     "kode": "ICBP",
-     "skor": 82,
-     "close": 7150.0,
-     "sl": 5400,
-     "tp": 12400,
-     "prioritas": false
-    },
-    {
-     "kode": "AYAM",
-     "skor": 80,
-     "close": 520.0,
-     "sl": 464,
-     "tp": 690,
-     "prioritas": false
-    }
-   ]
+   "kandidat": []
   },
   {
    "id": "p_golden_cross_momentum",
@@ -448,24 +415,7 @@
    "bukti_backtest": null,
    "selesai": 0,
    "rata_r": null,
-   "kandidat": [
-    {
-     "kode": "ICBP",
-     "skor": 82,
-     "close": 7150.0,
-     "sl": 5400,
-     "tp": 12400,
-     "prioritas": false
-    },
-    {
-     "kode": "AYAM",
-     "skor": 80,
-     "close": 520.0,
-     "sl": 464,
-     "tp": 690,
-     "prioritas": false
-    }
-   ]
+   "kandidat": []
   },
   {
    "id": "p_rebut_ma50",
@@ -498,24 +448,7 @@
    "bukti_backtest": null,
    "selesai": 0,
    "rata_r": null,
-   "kandidat": [
-    {
-     "kode": "UNIQ",
-     "skor": 87,
-     "close": 171.0,
-     "sl": 148,
-     "tp": 240,
-     "prioritas": false
-    },
-    {
-     "kode": "IDEA",
-     "skor": 80,
-     "close": 476.0,
-     "sl": 400,
-     "tp": 705,
-     "prioritas": false
-    }
-   ]
+   "kandidat": []
   },
   {
    "id": "p_rank60_baru",
@@ -629,62 +562,5 @@
   }
  ],
  "top": [],
- "tertahan": [
-  {
-   "kode": "UNIQ",
-   "skor": 87,
-   "close": 171.0,
-   "sl": 148,
-   "tp": 240,
-   "prioritas": false,
-   "preset": "p_cmp_donchian_dasar",
-   "nama": "Pembanding · Donchian 55 polos",
-   "alasan": [
-    "breadth 22% < 40%"
-   ],
-   "jenis": "riset"
-  },
-  {
-   "kode": "ICBP",
-   "skor": 82,
-   "close": 7150.0,
-   "sl": 5400,
-   "tp": 12400,
-   "prioritas": false,
-   "preset": "p_golden_cross_bawah_ma50",
-   "nama": "Pantau · Golden Cross · IHSG < MA50",
-   "alasan": [
-    "breadth 22% < 40%"
-   ],
-   "jenis": "riset"
-  },
-  {
-   "kode": "AYAM",
-   "skor": 80,
-   "close": 520.0,
-   "sl": 464,
-   "tp": 690,
-   "prioritas": false,
-   "preset": "p_golden_cross_bawah_ma50",
-   "nama": "Pantau · Golden Cross · IHSG < MA50",
-   "alasan": [
-    "breadth 22% < 40%"
-   ],
-   "jenis": "riset"
-  },
-  {
-   "kode": "IDEA",
-   "skor": 80,
-   "close": 476.0,
-   "sl": 400,
-   "tp": 705,
-   "prioritas": false,
-   "preset": "p_cmp_donchian_dasar",
-   "nama": "Pembanding · Donchian 55 polos",
-   "alasan": [
-    "breadth 22% < 40%"
-   ],
-   "jenis": "riset"
-  }
- ]
+ "tertahan": []
 }
