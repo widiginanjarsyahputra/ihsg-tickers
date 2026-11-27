@@ -883,7 +883,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.96
+   "ret_berjalan": -1.7
   },
   {
    "tanggal": "2026-11-02",
@@ -1121,7 +1121,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 3.19
+   "ret_berjalan": 0.4
   },
   {
    "tanggal": "2026-11-09",
@@ -1233,7 +1233,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.96
+   "ret_berjalan": -1.7
   },
   {
    "tanggal": "2026-11-11",
@@ -1275,7 +1275,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.96
+   "ret_berjalan": -1.7
   },
   {
    "tanggal": "2026-11-12",
@@ -1289,7 +1289,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 8.19
+   "ret_berjalan": 6.47
   },
   {
    "tanggal": "2026-11-12",
@@ -1345,7 +1345,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -8.88
+   "ret_berjalan": -8.33
   },
   {
    "tanggal": "2026-11-12",
@@ -1359,7 +1359,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 8.19
+   "ret_berjalan": 6.47
   },
   {
    "tanggal": "2026-11-12",
@@ -1499,7 +1499,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -4.93
+   "ret_berjalan": -4.68
   },
   {
    "tanggal": "2026-11-13",
@@ -1513,7 +1513,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 3.72
+   "ret_berjalan": 2.07
   },
   {
    "tanggal": "2026-11-13",
@@ -1709,7 +1709,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 7.15
+   "ret_berjalan": 4.32
   },
   {
    "tanggal": "2026-11-17",
@@ -1849,7 +1849,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 2.9
+   "ret_berjalan": 1.58
   },
   {
    "tanggal": "2026-11-25",
@@ -1863,7 +1863,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 1.46
+   "ret_berjalan": -0.4
   },
   {
    "tanggal": "2026-11-25",
@@ -1877,7 +1877,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -0.4
+   "ret_berjalan": -1.24
   },
   {
    "tanggal": "2026-11-25",
@@ -1891,7 +1891,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -0.84
+   "ret_berjalan": -3.46
   },
   {
    "tanggal": "2026-11-26",
@@ -2392,8 +2392,8 @@
    "sejak": "2026-11-23",
    "belum_mulai": false,
    "selesai": 0,
-   "terbuka": 7,
-   "menunggu": 1,
+   "terbuka": 5,
+   "menunggu": 3,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
@@ -2414,8 +2414,8 @@
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
-    "terbuka": 7,
-    "menunggu": 1,
+    "terbuka": 5,
+    "menunggu": 3,
     "rata_r": null
    }
   },
@@ -2460,8 +2460,8 @@
    "sejak": "2026-11-23",
    "belum_mulai": false,
    "selesai": 0,
-   "terbuka": 7,
-   "menunggu": 0,
+   "terbuka": 5,
+   "menunggu": 2,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
@@ -2499,8 +2499,8 @@
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
-    "terbuka": 3,
-    "menunggu": 2,
+    "terbuka": 2,
+    "menunggu": 3,
     "rata_r": null
    }
   },
@@ -2511,8 +2511,8 @@
    "sejak": "2026-11-24",
    "belum_mulai": false,
    "selesai": 0,
-   "terbuka": 3,
-   "menunggu": 2,
+   "terbuka": 2,
+   "menunggu": 3,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,

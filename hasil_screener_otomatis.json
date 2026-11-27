@@ -2,11 +2,11 @@
  "versi": 2,
  "data_sampai": "2026-11-27",
  "ihsg": "Sideways",
- "cakupan": 316,
+ "cakupan": 0,
  "total": 322,
  "status_valid": true,
- "alasan": null,
- "breadth_pct": 24.1,
+ "alasan": "Cakupan candle kurang dari 90%",
+ "breadth_pct": null,
  "vol": "NORMAL",
  "dd25": 3,
  "zona_distribusi": "normal",
@@ -1854,18 +1854,7 @@
     "duplikat_dengan": null,
     "data_sampai": "2026-11-27"
    },
-   "kandidat": [
-    {
-     "kode": "SIMP",
-     "skor": 60,
-     "close": 560.0,
-     "sl": 494.0,
-     "tp": 760.0,
-     "label": "PANTAU",
-     "prioritas": false,
-     "siap_ai": false
-    }
-   ]
+   "kandidat": []
   },
   {
    "id": "o_golden_cross_dasar_breadth_lebar",
@@ -7319,18 +7308,7 @@
     "duplikat_dengan": null,
     "data_sampai": "2026-11-27"
    },
-   "kandidat": [
-    {
-     "kode": "SIMP",
-     "skor": 60,
-     "close": 560.0,
-     "sl": 494.0,
-     "tp": 760.0,
-     "label": "PANTAU",
-     "prioritas": false,
-     "siap_ai": false
-    }
-   ]
+   "kandidat": []
   },
   {
    "id": "p_golden_cross_momentum",
@@ -7529,18 +7507,7 @@
     "duplikat_dengan": null,
     "data_sampai": "2026-11-27"
    },
-   "kandidat": [
-    {
-     "kode": "INTP",
-     "skor": 87,
-     "close": 6300.0,
-     "sl": 5375.0,
-     "tp": 10000.0,
-     "label": "SIAP",
-     "prioritas": false,
-     "siap_ai": true
-    }
-   ]
+   "kandidat": []
   },
   {
    "id": "p_ftt_momentum70_ihsg",
