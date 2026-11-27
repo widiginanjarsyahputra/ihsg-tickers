@@ -1,690 +1,7817 @@
 {
- "versi": 1,
- "data_sampai": "2026-11-26",
+ "versi": 2,
+ "data_sampai": "2026-11-27",
  "ihsg": "Sideways",
- "cakupan": 322,
+ "cakupan": 316,
  "total": 322,
- "alasan": "Risiko pasar tinggi atau indikator pasar belum lengkap",
- "breadth_pct": 22.7,
+ "status_valid": true,
+ "alasan": null,
+ "breadth_pct": 24.1,
  "vol": "NORMAL",
  "dd25": 3,
  "zona_distribusi": "normal",
- "sektor": [
-  {
-   "nama": "Utilities",
-   "n": 6,
-   "rs20": 3.74
-  },
-  {
-   "nama": "Commercial services",
-   "n": 13,
-   "rs20": 0.4
-  },
-  {
-   "nama": "Finance",
-   "n": 57,
-   "rs20": 0.33
-  }
- ],
- "status_valid": true,
+ "sektor": [],
  "preset": [
   {
    "id": "b_sw_kor",
    "nama": "Swing · Beli Saat Koreksi",
-   "riset": true,
+   "jenis": "induk",
    "aktif": false,
+   "riset": true,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "lowMa20",
+     "op": "<=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": -2.0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 4.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 40.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
    "backtest_lolos": false,
-   "bukti_backtest": null,
-   "selesai": 9,
-   "rata_r": -0.71,
+   "bukti_backtest": {
+    "jenis": "induk",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": null,
+    "independen": false,
+    "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 195,
+    "r6": -0.005279276645336388,
+    "stress6": -0.3173503206252505,
+    "stress_pf6": 0.66,
+    "n12": 353,
+    "r12": -0.14275807584727745,
+    "stress12": -0.44433295018104774,
+    "stress_pf12": 0.56,
+    "n24": 727,
+    "r24": -0.031031008233468178,
+    "stress24": -0.328354179876004,
+    "stress_pf24": 0.67,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "b_sw_bo",
    "nama": "Swing · Tembus Resistance",
-   "riset": true,
+   "jenis": "induk",
    "aktif": false,
+   "riset": true,
+   "akar": "b_sw_bo",
+   "gaya": "swing",
+   "aturan_keluar": "Antre di level breakout (high 20 hari) +1% selama 5 hari · SL level −4% · TP harga masuk +12%",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 10.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "lebar20",
+     "op": "<=",
+     "kananNilai": 30.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 10.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
    "backtest_lolos": false,
-   "bukti_backtest": null,
-   "selesai": 1,
-   "rata_r": -1.08,
+   "bukti_backtest": {
+    "jenis": "induk",
+    "akar": "b_sw_bo",
+    "profil_keluar": "b_sw_bo",
+    "basis": null,
+    "independen": false,
+    "aturan_keluar": "Antre di level breakout (high 20 hari) +1% selama 5 hari · SL level −4% · TP harga masuk +12%",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 31,
+    "r6": 0.08201685860502785,
+    "stress6": -0.20834550498528406,
+    "stress_pf6": 0.67,
+    "n12": 61,
+    "r12": -0.34631478224186546,
+    "stress12": -0.6477619761065395,
+    "stress_pf12": 0.28,
+    "n24": 100,
+    "r24": -0.25718940094963494,
+    "stress24": -0.5562804064214435,
+    "stress_pf24": 0.36,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "b_sw_kuat",
    "nama": "Swing · Tren Super Kuat",
-   "riset": false,
+   "jenis": "induk",
    "aktif": false,
-   "backtest_lolos": true,
-   "bukti_backtest": {
-    "data_sampai": "2026-11-20",
-    "lolos": true,
-    "n12": 138,
-    "n24": 224,
-    "r12": 0.2,
-    "r24": 0.39,
-    "stress12": 0.12,
-    "stress24": 0.27,
-    "regime": {
-     "NAIK": {
-      "n": 104,
-      "r": 0.22,
-      "lolos": true
-     },
-     "SAMPING": {
-      "n": 34,
-      "r": 0.16,
-      "lolos": true
-     },
-     "TURUN": {
-      "n": 0,
-      "r": null,
-      "lolos": false
-     }
+   "riset": true,
+   "akar": "b_sw_kuat",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA50 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50",
+     "op": ">",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "ma150",
+     "op": ">",
+     "kananMetrik": "ma200"
+    },
+    {
+     "kiri": "ma200Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "dariLow52",
+     "op": ">=",
+     "kananNilai": 30.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
     }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "induk",
+    "akar": "b_sw_kuat",
+    "profil_keluar": "b_sw_kuat",
+    "basis": null,
+    "independen": false,
+    "aturan_keluar": "SL bawah MA50 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 422,
+    "r6": 0.22208021725266489,
+    "stress6": 0.11964775917541137,
+    "stress_pf6": 1.0,
+    "n12": 1830,
+    "r12": 0.09701198467942458,
+    "stress12": -0.0008272747684273813,
+    "stress_pf12": 1.01,
+    "n24": 3360,
+    "r24": 0.20855443539443067,
+    "stress24": 0.10505953116714668,
+    "stress_pf24": 1.39,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
    },
-   "selesai": 10,
-   "rata_r": -0.97,
+   "kandidat": []
+  },
+  {
+   "id": "b_dt",
+   "nama": "Day Trade",
+   "jenis": "induk",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_dt",
+   "gaya": "day",
+   "aturan_keluar": "SL low hari ini / −2,5% · TP +4%",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "harga",
+     "op": "<",
+     "kananNilai": 5000.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "valRasio5",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 0.5
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "volatil5",
+     "op": ">",
+     "kananNilai": 3.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "induk",
+    "akar": "b_dt",
+    "profil_keluar": "b_dt",
+    "basis": null,
+    "independen": false,
+    "aturan_keluar": "SL low hari ini / −2,5% · TP +4%",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "b_bsjp",
+   "nama": "BSJP · Beli Sore Jual Pagi",
+   "jenis": "induk",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_bsjp",
+   "gaya": "bsjp",
+   "aturan_keluar": "Jual di pembukaan besok · SL −2% hanya acuan risiko (1R) · TP +3% hanya acuan",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "chg",
+     "op": "<=",
+     "kananNilai": 8.0
+    },
+    {
+     "kiri": "keAra",
+     "op": ">=",
+     "kananNilai": 3.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 85.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 10.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma5"
+    },
+    {
+     "kiri": "ma5",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 80.0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 15.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 0.5
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "induk",
+    "akar": "b_bsjp",
+    "profil_keluar": "b_bsjp",
+    "basis": null,
+    "independen": false,
+    "aturan_keluar": "Jual di pembukaan besok · SL −2% hanya acuan risiko (1R) · TP +3% hanya acuan",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "b_aseng",
    "nama": "Aseng ACC",
-   "riset": true,
+   "jenis": "induk",
    "aktif": false,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 10.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 15.0
+    },
+    {
+     "kiri": "volRasio20i",
+     "op": ">=",
+     "kananNilai": 1.3
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 8.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
    "backtest_lolos": false,
-   "bukti_backtest": null,
-   "selesai": 1,
-   "rata_r": -1.18,
+   "bukti_backtest": {
+    "jenis": "induk",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": null,
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 51,
+    "r6": -0.15524550543473148,
+    "stress6": -0.4037609966179073,
+    "stress_pf6": 0.43,
+    "n12": 101,
+    "r12": -0.32171151180719715,
+    "stress12": -0.6020762867381316,
+    "stress_pf12": 0.36,
+    "n24": 210,
+    "r24": -0.1709690240344972,
+    "stress24": -0.4400507289521121,
+    "stress_pf24": 0.55,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "b_bandar",
+   "nama": "Bandar",
+   "jenis": "induk",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_bandar",
+   "gaya": "swing",
+   "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 95.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "induk",
+    "akar": "b_bandar",
+    "profil_keluar": "b_bandar",
+    "basis": null,
+    "independen": false,
+    "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W)",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 24,
+    "r6": 0.41948845392686923,
+    "stress6": 0.07550628230657598,
+    "stress_pf6": 1.29,
+    "n12": 65,
+    "r12": -0.28136024695487294,
+    "stress12": -0.5740260070545515,
+    "stress_pf12": 0.52,
+    "n24": 180,
+    "r24": 0.29349873561559164,
+    "stress24": -0.011613784132368578,
+    "stress_pf24": 1.02,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "b_ftt",
    "nama": "Follow The Trend",
-   "riset": true,
+   "jenis": "induk",
    "aktif": false,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "prevHigh",
+     "op": "<=",
+     "kananMetrik": "prevHigh20"
+    },
+    {
+     "kiri": "low150Pct",
+     "op": ">",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 4.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 1.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
    "backtest_lolos": false,
-   "bukti_backtest": null,
-   "selesai": 1,
-   "rata_r": -0.55,
+   "bukti_backtest": {
+    "jenis": "induk",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": null,
+    "independen": false,
+    "aturan_keluar": "SL support 20 hari · TP R:R 3",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 207,
+    "r6": -0.2054315618151808,
+    "stress6": -0.325961128028016,
+    "stress_pf6": 0.44,
+    "n12": 374,
+    "r12": -0.22636415064633064,
+    "stress12": -0.34405735194759146,
+    "stress_pf12": 0.41,
+    "n24": 707,
+    "r24": -0.017154204856390853,
+    "stress24": -0.12891819087946485,
+    "stress_pf24": 0.86,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "o_sw_kor_naik",
+   "nama": "Swing · Beli Saat Koreksi · Uptrend+",
+   "jenis": "varian",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "lowMa20",
+     "op": "<=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": -2.0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 4.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 40.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "b_sw_kor",
+    "independen": false,
+    "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 116,
+    "r6": 0.13766022149954146,
+    "stress6": -0.18068981522668912,
+    "stress_pf6": 0.84,
+    "n12": 222,
+    "r12": -0.08492498453172065,
+    "stress12": -0.3822768004233007,
+    "stress_pf12": 0.62,
+    "n24": 475,
+    "r24": 0.047450154407224596,
+    "stress24": -0.2456113994425172,
+    "stress_pf24": 0.74,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "o_sw_kor_breadth_lebar",
+   "nama": "Swing · Beli Saat Koreksi · Breadth lebar+",
+   "jenis": "varian",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "lowMa20",
+     "op": "<=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": -2.0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 4.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 40.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "b_sw_kor",
+    "independen": false,
+    "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 116,
+    "r6": 0.13766022149954146,
+    "stress6": -0.18068981522668912,
+    "stress_pf6": 0.84,
+    "n12": 162,
+    "r12": -0.10943444067145475,
+    "stress12": -0.4170347586269739,
+    "stress_pf12": 0.57,
+    "n24": 343,
+    "r24": -0.1296808076692966,
+    "stress24": -0.43085634140627166,
+    "stress_pf24": 0.55,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "o_ftt_naik",
+   "nama": "Follow The Trend · Uptrend+",
+   "jenis": "varian",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "prevHigh",
+     "op": "<=",
+     "kananMetrik": "prevHigh20"
+    },
+    {
+     "kiri": "low150Pct",
+     "op": ">",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 4.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 18.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 hari · TP R:R 3",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 71,
+    "r6": -0.14400830463255332,
+    "stress6": -0.2935885144502713,
+    "stress_pf6": 0.69,
+    "n12": 133,
+    "r12": -0.25947769711925955,
+    "stress12": -0.40404360330810524,
+    "stress_pf12": 0.54,
+    "n24": 251,
+    "r24": -0.054096307069512725,
+    "stress24": -0.18829982814633767,
+    "stress_pf24": 0.94,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "o_ftt_breadth_lebar",
+   "nama": "Follow The Trend · Breadth lebar+",
+   "jenis": "varian",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "prevHigh",
+     "op": "<=",
+     "kananMetrik": "prevHigh20"
+    },
+    {
+     "kiri": "low150Pct",
+     "op": ">",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 4.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 19.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 hari · TP R:R 3",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 90,
+    "r6": -0.14085709674031738,
+    "stress6": -0.28372213687336045,
+    "stress_pf6": 0.66,
+    "n12": 125,
+    "r12": -0.24342241488111843,
+    "stress12": -0.38755040051260975,
+    "stress_pf12": 0.52,
+    "n24": 229,
+    "r24": 0.002226259368233952,
+    "stress24": -0.13230796246512164,
+    "stress_pf24": 1.05,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "o_ma50_ftt_naik",
+   "nama": "Follow The Trend · IHSG > MA50 · Uptrend+",
+   "jenis": "varian",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 hari · TP R:R 3 · hanya bila IHSG close > MA50",
+   "kondisi": [
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "prevHigh",
+     "op": "<=",
+     "kananMetrik": "prevHigh20"
+    },
+    {
+     "kiri": "low150Pct",
+     "op": ">",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 4.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 18.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "p_ma50_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 hari · TP R:R 3 · hanya bila IHSG close > MA50",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 71,
+    "r6": -0.14400830463255332,
+    "stress6": -0.2935885144502713,
+    "stress_pf6": 0.69,
+    "n12": 133,
+    "r12": -0.25947769711925955,
+    "stress12": -0.40404360330810524,
+    "stress_pf12": 0.54,
+    "n24": 251,
+    "r24": -0.054096307069512725,
+    "stress24": -0.18829982814633767,
+    "stress_pf24": 0.94,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "o_ma50_ftt_vol_normal",
+   "nama": "Follow The Trend · IHSG > MA50 · Volatilitas IHSG normal+",
+   "jenis": "varian",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 hari · TP R:R 3 · hanya bila IHSG close > MA50",
+   "kondisi": [
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "prevHigh",
+     "op": "<=",
+     "kananMetrik": "prevHigh20"
+    },
+    {
+     "kiri": "low150Pct",
+     "op": ">",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 4.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 15.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "p_ma50_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 hari · TP R:R 3 · hanya bila IHSG close > MA50",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 72,
+    "r6": -0.20268654564824795,
+    "stress6": -0.3440745678214021,
+    "stress_pf6": 0.5,
+    "n12": 72,
+    "r12": -0.20268654564824795,
+    "stress12": -0.3440745678214021,
+    "stress_pf12": 0.5,
+    "n24": 139,
+    "r24": 0.06873318090851836,
+    "stress24": -0.06555990074231682,
+    "stress_pf24": 0.99,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "o_pocket_pivot_hari_rabu",
+   "nama": "Pocket Pivot · keluar ala Aseng ACC · Hari Rabu+",
+   "jenis": "varian",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2 · pocket pivot: naik, volume > volume terbesar hari turun 10 hari, close > MA50 · + IHSG > MA50",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "pp10",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 20.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "p_pocket_pivot",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2 · pocket pivot: naik, volume > volume terbesar hari turun 10 hari, close > MA50 · + IHSG > MA50",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 60,
+    "r6": -0.006510520484019648,
+    "stress6": -0.18700724393546533,
+    "stress_pf6": 0.96,
+    "n12": 111,
+    "r12": 0.03210510202616219,
+    "stress12": -0.14781404180424262,
+    "stress_pf12": 1.0,
+    "n24": 206,
+    "r24": 0.09169226876064956,
+    "stress24": -0.09391192620581111,
+    "stress_pf24": 1.31,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "o_pocket_pivot_breadth_lebar",
+   "nama": "Pocket Pivot · keluar ala Aseng ACC · Breadth lebar+",
+   "jenis": "varian",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2 · pocket pivot: naik, volume > volume terbesar hari turun 10 hari, close > MA50 · + IHSG > MA50",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "pp10",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 92.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "p_pocket_pivot",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2 · pocket pivot: naik, volume > volume terbesar hari turun 10 hari, close > MA50 · + IHSG > MA50",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 134,
+    "r6": 0.22579579215128712,
+    "stress6": 0.09299682985910407,
+    "stress_pf6": 1.2,
+    "n12": 400,
+    "r12": -0.09157913008993943,
+    "stress12": -0.20337983281902272,
+    "stress_pf12": 0.61,
+    "n24": 822,
+    "r24": 0.012450763866500198,
+    "stress24": -0.10863734984923044,
+    "stress_pf24": 0.94,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "o_golden_cross_dasar_samping",
+   "nama": "Golden Cross MA20/50 dasar · Sideways+",
+   "jenis": "varian",
+   "aktif": true,
+   "riset": false,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "Keluar ala FTT; pembanding forward saja",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "prevMA20",
+     "op": "<",
+     "kananMetrik": "prevMA50"
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 11.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": true,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "p_golden_cross_dasar",
+    "independen": false,
+    "aturan_keluar": "Keluar ala FTT; pembanding forward saja",
+    "pernah_aktif": true,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 31,
+    "r6": 0.5287207782578635,
+    "stress6": 0.40678139115186646,
+    "stress_pf6": 3.92,
+    "n12": 49,
+    "r12": 0.2603612064925372,
+    "stress12": 0.13559802155872444,
+    "stress_pf12": 1.63,
+    "n24": 73,
+    "r24": 0.2911889403566558,
+    "stress24": 0.17119486558690147,
+    "stress_pf24": 2.11,
+    "suara": [
+     true,
+     true,
+     false
+    ],
+    "jumlah_suara": 2,
+    "aktif": true,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": [
+    {
+     "kode": "SIMP",
+     "skor": 60,
+     "close": 560.0,
+     "sl": 494.0,
+     "tp": 760.0,
+     "label": "PANTAU",
+     "prioritas": false,
+     "siap_ai": false
+    }
+   ]
+  },
+  {
+   "id": "o_golden_cross_dasar_breadth_lebar",
+   "nama": "Golden Cross MA20/50 dasar · Breadth lebar+",
+   "jenis": "varian",
+   "aktif": true,
+   "riset": false,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "Keluar ala FTT; pembanding forward saja",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "prevMA20",
+     "op": "<",
+     "kananMetrik": "prevMA50"
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 17.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": true,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "p_golden_cross_dasar",
+    "independen": false,
+    "aturan_keluar": "Keluar ala FTT; pembanding forward saja",
+    "pernah_aktif": true,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 26,
+    "r6": 0.42616618323431454,
+    "stress6": 0.2590341933709526,
+    "stress_pf6": 2.21,
+    "n12": 45,
+    "r12": 0.24824486570384954,
+    "stress12": 0.0758546823584716,
+    "stress_pf12": 1.38,
+    "n24": 92,
+    "r24": 0.29072144830534724,
+    "stress24": 0.14344547098713828,
+    "stress_pf24": 2.14,
+    "suara": [
+     true,
+     true,
+     false
+    ],
+    "jumlah_suara": 2,
+    "aktif": true,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "o_koreksi_reli20_breadth_lebar",
+   "nama": "Koreksi setelah reli 20% · Breadth lebar+",
+   "jenis": "varian",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "Naik ≥20% dalam 20 sesi lalu koreksi 3–10% dalam 5 sesi, masih di atas MA20 · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "chg20",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "chg5",
+     "op": ">=",
+     "kananNilai": -10.0
+    },
+    {
+     "kiri": "chg5",
+     "op": "<=",
+     "kananNilai": -3.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": 4.5
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "p_koreksi_reli20",
+    "independen": false,
+    "aturan_keluar": "Naik ≥20% dalam 20 sesi lalu koreksi 3–10% dalam 5 sesi, masih di atas MA20 · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 64,
+    "r6": 0.0850023609774855,
+    "stress6": -0.11554344345753687,
+    "stress_pf6": 0.91,
+    "n12": 108,
+    "r12": -0.5020867416332869,
+    "stress12": -0.7517294720993447,
+    "stress_pf12": 0.59,
+    "n24": 200,
+    "r24": 0.23948622370263842,
+    "stress24": -0.0033658803265149573,
+    "stress_pf24": 1.39,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "o_koreksi_reli20_vol_normal",
+   "nama": "Koreksi setelah reli 20% · Volatilitas IHSG normal+",
+   "jenis": "varian",
+   "aktif": true,
+   "riset": false,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "Naik ≥20% dalam 20 sesi lalu koreksi 3–10% dalam 5 sesi, masih di atas MA20 · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "chg20",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "chg5",
+     "op": ">=",
+     "kananNilai": -10.0
+    },
+    {
+     "kiri": "chg5",
+     "op": "<=",
+     "kananNilai": -3.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 83.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": true,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "p_koreksi_reli20",
+    "independen": false,
+    "aturan_keluar": "Naik ≥20% dalam 20 sesi lalu koreksi 3–10% dalam 5 sesi, masih di atas MA20 · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+    "pernah_aktif": true,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 43,
+    "r6": 0.18911815546580332,
+    "stress6": 0.020452082548566838,
+    "stress_pf6": 1.02,
+    "n12": 43,
+    "r12": 0.18911815546580332,
+    "stress12": 0.020452082548566838,
+    "stress_pf12": 1.02,
+    "n24": 63,
+    "r24": 0.937527626918016,
+    "stress24": 0.7660921390991228,
+    "stress_pf24": 2.19,
+    "suara": [
+     true,
+     true,
+     false
+    ],
+    "jumlah_suara": 2,
+    "aktif": true,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "o_lanjutan_lonjakan_breadth_lebar",
+   "nama": "Lanjutan sehari setelah lonjakan · Breadth lebar+",
+   "jenis": "varian",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "Kemarin naik ≥5%, hari ini tidak turun dan tutup di 60% atas rentang · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "prevChg",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": "<=",
+     "kananNilai": 79.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "p_lanjutan_lonjakan",
+    "independen": false,
+    "aturan_keluar": "Kemarin naik ≥5%, hari ini tidak turun dan tutup di 60% atas rentang · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 40,
+    "r6": 0.31052829480887173,
+    "stress6": 0.1277643874773921,
+    "stress_pf6": 1.25,
+    "n12": 69,
+    "r12": -0.14014621533877375,
+    "stress12": -0.30063451404819086,
+    "stress_pf12": 0.64,
+    "n24": 162,
+    "r24": 0.16218560239985808,
+    "stress24": -0.008502347183356414,
+    "stress_pf24": 1.02,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "n_lapis2_awal_tren",
    "nama": "Eksperimen · Lapis Kedua Awal Tren",
-   "riset": true,
+   "jenis": "eksperimen",
    "aktif": false,
+   "riset": true,
+   "akar": "b_bandar",
+   "gaya": "swing",
+   "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "mcap",
+     "op": "<=",
+     "kananNilai": 10.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "dariLow52",
+     "op": ">=",
+     "kananNilai": 30.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 90.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
    "backtest_lolos": false,
-   "bukti_backtest": null,
-   "selesai": 1,
-   "rata_r": -1.1,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_bandar",
+    "profil_keluar": "b_bandar",
+    "basis": "b_bandar",
+    "independen": false,
+    "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W)",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 22,
+    "r6": 0.24687104631479623,
+    "stress6": -0.1750043706293685,
+    "stress_pf6": 1.06,
+    "n12": 65,
+    "r12": 0.33945914539262567,
+    "stress12": -0.04788831345386308,
+    "stress_pf12": 1.0,
+    "n24": 127,
+    "r24": 1.1222525490080695,
+    "stress24": 0.7611965161947591,
+    "stress_pf24": 1.67,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_pullback_dangkal",
+   "nama": "Eksperimen · Pullback Dangkal di Tren Kuat",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 3.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 65.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 192,
+    "r6": -0.027828219758802064,
+    "stress6": -0.5676328835788604,
+    "stress_pf6": 0.43,
+    "n12": 378,
+    "r12": -0.1895239306339946,
+    "stress12": -0.725109284074848,
+    "stress_pf12": 0.33,
+    "n24": 762,
+    "r24": -0.2750479012243073,
+    "stress24": -0.8298996780366098,
+    "stress_pf24": 0.3,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_breakout_rapat",
+   "nama": "Eksperimen · Breakout Konsolidasi Rapat",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_sw_bo",
+   "gaya": "swing",
+   "aturan_keluar": "Antre di level breakout (high 20 hari) +1% selama 5 hari · SL level −4% · TP harga masuk +12%",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "lebar20",
+     "op": "<=",
+     "kananNilai": 15.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_sw_bo",
+    "profil_keluar": "b_sw_bo",
+    "basis": "b_sw_bo",
+    "independen": false,
+    "aturan_keluar": "Antre di level breakout (high 20 hari) +1% selama 5 hari · SL level −4% · TP harga masuk +12%",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 18,
+    "r6": 0.010293939085605275,
+    "stress6": -0.26911711344546285,
+    "stress_pf6": 0.59,
+    "n12": 40,
+    "r12": -0.42220248077086353,
+    "stress12": -0.7156864156916166,
+    "stress_pf12": 0.24,
+    "n24": 55,
+    "r24": -0.43751063783013505,
+    "stress24": -0.7273001416689022,
+    "stress_pf24": 0.19,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_akumulasi_senyap",
+   "nama": "Eksperimen · Akumulasi Senyap Dekat Puncak",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 90.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": "<=",
+     "kananNilai": 1.2
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 3.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 hari · TP R:R 3",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 174,
+    "r6": -0.20062558944112516,
+    "stress6": -0.3351200853039468,
+    "stress_pf6": 0.38,
+    "n12": 552,
+    "r12": -0.22209089550732988,
+    "stress12": -0.35613547520183364,
+    "stress_pf12": 0.4,
+    "n24": 1105,
+    "r24": 0.10926155779775958,
+    "stress24": -0.028100033187354555,
+    "stress_pf24": 1.02,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_kuat_saat_lemah",
+   "nama": "Eksperimen · Kuat Saat IHSG Lemah",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 0,
+    "r6": null,
+    "stress6": null,
+    "stress_pf6": null,
+    "n12": 0,
+    "r12": null,
+    "stress12": null,
+    "stress_pf12": null,
+    "n24": 0,
+    "r24": null,
+    "stress24": null,
+    "stress_pf24": null,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_rebound_tren_panjang",
+   "nama": "Eksperimen · Rebound di Tren Jangka Panjang",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ma50",
+     "op": ">",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "ma200Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 40.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 0,
+    "r6": null,
+    "stress6": null,
+    "stress_pf6": null,
+    "n12": 0,
+    "r12": null,
+    "stress12": null,
+    "stress_pf12": null,
+    "n24": 0,
+    "r24": null,
+    "stress24": null,
+    "stress_pf24": null,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_momentum_moderat",
+   "nama": "Eksperimen · Momentum 20 Hari Moderat",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "chg20",
+     "op": ">=",
+     "kananNilai": 10.0
+    },
+    {
+     "kiri": "chg20",
+     "op": "<=",
+     "kananNilai": 25.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 8.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 hari · TP R:R 3",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 235,
+    "r6": -0.15369147687912665,
+    "stress6": -0.25860617546022685,
+    "stress_pf6": 0.36,
+    "n12": 392,
+    "r12": -0.2231356994920353,
+    "stress12": -0.323748563746446,
+    "stress_pf12": 0.37,
+    "n24": 852,
+    "r24": 0.0242792096623211,
+    "stress24": -0.08007681571430225,
+    "stress_pf24": 0.84,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_tren_tenang",
+   "nama": "Eksperimen · Tren Naik yang Tenang",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_sw_kuat",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA50 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.5
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 85.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_sw_kuat",
+    "profil_keluar": "b_sw_kuat",
+    "basis": "b_sw_kuat",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA50 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 338,
+    "r6": 0.102763143560741,
+    "stress6": -0.02556934821695191,
+    "stress_pf6": 1.12,
+    "n12": 930,
+    "r12": -0.027978044604029608,
+    "stress12": -0.1621540075657486,
+    "stress_pf12": 0.91,
+    "n24": 1827,
+    "r24": 0.08303076502392717,
+    "stress24": -0.06048334228646546,
+    "stress_pf24": 1.18,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_higher_low",
+   "nama": "Eksperimen · Higher Low Setelah Koreksi",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "lowMa20",
+     "op": "<=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.2
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 273,
+    "r6": 0.0945883325708172,
+    "stress6": -0.12928528084696198,
+    "stress_pf6": 0.94,
+    "n12": 634,
+    "r12": -0.09886517157245342,
+    "stress12": -0.3036328809211196,
+    "stress_pf12": 0.69,
+    "n24": 1314,
+    "r24": -0.016744012884105396,
+    "stress24": -0.22342305218645875,
+    "stress_pf24": 0.85,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_bigcap_tertinggal",
+   "nama": "Eksperimen · Big Cap Tertinggal",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "chg5",
+     "op": "<=",
+     "kananNilai": -3.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 35.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 0,
+    "r6": null,
+    "stress6": null,
+    "stress_pf6": null,
+    "n12": 0,
+    "r12": null,
+    "stress12": null,
+    "stress_pf12": null,
+    "n24": 0,
+    "r24": null,
+    "stress24": null,
+    "stress_pf24": null,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_tembus_high52",
+   "nama": "Eksperimen · Tembus High 52 Minggu",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 99.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 70.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 hari · TP R:R 3",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 29,
+    "r6": -0.3435423913884095,
+    "stress6": -0.4058705322079181,
+    "stress_pf6": 0.08,
+    "n12": 139,
+    "r12": -0.2654336814085044,
+    "stress12": -0.32106643134586266,
+    "stress_pf12": 0.37,
+    "n24": 264,
+    "r24": 0.24549144286859476,
+    "stress24": 0.18804644982978475,
+    "stress_pf24": 1.83,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_pantul_range",
+   "nama": "Eksperimen · Pantulan Bawah Range",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "lebar20",
+     "op": "<=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "lowMa20",
+     "op": "<=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 40.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 55.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 3,
+    "r6": -0.6758773809523816,
+    "stress6": -0.9269797619047613,
+    "stress_pf6": 0.0,
+    "n12": 10,
+    "r12": -0.6768950793650793,
+    "stress12": -0.9331729761904747,
+    "stress_pf12": 0.03,
+    "n24": 15,
+    "r24": -0.1217006589706588,
+    "stress24": -0.3641409211159194,
+    "stress_pf24": 0.51,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_lonjakan_nilai_awal",
+   "nama": "Eksperimen · Lonjakan Nilai Transaksi Awal",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "valRasio5",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "chg",
+     "op": "<=",
+     "kananNilai": 6.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 65.0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 6.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 25,
+    "r6": -0.20472456308181117,
+    "stress6": -0.5052199151464501,
+    "stress_pf6": 0.38,
+    "n12": 47,
+    "r12": -0.32582233228267143,
+    "stress12": -0.6585775029869525,
+    "stress_pf12": 0.3,
+    "n24": 100,
+    "r24": -0.2897923763363186,
+    "stress24": -0.6247608743095601,
+    "stress_pf24": 0.34,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_rsi_kuat",
+   "nama": "Eksperimen · Momentum RSI Kuat",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_sw_kuat",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA50 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 65.0
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 10.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_sw_kuat",
+    "profil_keluar": "b_sw_kuat",
+    "basis": "b_sw_kuat",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA50 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 187,
+    "r6": -0.07705002160898386,
+    "stress6": -0.19523941705130216,
+    "stress_pf6": 0.62,
+    "n12": 376,
+    "r12": -0.29220326301434013,
+    "stress12": -0.42694105949746436,
+    "stress_pf12": 0.38,
+    "n24": 714,
+    "r24": -0.05536668308121172,
+    "stress24": -0.1902760815270911,
+    "stress_pf24": 0.7,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_tenang_sebelum_lanjut",
+   "nama": "Eksperimen · Tenang Sebelum Lanjut",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_sw_bo",
+   "gaya": "swing",
+   "aturan_keluar": "Antre di level breakout (high 20 hari) +1% selama 5 hari · SL level −4% · TP harga masuk +12%",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 2.5
+    },
+    {
+     "kiri": "lebar20",
+     "op": "<=",
+     "kananNilai": 12.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_sw_bo",
+    "profil_keluar": "b_sw_bo",
+    "basis": "b_sw_bo",
+    "independen": false,
+    "aturan_keluar": "Antre di level breakout (high 20 hari) +1% selama 5 hari · SL level −4% · TP harga masuk +12%",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 309,
+    "r6": -0.03148251359734304,
+    "stress6": -0.30537814414297515,
+    "stress_pf6": 0.51,
+    "n12": 571,
+    "r12": -0.18332122943150284,
+    "stress12": -0.4525835688435989,
+    "stress_pf12": 0.36,
+    "n24": 896,
+    "r24": -0.20084679182109072,
+    "stress24": -0.4723909560692235,
+    "stress_pf24": 0.34,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_pemimpin_tenang_turun",
+   "nama": "Eksperimen · Pemimpin Tenang Saat IHSG Turun",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 85.0
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 3.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 hari · TP R:R 3",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 0,
+    "r6": null,
+    "stress6": null,
+    "stress_pf6": null,
+    "n12": 0,
+    "r12": null,
+    "stress12": null,
+    "stress_pf12": null,
+    "n24": 0,
+    "r24": null,
+    "stress24": null,
+    "stress_pf24": null,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_koreksi_volume_kering",
+   "nama": "Eksperimen · Koreksi dengan Volume Kering",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": -3.0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": "<=",
+     "kananNilai": 0.8
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 40.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 55.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "b_sw_kor",
+    "independen": false,
+    "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 56,
+    "r6": -0.3388907007199908,
+    "stress6": -0.6442124624365573,
+    "stress_pf6": 0.33,
+    "n12": 82,
+    "r12": -0.24579435555899348,
+    "stress12": -0.5461108845002063,
+    "stress_pf12": 0.44,
+    "n24": 186,
+    "r24": -0.29372358148313926,
+    "stress24": -0.5866388446280643,
+    "stress_pf24": 0.41,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_ai_rebound_volume_spike_dari_ma50",
+   "nama": "Eksperimen · Rebound Volume Spike dari MA50",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": "<=",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "lowMa20",
+     "op": "<=",
+     "kananNilai": -2.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "b_sw_kor",
+    "independen": false,
+    "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 1,
+    "r6": -1.0700714285714301,
+    "stress6": -1.461499999999999,
+    "stress_pf6": 0.0,
+    "n12": 1,
+    "r12": -1.0700714285714301,
+    "stress12": -1.461499999999999,
+    "stress_pf12": 0.0,
+    "n24": 3,
+    "r24": -1.203783910533911,
+    "stress24": -1.5086473063973056,
+    "stress_pf24": 0.0,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_ai_breakout_likuiditas_tinggi",
+   "nama": "Eksperimen · Breakout Likuiditas Tinggi",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_sw_bo",
+   "gaya": "swing",
+   "aturan_keluar": "Antre di level breakout (high 20 hari) +1% selama 5 hari · SL level −4% · TP harga masuk +12%",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "valRasio5",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 75.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_sw_bo",
+    "profil_keluar": "b_sw_bo",
+    "basis": "b_sw_bo",
+    "independen": false,
+    "aturan_keluar": "Antre di level breakout (high 20 hari) +1% selama 5 hari · SL level −4% · TP harga masuk +12%",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 37,
+    "r6": -0.0602323042417055,
+    "stress6": -0.3750454558411493,
+    "stress_pf6": 0.6,
+    "n12": 77,
+    "r12": -0.1398250194715829,
+    "stress12": -0.4524738182531029,
+    "stress_pf12": 0.52,
+    "n24": 152,
+    "r24": -0.08195580724037234,
+    "stress24": -0.3948219122394087,
+    "stress_pf24": 0.58,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_ai_konsolidasi_ketat_di_zona_aman",
+   "nama": "Eksperimen · Konsolidasi Ketat di Zona Aman",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "lebar20",
+     "op": "<=",
+     "kananNilai": 10.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "ma50",
+     "op": ">",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": -5.0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 45.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 60.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 hari · TP R:R 3",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 18,
+    "r6": -0.05903748553695635,
+    "stress6": -0.27776736774147653,
+    "stress_pf6": 0.42,
+    "n12": 106,
+    "r12": -0.06968611331219153,
+    "stress12": -0.3482938517884649,
+    "stress_pf12": 0.61,
+    "n24": 168,
+    "r24": -0.10459372159276831,
+    "stress24": -0.39831267892438676,
+    "stress_pf24": 0.49,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_ai_momentum_awal_pasca_basing",
+   "nama": "Eksperimen · Momentum Awal Pasca Basing",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_bandar",
+   "gaya": "swing",
+   "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "dariLow52",
+     "op": ">=",
+     "kananNilai": 15.0
+    },
+    {
+     "kiri": "dariLow52",
+     "op": "<=",
+     "kananNilai": 40.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50",
+     "op": "<=",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.3
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 65.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_bandar",
+    "profil_keluar": "b_bandar",
+    "basis": "b_bandar",
+    "independen": false,
+    "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W)",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 6,
+    "r6": -0.8443898774714554,
+    "stress6": -1.1594258771929804,
+    "stress_pf6": 0.0,
+    "n12": 8,
+    "r12": -0.4157980899217728,
+    "stress12": -0.7340889786018052,
+    "stress_pf12": 0.25,
+    "n24": 25,
+    "r24": -0.50897799963849,
+    "stress24": -0.805757503835344,
+    "stress_pf24": 0.11,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_ai_pullback_ringan_zona_momentum",
+   "nama": "Eksperimen · Pullback Ringan Zona Momentum",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 45.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 55.0
+    },
+    {
+     "kiri": "chg20",
+     "op": ">=",
+     "kananNilai": 8.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma5"
+    },
+    {
+     "kiri": "ma5",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 0.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 8,
+    "r6": 0.2678406764729171,
+    "stress6": -0.05259965288776078,
+    "stress_pf6": 0.98,
+    "n12": 17,
+    "r12": 0.283810156140929,
+    "stress12": -0.045009836911400494,
+    "stress_pf12": 0.89,
+    "n24": 21,
+    "r24": 0.014114477473562446,
+    "stress24": -0.3544434907583415,
+    "stress_pf24": 0.63,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_ai_kenaikan_stabil_dengan_likuidi",
+   "nama": "Eksperimen · Kenaikan Stabil Dengan Likuiditas",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "chg",
+     "op": "<=",
+     "kananNilai": 3.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 15.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 70.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 183,
+    "r6": -0.08986687305566594,
+    "stress6": -0.3441673416653296,
+    "stress_pf6": 0.47,
+    "n12": 386,
+    "r12": -0.2049007679083212,
+    "stress12": -0.44964203972885314,
+    "stress_pf12": 0.48,
+    "n24": 739,
+    "r24": -0.11473995190481152,
+    "stress24": -0.3728520236972937,
+    "stress_pf24": 0.61,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_ai_bounce_ma150_volume_konfirmasi",
+   "nama": "Eksperimen · Bounce MA150 Volume Konfirmasi",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "harga",
+     "op": "<=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma150",
+     "op": "<",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 40.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 55.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 hari · TP R:R 3",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 3,
+    "r6": 0.6285015386166563,
+    "stress6": 0.5603908993748744,
+    "stress_pf6": 1.94,
+    "n12": 31,
+    "r12": 0.05374937968558887,
+    "stress12": -0.080973415699569,
+    "stress_pf12": 0.82,
+    "n24": 51,
+    "r24": -0.043811873459091655,
+    "stress24": -0.18930339586144737,
+    "stress_pf24": 0.64,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "n_ai_kenaikan_bertahap_strong_trend",
+   "nama": "Eksperimen · Kenaikan Bertahap Strong Trend",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_sw_kuat",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA50 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "chg",
+     "op": "<=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "ma5",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_sw_kuat",
+    "profil_keluar": "b_sw_kuat",
+    "basis": "b_sw_kuat",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA50 · TP R:R 2",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 87,
+    "r6": 0.11702422652173661,
+    "stress6": -0.008367725119267592,
+    "stress_pf6": 1.26,
+    "n12": 138,
+    "r12": 0.10206402130037405,
+    "stress12": -0.016065971019044938,
+    "stress_pf12": 1.32,
+    "n24": 237,
+    "r24": 0.11724752173367971,
+    "stress24": -0.008914458119253187,
+    "stress_pf24": 1.37,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_bandar_kuat",
    "nama": "Pantau · Bandar · Saham Terkuat",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_bandar",
+   "gaya": "swing",
+   "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · + kenaikan 60 hari di 30% teratas",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 95.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "rank60",
+     "op": ">=",
+     "kananNilai": 70.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_bandar",
+    "profil_keluar": "b_bandar",
+    "basis": "b_bandar",
+    "independen": false,
+    "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · + kenaikan 60 hari di 30% teratas",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 19,
+    "r6": 0.4705136404874796,
+    "stress6": 0.09233331874953599,
+    "stress_pf6": 1.31,
+    "n12": 35,
+    "r12": -0.02395336860883195,
+    "stress12": -0.34628601239035595,
+    "stress_pf12": 0.8,
+    "n24": 108,
+    "r24": 0.6977191390906422,
+    "stress24": 0.36864934055851584,
+    "stress_pf24": 1.38,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_aseng_tt",
    "nama": "Pantau · Aseng ACC · Trend Template",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2 · + trend template Minervini (MA50>MA150>MA200 naik, dekat high 52W)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 10.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 15.0
+    },
+    {
+     "kiri": "volRasio20i",
+     "op": ">=",
+     "kananNilai": 1.3
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 8.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "tt",
+     "op": ">=",
+     "kananNilai": 1.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2 · + trend template Minervini (MA50>MA150>MA200 naik, dekat high 52W)",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 12,
+    "r6": 0.20818568218384578,
+    "stress6": -0.0136298918017288,
+    "stress_pf6": 0.91,
+    "n12": 47,
+    "r12": -0.24764195189950178,
+    "stress12": -0.5088159120585299,
+    "stress_pf12": 0.43,
+    "n24": 85,
+    "r24": -0.065804593695383,
+    "stress24": -0.3232387617361909,
+    "stress_pf24": 0.66,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_kuat_dd",
    "nama": "Pantau · Tren Super Kuat · Pasar Sehat",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
+   "riset": true,
+   "akar": "b_sw_kuat",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA50 · TP R:R 2 · hari distribusi IHSG ≤ 4 dalam 25 hari bursa",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50",
+     "op": ">",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "ma150",
+     "op": ">",
+     "kananMetrik": "ma200"
+    },
+    {
+     "kiri": "ma200Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "dariLow52",
+     "op": ">=",
+     "kananNilai": 30.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "dd25",
+     "op": "<=",
+     "kananNilai": 4.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
    "backtest_lolos": false,
-   "bukti_backtest": null,
-   "selesai": 1,
-   "rata_r": -1.2,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_sw_kuat",
+    "profil_keluar": "b_sw_kuat",
+    "basis": "b_sw_kuat",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA50 · TP R:R 2 · hari distribusi IHSG ≤ 4 dalam 25 hari bursa",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 422,
+    "r6": 0.22208021725266489,
+    "stress6": 0.11964775917541137,
+    "stress_pf6": 1.0,
+    "n12": 1830,
+    "r12": 0.09701198467942458,
+    "stress12": -0.0008272747684273813,
+    "stress_pf12": 1.01,
+    "n24": 3022,
+    "r24": 0.19649056465055534,
+    "stress24": 0.093924797267323,
+    "stress_pf24": 1.36,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_potensi_l20",
    "nama": "Pantau · Potential Reversal (SL/TP level 20D)",
-   "riset": true,
+   "jenis": "eksperimen",
    "aktif": false,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL 1 tick di bawah low 20D · TP 1 tick di bawah high 20D (R:R ≥ 1,5)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma10"
+    },
+    {
+     "kiri": "harga",
+     "op": "<",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "ma10",
+     "op": "<",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "prevHarga",
+     "op": "<",
+     "kananMetrik": "ma10"
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
    "backtest_lolos": false,
-   "bukti_backtest": null,
-   "selesai": 1,
-   "rata_r": -1.05,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL 1 tick di bawah low 20D · TP 1 tick di bawah high 20D (R:R ≥ 1,5)",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 9,
+    "r6": 0.8566444398194405,
+    "stress6": 0.5215997648647656,
+    "stress_pf6": 1.57,
+    "n12": 18,
+    "r12": 0.9107679028790143,
+    "stress12": 0.5367091179499536,
+    "stress_pf12": 2.33,
+    "n24": 50,
+    "r24": 0.17668356053710566,
+    "stress24": -0.1140764600355304,
+    "stress_pf24": 1.0,
+    "suara": [
+     true,
+     true,
+     false
+    ],
+    "jumlah_suara": 2,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_aseng_tenang",
    "nama": "Pantau · Aseng ACC · Akumulasi Tenang",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2 · naik hanya 0,5–3% & volatilitas 5 hari ≤ 3%",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 10.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 15.0
+    },
+    {
+     "kiri": "volRasio20i",
+     "op": ">=",
+     "kananNilai": 1.3
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 8.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 0.5
+    },
+    {
+     "kiri": "chg",
+     "op": "<=",
+     "kananNilai": 3.0
+    },
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 3.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2 · naik hanya 0,5–3% & volatilitas 5 hari ≤ 3%",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 41,
+    "r6": 0.13300140236555533,
+    "stress6": -0.13202345504167,
+    "stress_pf6": 0.77,
+    "n12": 62,
+    "r12": 0.02148300076226579,
+    "stress12": -0.23914189709599118,
+    "stress_pf12": 0.65,
+    "n24": 117,
+    "r24": -0.004793907048066849,
+    "stress24": -0.29686483227244187,
+    "stress_pf24": 0.66,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_bandar_antre",
    "nama": "Pantau · Bandar · Antre −1,5%",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_bandar",
+   "gaya": "swing",
+   "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · masuk antre di close sinyal −1,5% (3 hari bursa)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 95.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_bandar",
+    "profil_keluar": "b_bandar",
+    "basis": "b_bandar",
+    "independen": false,
+    "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · masuk antre di close sinyal −1,5% (3 hari bursa)",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 19,
+    "r6": 1.0351142918961278,
+    "stress6": 0.5031926608431645,
+    "stress_pf6": 1.72,
+    "n12": 53,
+    "r12": -0.05245499498241073,
+    "stress12": -0.5470677004244195,
+    "stress_pf12": 0.66,
+    "n24": 147,
+    "r24": 0.612717773337876,
+    "stress24": 0.11819380065743398,
+    "stress_pf24": 1.14,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_52w_aseng",
-   "nama": "52W High · Swing (riset)",
-   "riset": false,
+   "nama": "Pantau · 52W High · keluar ala Aseng ACC",
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": true,
-   "bukti_backtest": {
-    "data_sampai": "2026-11-20",
-    "lolos": true,
-    "n12": 106,
-    "n24": 154,
-    "r12": 0.13,
-    "r24": 0.22,
-    "stress12": 0.02,
-    "stress24": 0.12,
-    "regime": {
-     "NAIK": {
-      "n": 90,
-      "r": 0.08,
-      "lolos": true
-     },
-     "SAMPING": {
-      "n": 16,
-      "r": 0.41,
-      "lolos": true
-     },
-     "TURUN": {
-      "n": 0,
-      "r": null,
-      "lolos": false
-     }
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2 · dekat high 52W (≥ 95%), naik ≥ 1%, volume ≥ 1,2× · + IHSG > MA50 & net asing 5 hari > 0",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 95.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.2
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
     }
-   },
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2 · dekat high 52W (≥ 95%), naik ≥ 1%, volume ≥ 1,2× · + IHSG > MA50 & net asing 5 hari > 0",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 67,
+    "r6": 0.20308851114098853,
+    "stress6": 0.08333531651967711,
+    "stress_pf6": 1.13,
+    "n12": 284,
+    "r12": 0.06615257369840753,
+    "stress12": -0.037539598686814696,
+    "stress_pf12": 0.97,
+    "n24": 555,
+    "r24": 0.15789639130482974,
+    "stress24": 0.0563557134132285,
+    "stress_pf24": 1.32,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_ma50_sw_bo",
    "nama": "Pantau · Tembus Resistance · IHSG > MA50",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_sw_bo",
+   "gaya": "swing",
+   "aturan_keluar": "Antre di level breakout (high 20 hari) +1% selama 5 hari · SL level −4% · TP harga masuk +12% · hanya bila IHSG close > MA50",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 10.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "lebar20",
+     "op": "<=",
+     "kananNilai": 30.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 10.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_sw_bo",
+    "profil_keluar": "b_sw_bo",
+    "basis": "b_sw_bo",
+    "independen": false,
+    "aturan_keluar": "Antre di level breakout (high 20 hari) +1% selama 5 hari · SL level −4% · TP harga masuk +12% · hanya bila IHSG close > MA50",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 28,
+    "r6": 0.20628034070831394,
+    "stress6": -0.08716669233260874,
+    "stress_pf6": 0.85,
+    "n12": 53,
+    "r12": -0.3623493806940368,
+    "stress12": -0.667216666403376,
+    "stress_pf12": 0.28,
+    "n24": 91,
+    "r24": -0.24968539494075861,
+    "stress24": -0.5508825565911385,
+    "stress_pf24": 0.37,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_ma50_ftt",
    "nama": "Pantau · Follow The Trend · IHSG > MA50",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 hari · TP R:R 3 · hanya bila IHSG close > MA50",
+   "kondisi": [
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "prevHigh",
+     "op": "<=",
+     "kananMetrik": "prevHigh20"
+    },
+    {
+     "kiri": "low150Pct",
+     "op": ">",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 4.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 hari · TP R:R 3 · hanya bila IHSG close > MA50",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 196,
+    "r6": -0.2608183792295847,
+    "stress6": -0.3803882473014553,
+    "stress_pf6": 0.37,
+    "n12": 324,
+    "r12": -0.2637075615577507,
+    "stress12": -0.3840388551525561,
+    "stress_pf12": 0.39,
+    "n24": 637,
+    "r24": -0.03407867414816401,
+    "stress24": -0.14744610515918813,
+    "stress_pf24": 0.84,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_bandar_aroon",
    "nama": "Pantau · Bandar · Aroon Naik",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_bandar",
+   "gaya": "swing",
+   "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · + Aroon(14) Up ≥ 70 & Up > Down",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 95.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "aroonUp",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "aroonSelisih",
+     "op": ">",
+     "kananNilai": 0.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_bandar",
+    "profil_keluar": "b_bandar",
+    "basis": "b_bandar",
+    "independen": false,
+    "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · + Aroon(14) Up ≥ 70 & Up > Down",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 23,
+    "r6": 0.4318229321608437,
+    "stress6": 0.09859647639895672,
+    "stress_pf6": 1.31,
+    "n12": 55,
+    "r12": -0.15287940614610313,
+    "stress12": -0.44643271468254586,
+    "stress_pf12": 0.63,
+    "n24": 152,
+    "r24": 0.46472196401366633,
+    "stress24": 0.1568052928727334,
+    "stress_pf24": 1.19,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_pocket_pivot",
-   "nama": "Pocket Pivot · Swing (riset)",
-   "riset": false,
+   "nama": "Pantau · Pocket Pivot · keluar ala Aseng ACC",
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": true,
-   "bukti_backtest": {
-    "data_sampai": "2026-11-20",
-    "lolos": true,
-    "n12": 175,
-    "n24": 268,
-    "r12": 0.36,
-    "r24": 0.19,
-    "stress12": 0.24,
-    "stress24": 0.06,
-    "regime": {
-     "NAIK": {
-      "n": 124,
-      "r": 0.44,
-      "lolos": true
-     },
-     "SAMPING": {
-      "n": 51,
-      "r": 0.19,
-      "lolos": true
-     },
-     "TURUN": {
-      "n": 0,
-      "r": null,
-      "lolos": false
-     }
+   "riset": true,
+   "akar": "b_aseng",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2 · pocket pivot: naik, volume > volume terbesar hari turun 10 hari, close > MA50 · + IHSG > MA50",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "pp10",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
     }
-   },
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_aseng",
+    "profil_keluar": "b_aseng",
+    "basis": "b_aseng",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA20 · TP R:R 2 · pocket pivot: naik, volume > volume terbesar hari turun 10 hari, close > MA50 · + IHSG > MA50",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 662,
+    "r6": 0.09937265056508639,
+    "stress6": -0.07314628951100739,
+    "stress_pf6": 1.05,
+    "n12": 1324,
+    "r12": 0.05521031919340481,
+    "stress12": -0.10261556623465266,
+    "stress_pf12": 0.92,
+    "n24": 2693,
+    "r24": 0.09212875012865308,
+    "stress24": -0.07067096189175162,
+    "stress_pf24": 1.13,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_bandar_aroon_sektor",
    "nama": "Pantau · Bandar · Aroon · Ranking Sektor",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_bandar",
+   "gaya": "swing",
+   "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · + Aroon(14) Up ≥ 70 & Up > Down · ranking return 20 sesi di 30% teratas kelompok sektor; min 5 anggota valid",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 95.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "aroonUp",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "aroonSelisih",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "rankSektor20",
+     "op": ">=",
+     "kananNilai": 70.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_bandar",
+    "profil_keluar": "b_bandar",
+    "basis": "b_bandar",
+    "independen": false,
+    "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · + Aroon(14) Up ≥ 70 & Up > Down · ranking return 20 sesi di 30% teratas kelompok sektor; min 5 anggota valid",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 0,
+    "r6": null,
+    "stress6": null,
+    "stress_pf6": null,
+    "n12": 0,
+    "r12": null,
+    "stress12": null,
+    "stress_pf12": null,
+    "n24": 0,
+    "r24": null,
+    "stress24": null,
+    "stress_pf24": null,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_bandar_aroon_ihsg_hijau",
-   "nama": "Bandar · Aroon · IHSG Hijau",
-   "riset": false,
+   "nama": "Pantau · Bandar · Aroon · IHSG Hijau",
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": true,
-   "bukti_backtest": {
-    "data_sampai": "2026-11-20",
-    "lolos": true,
-    "n12": 43,
-    "n24": 67,
-    "r12": 1.04,
-    "r24": 1.32,
-    "stress12": 0.71,
-    "stress24": 1.01,
-    "regime": {
-     "NAIK": {
-      "n": 35,
-      "r": 1.1,
-      "lolos": true
-     },
-     "SAMPING": {
-      "n": 8,
-      "r": 0.8,
-      "lolos": false
-     },
-     "TURUN": {
-      "n": 0,
-      "r": null,
-      "lolos": false
-     }
+   "riset": true,
+   "akar": "b_bandar",
+   "gaya": "swing",
+   "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · + Aroon(14) Up ≥ 70 & Up > Down · IHSG close > close hari bursa sebelumnya",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 95.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "aroonUp",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "aroonSelisih",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "ihsgChg",
+     "op": ">",
+     "kananNilai": 0.0
     }
-   },
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_bandar",
+    "profil_keluar": "b_bandar",
+    "basis": "b_bandar",
+    "independen": false,
+    "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · + Aroon(14) Up ≥ 70 & Up > Down · IHSG close > close hari bursa sebelumnya",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 14,
+    "r6": 0.6361379977632086,
+    "stress6": 0.27986114285457925,
+    "stress_pf6": 1.64,
+    "n12": 37,
+    "r12": -0.10989326299307929,
+    "stress12": -0.4127172246168074,
+    "stress_pf12": 0.63,
+    "n24": 101,
+    "r24": 0.6522037645925813,
+    "stress24": 0.3237449014948818,
+    "stress_pf24": 1.3,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_bandar_trend_following",
    "nama": "Pantau · Bandar Trend Following · 40 sesi",
-   "riset": true,
+   "jenis": "eksperimen",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_bandar",
+   "gaya": "swing",
+   "aturan_keluar": "Entry & SL Bandar Aroon IHSG Hijau · tanpa TP tetap (target hanya acuan) · trailing 2R awal dari close tertinggi, berlaku sesi berikut · patah tren / maks 40 sesi",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 95.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "aroonUp",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "aroonSelisih",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "ihsgChg",
+     "op": ">",
+     "kananNilai": 0.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_bandar",
+    "profil_keluar": "b_bandar",
+    "basis": "b_bandar",
+    "independen": false,
+    "aturan_keluar": "Entry & SL Bandar Aroon IHSG Hijau · tanpa TP tetap (target hanya acuan) · trailing 2R awal dari close tertinggi, berlaku sesi berikut · patah tren / maks 40 sesi",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 14,
+    "r6": 0.056501874082966586,
+    "stress6": -0.29803171428827807,
+    "stress_pf6": 0.91,
+    "n12": 37,
+    "r12": 0.25671225840655965,
+    "stress12": -0.05178184378142647,
+    "stress_pf12": 0.95,
+    "n24": 101,
+    "r24": 0.3995612910997567,
+    "stress24": 0.07434445779449685,
+    "stress_pf24": 1.11,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_golden_cross_dasar",
    "nama": "Pantau · Golden Cross MA20/50 dasar",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
-   "selesai": 0,
-   "rata_r": null,
-   "kandidat": [
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "Keluar ala FTT; pembanding forward saja",
+   "kondisi": [
     {
-     "kode": "ICBP",
-     "skor": 82,
-     "close": 7150.0,
-     "sl": 5400,
-     "tp": 12400,
-     "prioritas": false
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
     },
     {
-     "kode": "AYAM",
-     "skor": 80,
-     "close": 520.0,
-     "sl": 464,
-     "tp": 690,
-     "prioritas": false
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "prevMA20",
+     "op": "<",
+     "kananMetrik": "prevMA50"
     }
-   ]
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "Keluar ala FTT; pembanding forward saja",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 93,
+    "r6": 0.24449548411721306,
+    "stress6": 0.12458010604053245,
+    "stress_pf6": 1.85,
+    "n12": 222,
+    "r12": 0.008233617433569715,
+    "stress12": -0.11048876829447393,
+    "stress_pf12": 0.76,
+    "n24": 439,
+    "r24": 0.10817336306527142,
+    "stress24": -0.005317820962427269,
+    "stress_pf24": 1.26,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
   },
   {
    "id": "p_golden_cross_momentum",
    "nama": "Golden Cross · Momentum 60",
+   "jenis": "varian",
+   "aktif": true,
    "riset": false,
-   "aktif": false,
-   "backtest_lolos": true,
-   "bukti_backtest": {
-    "data_sampai": "2026-11-20",
-    "lolos": true,
-    "n12": 33,
-    "n24": 33,
-    "r12": 0.4,
-    "r24": 0.43,
-    "stress12": 0.29,
-    "stress24": 0.37,
-    "regime": {
-     "NAIK": {
-      "n": 14,
-      "r": 0.53,
-      "lolos": false
-     },
-     "SAMPING": {
-      "n": 19,
-      "r": 0.3,
-      "lolos": true
-     },
-     "TURUN": {
-      "n": 0,
-      "r": null,
-      "lolos": false
-     }
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 sesi · TP 3R · patah tren · maks 60 sesi",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "prevMA20",
+     "op": "<",
+     "kananMetrik": "prevMA50"
+    },
+    {
+     "kiri": "rank60",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
     }
-   },
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": true,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 sesi · TP 3R · patah tren · maks 60 sesi",
+    "pernah_aktif": true,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 16,
+    "r6": 0.4069538828758131,
+    "stress6": 0.28140216996682077,
+    "stress_pf6": 3.35,
+    "n12": 29,
+    "r12": 0.36402164818227833,
+    "stress12": 0.2674575879966804,
+    "stress_pf12": 1.97,
+    "n24": 59,
+    "r24": 0.3476627192609273,
+    "stress24": 0.26895710384862015,
+    "stress_pf24": 2.37,
+    "suara": [
+     true,
+     true,
+     false
+    ],
+    "jumlah_suara": 2,
+    "aktif": true,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_ftt_momentum80",
    "nama": "Pantau · Follow The Trend · Momentum 80",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "FTT + rank60 ≥80 · SL support 20 sesi · target 4R · maks 60 sesi",
+   "kondisi": [
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "prevHigh",
+     "op": "<=",
+     "kananMetrik": "prevHigh20"
+    },
+    {
+     "kiri": "low150Pct",
+     "op": ">",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 4.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "rank60",
+     "op": ">=",
+     "kananNilai": 80.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "FTT + rank60 ≥80 · SL support 20 sesi · target 4R · maks 60 sesi",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 65,
+    "r6": 0.16859407203220828,
+    "stress6": 0.07591790663011773,
+    "stress_pf6": 0.94,
+    "n12": 85,
+    "r12": 0.03843232963853593,
+    "stress12": -0.049054721898651274,
+    "stress_pf12": 0.77,
+    "n24": 165,
+    "r24": 0.3567816535001886,
+    "stress24": 0.27274615579814515,
+    "stress_pf24": 2.19,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_ftt_momentum70_ihsg",
    "nama": "Pantau · Follow The Trend · Momentum 70 · IHSG > MA50",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "FTT + rank60 ≥70 + IHSG > MA50 · SL support 20 sesi · TP 3R · patah tren · maks 60 sesi",
+   "kondisi": [
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "prevHigh",
+     "op": "<=",
+     "kananMetrik": "prevHigh20"
+    },
+    {
+     "kiri": "low150Pct",
+     "op": ">",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 4.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "rank60",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "FTT + rank60 ≥70 + IHSG > MA50 · SL support 20 sesi · TP 3R · patah tren · maks 60 sesi",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 88,
+    "r6": -0.13337057692879944,
+    "stress6": -0.22327124989227895,
+    "stress_pf6": 0.47,
+    "n12": 119,
+    "r12": -0.12174652606566917,
+    "stress12": -0.20991296608369459,
+    "stress_pf12": 0.53,
+    "n24": 249,
+    "r24": 0.11604481509994216,
+    "stress24": 0.026963298601504454,
+    "stress_pf24": 1.28,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_golden_cross_bawah_ma50",
    "nama": "Pantau · Golden Cross · IHSG < MA50",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
-   "selesai": 0,
-   "rata_r": null,
-   "kandidat": [
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "Golden Cross MA20/50 + rank60 ≥70 + IHSG < MA50 (rezim lemah; ukuran kecil) · SL support 20 sesi · TP 3R · patah tren · maks 60 sesi",
+   "kondisi": [
     {
-     "kode": "ICBP",
-     "skor": 82,
-     "close": 7150.0,
-     "sl": 5400,
-     "tp": 12400,
-     "prioritas": false
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
     },
     {
-     "kode": "AYAM",
-     "skor": 80,
-     "close": 520.0,
-     "sl": 464,
-     "tp": 690,
-     "prioritas": false
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "prevMA20",
+     "op": "<",
+     "kananMetrik": "prevMA50"
+    },
+    {
+     "kiri": "rank60",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": "<",
+     "kananNilai": 1.0
     }
-   ]
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "Golden Cross MA20/50 + rank60 ≥70 + IHSG < MA50 (rezim lemah; ukuran kecil) · SL support 20 sesi · TP 3R · patah tren · maks 60 sesi",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 4,
+    "r6": 0.6836524523133929,
+    "stress6": 0.5949823414440413,
+    "stress_pf6": 20.51,
+    "n12": 29,
+    "r12": -0.23615649890392074,
+    "stress12": -0.3167662884710358,
+    "stress_pf12": 0.12,
+    "n24": 37,
+    "r24": -0.13609427822527467,
+    "stress24": -0.2264075063121523,
+    "stress_pf24": 0.23,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
   },
   {
    "id": "p_rebut_ma50",
    "nama": "Pantau · Rebut MA50 · IHSG > MA50",
-   "riset": true,
+   "jenis": "eksperimen",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "Naik menembus MA50 dari bawah dengan volume ≥1,5× (saham <75% dari high 52W) · SL low 20 sesi (maks −10%) · maks 20 sesi",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "prevHarga",
+     "op": "<",
+     "kananMetrik": "prevMA50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "dariLow52",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "b_sw_kor",
+    "independen": false,
+    "aturan_keluar": "Naik menembus MA50 dari bawah dengan volume ≥1,5× (saham <75% dari high 52W) · SL low 20 sesi (maks −10%) · maks 20 sesi",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 16,
+    "r6": 1.1491887603597866,
+    "stress6": 0.9674525160553223,
+    "stress_pf6": 3.51,
+    "n12": 25,
+    "r12": 0.7525732413402269,
+    "stress12": 0.5811253336236324,
+    "stress_pf12": 2.43,
+    "n24": 50,
+    "r24": 0.473798187733048,
+    "stress24": 0.3139152892685736,
+    "stress_pf24": 1.76,
+    "suara": [
+     true,
+     true,
+     false
+    ],
+    "jumlah_suara": 2,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_donchian_terfilter",
    "nama": "Pantau · Donchian 55 · tren & breadth",
-   "riset": true,
+   "jenis": "eksperimen",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
-   "selesai": 0,
-   "rata_r": null,
-   "kandidat": []
-  },
-  {
-   "id": "p_cmp_donchian_dasar",
-   "nama": "Pembanding · Donchian 55 polos",
    "riset": true,
-   "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
-   "selesai": 0,
-   "rata_r": null,
-   "kandidat": [
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "Tembus high 55 sesi + MA200 naik + breadth MA50 >= 50% + rank return 126 sesi >= 70 · SL 2×ATR14 · tanpa TP · keluar close < low 20 sesi · maks 60 sesi",
+   "kondisi": [
     {
-     "kode": "UNIQ",
-     "skor": 87,
-     "close": 171.0,
-     "sl": 148,
-     "tp": 240,
-     "prioritas": false
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
     },
     {
-     "kode": "IDEA",
-     "skor": 80,
-     "close": 476.0,
-     "sl": 400,
-     "tp": 705,
-     "prioritas": false
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "high55"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma200"
+    },
+    {
+     "kiri": "ma200Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "breadthMa50",
+     "op": ">=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "rank126",
+     "op": ">=",
+     "kananNilai": 70.0
     }
-   ]
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "Tembus high 55 sesi + MA200 naik + breadth MA50 >= 50% + rank return 126 sesi >= 70 · SL 2×ATR14 · tanpa TP · keluar close < low 20 sesi · maks 60 sesi",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 176,
+    "r6": -0.4594266206333774,
+    "stress6": -0.6475336375291981,
+    "stress_pf6": 0.28,
+    "n12": 487,
+    "r12": -0.6053564858792351,
+    "stress12": -0.7567707559787895,
+    "stress_pf12": 0.28,
+    "n24": 1002,
+    "r24": 0.8854921898479337,
+    "stress24": 0.7206272678551392,
+    "stress_pf24": 1.81,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
   },
   {
    "id": "p_rank60_baru",
    "nama": "Pantau · Rank60 baru masuk 10% teratas",
-   "riset": true,
-   "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "jenis": "varian",
+   "aktif": true,
+   "riset": false,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "Peringkat kenaikan 60 hari baru masuk 10% teratas hari ini · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "rank60",
+     "op": ">=",
+     "kananNilai": 90.0
+    },
+    {
+     "kiri": "prevRank60",
+     "op": "<",
+     "kananNilai": 90.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": true,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "b_sw_kor",
+    "independen": false,
+    "aturan_keluar": "Peringkat kenaikan 60 hari baru masuk 10% teratas hari ini · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+    "pernah_aktif": true,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 56,
+    "r6": 0.4957159194178372,
+    "stress6": 0.3005565507031208,
+    "stress_pf6": 1.3,
+    "n12": 106,
+    "r12": 0.8029994788729438,
+    "stress12": 0.6209809320060544,
+    "stress_pf12": 1.6,
+    "n24": 204,
+    "r24": 1.2072503902517924,
+    "stress24": 1.0292024479288757,
+    "stress_pf24": 2.44,
+    "suara": [
+     true,
+     true,
+     false
+    ],
+    "jumlah_suara": 2,
+    "aktif": true,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_turun3_tren",
    "nama": "Pantau · Turun 3 hari dalam tren",
-   "riset": true,
-   "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "jenis": "varian",
+   "aktif": true,
+   "riset": false,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "Close turun 3 hari beruntun, di atas MA200 dan MA50 > MA200 · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma200"
+    },
+    {
+     "kiri": "ma50",
+     "op": ">",
+     "kananMetrik": "ma200"
+    },
+    {
+     "kiri": "turun3",
+     "op": ">=",
+     "kananNilai": 1.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": true,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "b_sw_kor",
+    "independen": false,
+    "aturan_keluar": "Close turun 3 hari beruntun, di atas MA200 dan MA50 > MA200 · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+    "pernah_aktif": true,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 14,
+    "r6": 0.6079305257272617,
+    "stress6": 0.4313759479786955,
+    "stress_pf6": 1.4,
+    "n12": 68,
+    "r12": 0.2605720371671737,
+    "stress12": 0.08691680337489366,
+    "stress_pf12": 1.12,
+    "n24": 171,
+    "r24": 0.5251438851299416,
+    "stress24": 0.34720347841502075,
+    "stress_pf24": 1.68,
+    "suara": [
+     true,
+     true,
+     false
+    ],
+    "jumlah_suara": 2,
+    "aktif": true,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_koreksi_reli20",
    "nama": "Pantau · Koreksi setelah reli 20%",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "Naik ≥20% dalam 20 sesi lalu koreksi 3–10% dalam 5 sesi, masih di atas MA20 · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "chg20",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "chg5",
+     "op": ">=",
+     "kananNilai": -10.0
+    },
+    {
+     "kiri": "chg5",
+     "op": "<=",
+     "kananNilai": -3.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "b_sw_kor",
+    "independen": false,
+    "aturan_keluar": "Naik ≥20% dalam 20 sesi lalu koreksi 3–10% dalam 5 sesi, masih di atas MA20 · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 82,
+    "r6": -0.04195724128136357,
+    "stress6": -0.23566701279357,
+    "stress_pf6": 0.74,
+    "n12": 172,
+    "r12": 0.4329738981926676,
+    "stress12": 0.1267814652123427,
+    "stress_pf12": 1.06,
+    "n24": 361,
+    "r24": 0.5501629378263121,
+    "stress24": 0.29586217295696765,
+    "stress_pf24": 1.44,
+    "suara": [
+     false,
+     true,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_lanjutan_lonjakan",
    "nama": "Pantau · Lanjutan sehari setelah lonjakan",
-   "riset": true,
-   "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "jenis": "varian",
+   "aktif": true,
+   "riset": false,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "Kemarin naik ≥5%, hari ini tidak turun dan tutup di 60% atas rentang · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "prevChg",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": true,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "b_sw_kor",
+    "independen": false,
+    "aturan_keluar": "Kemarin naik ≥5%, hari ini tidak turun dan tutup di 60% atas rentang · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+    "pernah_aktif": true,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 105,
+    "r6": 0.6030864746090985,
+    "stress6": 0.410817551077353,
+    "stress_pf6": 1.67,
+    "n12": 272,
+    "r12": 0.8086583501026579,
+    "stress12": 0.6218586297936464,
+    "stress_pf12": 0.93,
+    "n24": 575,
+    "r24": 0.7295745472953128,
+    "stress24": 0.550795367384555,
+    "stress_pf24": 1.26,
+    "suara": [
+     true,
+     true,
+     false
+    ],
+    "jumlah_suara": 2,
+    "aktif": true,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_lanjutan_kuat",
    "nama": "Pantau · Lanjutan lonjakan · dekat high 52W + volume",
-   "riset": true,
+   "jenis": "varian",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "Kemarin naik ≥5%, hari ini tidak turun, tutup di 60% atas rentang, harga ≥85% high 52W, volume ≥1,5× · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "prevChg",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 85.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "b_sw_kor",
+    "independen": false,
+    "aturan_keluar": "Kemarin naik ≥5%, hari ini tidak turun, tutup di 60% atas rentang, harga ≥85% high 52W, volume ≥1,5× · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 17,
+    "r6": -0.2192054028823735,
+    "stress6": -0.40438454001682916,
+    "stress_pf6": 0.59,
+    "n12": 115,
+    "r12": -0.3575286777323409,
+    "stress12": -0.5167874859862317,
+    "stress_pf12": 0.49,
+    "n24": 256,
+    "r24": 0.08699659954691549,
+    "stress24": -0.07632184555666949,
+    "stress_pf24": 0.9,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_review15_b_bandar",
    "nama": "Pantau · Bandar · Review 15 sesi",
-   "riset": true,
+   "jenis": "eksperimen",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_bandar",
+   "gaya": "swing",
+   "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · setelah close sesi 15 <+0,5R, keluar open berikutnya",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 95.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_bandar",
+    "profil_keluar": "b_bandar",
+    "basis": "b_bandar",
+    "independen": false,
+    "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · setelah close sesi 15 <+0,5R, keluar open berikutnya",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 24,
+    "r6": 0.4363113705935358,
+    "stress6": 0.09227860373514746,
+    "stress_pf6": 1.33,
+    "n12": 65,
+    "r12": -0.23252050336512933,
+    "stress12": -0.5253331499116943,
+    "stress_pf12": 0.54,
+    "n24": 180,
+    "r24": 0.33054721739232124,
+    "stress24": 0.024854810380315038,
+    "stress_pf24": 1.05,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_review15_b_sw_kuat",
    "nama": "Pantau · Swing · Tren Super Kuat · Review 15 sesi",
-   "riset": true,
+   "jenis": "eksperimen",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_sw_kuat",
+   "gaya": "swing",
+   "aturan_keluar": "SL bawah MA50 · TP R:R 2 · setelah close sesi 15 <+0,5R, keluar open berikutnya",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50",
+     "op": ">",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "ma150",
+     "op": ">",
+     "kananMetrik": "ma200"
+    },
+    {
+     "kiri": "ma200Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "dariLow52",
+     "op": ">=",
+     "kananNilai": 30.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_sw_kuat",
+    "profil_keluar": "b_sw_kuat",
+    "basis": "b_sw_kuat",
+    "independen": false,
+    "aturan_keluar": "SL bawah MA50 · TP R:R 2 · setelah close sesi 15 <+0,5R, keluar open berikutnya",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 422,
+    "r6": 0.2456500940286857,
+    "stress6": 0.14396439870935965,
+    "stress_pf6": 1.17,
+    "n12": 1830,
+    "r12": 0.08237329345105035,
+    "stress12": -0.015357700325388742,
+    "stress_pf12": 0.96,
+    "n24": 3362,
+    "r24": 0.18454918250434854,
+    "stress24": 0.08119063598985726,
+    "stress_pf24": 1.34,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_review15_p_bandar_aroon",
    "nama": "Pantau · Bandar · Aroon Naik · Review 15 sesi",
-   "riset": true,
+   "jenis": "eksperimen",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_bandar",
+   "gaya": "swing",
+   "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · + Aroon(14) Up ≥ 70 & Up > Down · setelah close sesi 15 <+0,5R, keluar open berikutnya",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 95.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "aroonUp",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "aroonSelisih",
+     "op": ">",
+     "kananNilai": 0.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_bandar",
+    "profil_keluar": "b_bandar",
+    "basis": "b_bandar",
+    "independen": false,
+    "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · + Aroon(14) Up ≥ 70 & Up > Down · setelah close sesi 15 <+0,5R, keluar open berikutnya",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 23,
+    "r6": 0.4493772799869306,
+    "stress6": 0.11609802919398782,
+    "stress_pf6": 1.36,
+    "n12": 55,
+    "r12": -0.09515970917640622,
+    "stress12": -0.3888866107864419,
+    "stress_pf12": 0.66,
+    "n24": 152,
+    "r24": 0.5082930827843548,
+    "stress24": 0.2002452403219641,
+    "stress_pf24": 1.23,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_review15_p_bandar_aroon_ihsg_hijau",
    "nama": "Pantau · Bandar · Aroon · IHSG Hijau · Review 15 sesi",
-   "riset": true,
+   "jenis": "eksperimen",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_bandar",
+   "gaya": "swing",
+   "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · + Aroon(14) Up ≥ 70 & Up > Down · IHSG close > close hari bursa sebelumnya · setelah close sesi 15 <+0,5R, keluar open berikutnya",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilai",
+     "op": ">=",
+     "kananNilai": 20.0
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 75.0
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 95.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "asingPct5K",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "aroonUp",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "aroonSelisih",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "ihsgChg",
+     "op": ">",
+     "kananNilai": 0.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_bandar",
+    "profil_keluar": "b_bandar",
+    "basis": "b_bandar",
+    "independen": false,
+    "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W) · + Aroon(14) Up ≥ 70 & Up > Down · IHSG close > close hari bursa sebelumnya · setelah close sesi 15 <+0,5R, keluar open berikutnya",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 14,
+    "r6": 0.7006022834774941,
+    "stress6": 0.3441315510178447,
+    "stress_pf6": 1.77,
+    "n12": 37,
+    "r12": -0.01061398371380003,
+    "stress12": -0.31373652963611204,
+    "stress_pf12": 0.7,
+    "n24": 101,
+    "r24": 0.7025105921503371,
+    "stress24": 0.3739004303231407,
+    "stress_pf24": 1.36,
+    "suara": [
+     true,
+     false,
+     false
+    ],
+    "jumlah_suara": 1,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   },
   {
    "id": "p_review15_p_golden_cross_momentum",
    "nama": "Pantau · Golden Cross · Momentum 60 · Review 15 sesi",
-   "riset": true,
+   "jenis": "eksperimen",
    "aktif": false,
-   "backtest_lolos": false,
-   "bukti_backtest": null,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 sesi · TP 3R · patah tren · maks 60 sesi · setelah close sesi 15 <+0,5R, keluar open berikutnya",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 2.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "prevMA20",
+     "op": "<",
+     "kananMetrik": "prevMA50"
+    },
+    {
+     "kiri": "rank60",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    }
+   ],
    "selesai": 0,
    "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 sesi · TP 3R · patah tren · maks 60 sesi · setelah close sesi 15 <+0,5R, keluar open berikutnya",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 16,
+    "r6": 0.4612700792008922,
+    "stress6": 0.3355127160773884,
+    "stress_pf6": 4.72,
+    "n12": 29,
+    "r12": 0.42492356346894267,
+    "stress12": 0.3281530054307843,
+    "stress_pf12": 2.62,
+    "n24": 59,
+    "r24": 0.33533298894252883,
+    "stress24": 0.256958375332476,
+    "stress_pf24": 2.5,
+    "suara": [
+     true,
+     true,
+     false
+    ],
+    "jumlah_suara": 2,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "p_ftt_momentum70_parsial",
+   "nama": "FTT · Momentum 70 · TP Parsial",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_ftt",
+   "gaya": "swing",
+   "aturan_keluar": "SL support 20 sesi · TP 2R jual 50% · sisanya TS/patah tren",
+   "kondisi": [
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "prevHigh",
+     "op": "<=",
+     "kananMetrik": "prevHigh20"
+    },
+    {
+     "kiri": "low150Pct",
+     "op": ">",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 4.0
+    },
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 70.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "rank60",
+     "op": ">=",
+     "kananNilai": 70.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "b_ftt",
+    "profil_keluar": "b_ftt",
+    "basis": "b_ftt",
+    "independen": false,
+    "aturan_keluar": "SL support 20 sesi · TP 2R jual 50% · sisanya TS/patah tren",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 97,
+    "r6": -0.07121664165208896,
+    "stress6": -0.16347750716182938,
+    "stress_pf6": 0.5,
+    "n12": 149,
+    "r12": -0.13751395413413556,
+    "stress12": -0.2267950087126089,
+    "stress_pf12": 0.44,
+    "n24": 295,
+    "r24": 0.09213922910879332,
+    "stress24": 0.002567453533202759,
+    "stress_pf24": 1.15,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "p_sw_kor_momentum80",
+   "nama": "Beli Saat Koreksi · Momentum 80",
+   "jenis": "varian",
+   "aktif": false,
+   "riset": true,
+   "akar": "b_sw_kor",
+   "gaya": "swing",
+   "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100.0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "lowMa20",
+     "op": "<=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": -2.0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 4.0
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 40.0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 60.0
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0.0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 50.0
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5.0
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1.0
+    },
+    {
+     "kiri": "rank60",
+     "op": ">=",
+     "kananNilai": 80.0
+    }
+   ],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "varian",
+    "akar": "b_sw_kor",
+    "profil_keluar": "b_sw_kor",
+    "basis": "b_sw_kor",
+    "independen": false,
+    "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "n6": 25,
+    "r6": -0.08276456737224162,
+    "stress6": -0.37698411654770153,
+    "stress_pf6": 0.55,
+    "n12": 40,
+    "r12": -0.11471009366793292,
+    "stress12": -0.3948623247077717,
+    "stress_pf12": 0.63,
+    "n24": 80,
+    "r24": 0.46478050330525933,
+    "stress24": 0.18589106125713625,
+    "stress_pf24": 1.21,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "p_day_oversold_ketat",
+   "nama": "Oversold Bounce Ketat",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "p_day_oversold_ketat",
+   "gaya": "day",
+   "aturan_keluar": "5m: reversal VWAP + high tiga candle; SL 2–6%; TP 2R; 180 menit",
+   "kondisi": [],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "p_day_oversold_ketat",
+    "profil_keluar": "p_day_oversold_ketat",
+    "basis": null,
+    "independen": false,
+    "aturan_keluar": "5m: reversal VWAP + high tiga candle; SL 2–6%; TP 2R; 180 menit",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
+   "kandidat": []
+  },
+  {
+   "id": "p_day_orb_volatil",
+   "nama": "ORB Volatilitas Tinggi",
+   "jenis": "eksperimen",
+   "aktif": false,
+   "riset": true,
+   "akar": "p_day_orb_volatil",
+   "gaya": "day",
+   "aturan_keluar": "5m: ORB 15 menit + value relatif ≥2; volatil5 ≥3,5%; SL 2–6%; TP 2R; 180 menit",
+   "kondisi": [],
+   "selesai": 0,
+   "rata_r": null,
+   "backtest_lolos": false,
+   "bukti_backtest": {
+    "jenis": "eksperimen",
+    "akar": "p_day_orb_volatil",
+    "profil_keluar": "p_day_orb_volatil",
+    "basis": null,
+    "independen": false,
+    "aturan_keluar": "5m: ORB 15 menit + value relatif ≥2; volatil5 ≥3,5%; SL 2–6%; TP 2R; 180 menit",
+    "pernah_aktif": false,
+    "n_forward": 0,
+    "r_forward": null,
+    "suara": [
+     false,
+     false,
+     false
+    ],
+    "jumlah_suara": 0,
+    "aktif": false,
+    "duplikat_dengan": null,
+    "data_sampai": "2026-11-26"
+   },
    "kandidat": []
   }
  ],
  "top": [],
- "tertahan": [
-  {
-   "kode": "UNIQ",
-   "skor": 87,
-   "close": 171.0,
-   "sl": 148,
-   "tp": 240,
-   "prioritas": false,
-   "preset": "p_cmp_donchian_dasar",
-   "nama": "Pembanding · Donchian 55 polos",
-   "alasan": [
-    "breadth 23% < 40%"
-   ],
-   "jenis": "riset"
-  },
-  {
-   "kode": "ICBP",
-   "skor": 82,
-   "close": 7150.0,
-   "sl": 5400,
-   "tp": 12400,
-   "prioritas": false,
-   "preset": "p_golden_cross_bawah_ma50",
-   "nama": "Pantau · Golden Cross · IHSG < MA50",
-   "alasan": [
-    "breadth 23% < 40%"
-   ],
-   "jenis": "riset"
-  },
-  {
-   "kode": "AYAM",
-   "skor": 80,
-   "close": 520.0,
-   "sl": 464,
-   "tp": 690,
-   "prioritas": false,
-   "preset": "p_golden_cross_bawah_ma50",
-   "nama": "Pantau · Golden Cross · IHSG < MA50",
-   "alasan": [
-    "breadth 23% < 40%"
-   ],
-   "jenis": "riset"
-  },
-  {
-   "kode": "IDEA",
-   "skor": 80,
-   "close": 476.0,
-   "sl": 400,
-   "tp": 705,
-   "prioritas": false,
-   "preset": "p_cmp_donchian_dasar",
-   "nama": "Pembanding · Donchian 55 polos",
-   "alasan": [
-    "breadth 23% < 40%"
-   ],
-   "jenis": "riset"
-  }
- ]
+ "tertahan": []
 }

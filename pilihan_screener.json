@@ -1,6 +1,6 @@
 {
- "diperbarui": "2026-11-26",
- "data_sampai": "2026-11-26",
+ "diperbarui": "2026-11-27",
+ "data_sampai": "2026-11-27",
  "aturan": "maks 2 saham per preset per hari (skor tertinggi), beli open esok hari; sama dengan forward test",
  "pilihan": [
   {
@@ -709,13 +709,13 @@
    "nama": "Swing · Tren Super Kuat",
    "kode": "ASGR",
    "label": "PANTAU",
-   "status": "terbuka",
+   "status": "selesai",
    "masuk": "2026-11-02",
-   "keluar": null,
-   "alasan": null,
-   "r": null,
-   "ret": null,
-   "ret_berjalan": 5.46
+   "keluar": "2026-11-27",
+   "alasan": "Batas waktu",
+   "r": 1.25,
+   "ret": 8.39,
+   "ret_berjalan": null
   },
   {
    "tanggal": "2026-10-30",
@@ -807,13 +807,13 @@
    "nama": "Swing · Tren Super Kuat · IHSG bergejolak+",
    "kode": "ASGR",
    "label": "PANTAU",
-   "status": "terbuka",
+   "status": "selesai",
    "masuk": "2026-11-02",
-   "keluar": null,
-   "alasan": null,
-   "r": null,
-   "ret": null,
-   "ret_berjalan": 5.46
+   "keluar": "2026-11-27",
+   "alasan": "Batas waktu",
+   "r": 1.25,
+   "ret": 8.39,
+   "ret_berjalan": null
   },
   {
    "tanggal": "2026-10-30",
@@ -883,7 +883,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.7
+   "ret_berjalan": -1.96
   },
   {
    "tanggal": "2026-11-02",
@@ -1121,7 +1121,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 0.4
+   "ret_berjalan": 3.19
   },
   {
    "tanggal": "2026-11-09",
@@ -1233,7 +1233,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.7
+   "ret_berjalan": -1.96
   },
   {
    "tanggal": "2026-11-11",
@@ -1275,7 +1275,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.7
+   "ret_berjalan": -1.96
   },
   {
    "tanggal": "2026-11-12",
@@ -1289,7 +1289,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 6.47
+   "ret_berjalan": 8.19
   },
   {
    "tanggal": "2026-11-12",
@@ -1345,7 +1345,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -8.33
+   "ret_berjalan": -8.88
   },
   {
    "tanggal": "2026-11-12",
@@ -1359,7 +1359,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 6.47
+   "ret_berjalan": 8.19
   },
   {
    "tanggal": "2026-11-12",
@@ -1499,7 +1499,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -4.68
+   "ret_berjalan": -4.93
   },
   {
    "tanggal": "2026-11-13",
@@ -1513,7 +1513,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 2.07
+   "ret_berjalan": 3.72
   },
   {
    "tanggal": "2026-11-13",
@@ -1709,7 +1709,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 4.32
+   "ret_berjalan": 7.15
   },
   {
    "tanggal": "2026-11-17",
@@ -1849,7 +1849,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": 1.58
+   "ret_berjalan": 2.9
   },
   {
    "tanggal": "2026-11-25",
@@ -1863,7 +1863,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -0.4
+   "ret_berjalan": 1.46
   },
   {
    "tanggal": "2026-11-25",
@@ -1877,7 +1877,7 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -1.24
+   "ret_berjalan": -0.4
   },
   {
    "tanggal": "2026-11-25",
@@ -1891,13 +1891,41 @@
    "alasan": null,
    "r": null,
    "ret": null,
-   "ret_berjalan": -3.46
+   "ret_berjalan": -0.84
   },
   {
    "tanggal": "2026-11-26",
    "preset": "b_dt",
    "nama": "Day Trade",
    "kode": "UNIQ",
+   "label": "SIAP",
+   "status": "selesai",
+   "masuk": "2026-11-27",
+   "keluar": "2026-11-27",
+   "alasan": "TP",
+   "r": 1.83,
+   "ret": 4.29,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-26",
+   "preset": "b_dt",
+   "nama": "Day Trade",
+   "kode": "CYBR",
+   "label": "SIAP",
+   "status": "selesai",
+   "masuk": "2026-11-27",
+   "keluar": "2026-11-27",
+   "alasan": "Batas waktu",
+   "r": 1.05,
+   "ret": 2.85,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "b_dt",
+   "nama": "Day Trade",
+   "kode": "ALII",
    "label": "SIAP",
    "status": "menunggu",
    "masuk": null,
@@ -1908,10 +1936,206 @@
    "ret_berjalan": null
   },
   {
-   "tanggal": "2026-11-26",
+   "tanggal": "2026-11-27",
    "preset": "b_dt",
    "nama": "Day Trade",
-   "kode": "CYBR",
+   "kode": "TRIN",
+   "label": "PANTAU",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "o_golden_cross_dasar_samping",
+   "nama": "Golden Cross MA20/50 dasar · Sideways+",
+   "kode": "SIMP",
+   "label": "PANTAU",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "n_pullback_dangkal",
+   "nama": "Eksperimen · Pullback Dangkal di Tren Kuat",
+   "kode": "DKFT",
+   "label": "PANTAU",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "n_akumulasi_senyap",
+   "nama": "Eksperimen · Akumulasi Senyap Dekat Puncak",
+   "kode": "AYAM",
+   "label": "SIAP",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "n_momentum_moderat",
+   "nama": "Eksperimen · Momentum 20 Hari Moderat",
+   "kode": "INTP",
+   "label": "SIAP",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "n_momentum_moderat",
+   "nama": "Eksperimen · Momentum 20 Hari Moderat",
+   "kode": "INDF",
+   "label": "SIAP",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "n_higher_low",
+   "nama": "Eksperimen · Higher Low Setelah Koreksi",
+   "kode": "ASGR",
+   "label": "PANTAU",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "n_pantul_range",
+   "nama": "Eksperimen · Pantulan Bawah Range",
+   "kode": "ARTO",
+   "label": "PANTAU",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "n_pantul_range",
+   "nama": "Eksperimen · Pantulan Bawah Range",
+   "kode": "ESSA",
+   "label": "PANTAU",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "n_rsi_kuat",
+   "nama": "Eksperimen · Momentum RSI Kuat",
+   "kode": "INTP",
+   "label": "SIAP",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "n_koreksi_volume_kering",
+   "nama": "Eksperimen · Koreksi dengan Volume Kering",
+   "kode": "AALI",
+   "label": "PANTAU",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "n_ai_konsolidasi_ketat_di_zona_aman",
+   "nama": "Eksperimen · Konsolidasi Ketat di Zona Aman",
+   "kode": "ITMG",
+   "label": "SIAP",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "n_ai_momentum_awal_pasca_basing",
+   "nama": "Eksperimen · Momentum Awal Pasca Basing",
+   "kode": "INDF",
+   "label": "PANTAU",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "n_ai_kenaikan_stabil_dengan_likuidi",
+   "nama": "Eksperimen · Kenaikan Stabil Dengan Likuiditas",
+   "kode": "ASII",
+   "label": "SIAP",
+   "status": "menunggu",
+   "masuk": null,
+   "keluar": null,
+   "alasan": null,
+   "r": null,
+   "ret": null,
+   "ret_berjalan": null
+  },
+  {
+   "tanggal": "2026-11-27",
+   "preset": "n_ai_kenaikan_stabil_dengan_likuidi",
+   "nama": "Eksperimen · Kenaikan Stabil Dengan Likuiditas",
+   "kode": "KLBF",
    "label": "SIAP",
    "status": "menunggu",
    "masuk": null,
@@ -2168,8 +2392,8 @@
    "sejak": "2026-11-23",
    "belum_mulai": false,
    "selesai": 0,
-   "terbuka": 5,
-   "menunggu": 2,
+   "terbuka": 7,
+   "menunggu": 1,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
@@ -2190,8 +2414,8 @@
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
-    "terbuka": 5,
-    "menunggu": 2,
+    "terbuka": 7,
+    "menunggu": 1,
     "rata_r": null
    }
   },
@@ -2236,8 +2460,8 @@
    "sejak": "2026-11-23",
    "belum_mulai": false,
    "selesai": 0,
-   "terbuka": 5,
-   "menunggu": 2,
+   "terbuka": 7,
+   "menunggu": 0,
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
@@ -2275,7 +2499,7 @@
    "rata_r": null,
    "induk_stat": {
     "selesai": 0,
-    "terbuka": 2,
+    "terbuka": 3,
     "menunggu": 2,
     "rata_r": null
    }
@@ -2287,7 +2511,7 @@
    "sejak": "2026-11-24",
    "belum_mulai": false,
    "selesai": 0,
-   "terbuka": 2,
+   "terbuka": 3,
    "menunggu": 2,
    "rata_r": null,
    "induk_stat": {
@@ -2455,6 +2679,74 @@
    "nama": "Pantau · Golden Cross · Momentum 60 · Review 15 sesi",
    "induk": "p_cmp_review15_p_golden_cross_momentum",
    "sejak": "2026-11-23",
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_ftt_momentum70_parsial",
+   "nama": "FTT · Momentum 70 · TP Parsial",
+   "induk": "p_cmp_ftt_parsial",
+   "sejak": "2026-11-30",
+   "belum_mulai": true,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_sw_kor_momentum80",
+   "nama": "Beli Saat Koreksi · Momentum 80",
+   "induk": "b_sw_kor",
+   "sejak": "2026-11-30",
+   "belum_mulai": true,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_day_oversold_ketat",
+   "nama": "Oversold Bounce Ketat",
+   "induk": "p_day_oversold_ketat",
+   "sejak": null,
+   "belum_mulai": false,
+   "selesai": 0,
+   "terbuka": 0,
+   "menunggu": 0,
+   "rata_r": null,
+   "induk_stat": {
+    "selesai": 0,
+    "terbuka": 0,
+    "menunggu": 0,
+    "rata_r": null
+   }
+  },
+  {
+   "id": "p_day_orb_volatil",
+   "nama": "ORB Volatilitas Tinggi",
+   "induk": "p_day_orb_volatil",
+   "sejak": null,
    "belum_mulai": false,
    "selesai": 0,
    "terbuka": 0,
