@@ -20,3 +20,7 @@ Batas auto rejection BEI per periode, dipakai aplikasi Jurnal Saham untuk valida
 
 ## Daftar saham margin (`margin.json`)
 Daftar efek yang dapat ditransaksikan secara margin menurut pengumuman bulanan BEI, dipakai aplikasi untuk lencana "M". Ini daftar bursa; saham yang dibiayai dan daya belinya ditentukan sekuritas. Diperbarui manual: unduh lampiran Excel dari idx.co.id, lalu jalankan `python buat_margin.py <berkas.xlsx> --periode YYYY-MM --sumber <nomor pengumuman>` (butuh `openpyxl`).
+
+## Kontrak screener EOD v2 (pembaruan 27 November 2026)
+
+`status_aktif.json` adalah hasil penilaian mingguan 6 bulan, 12 bulan dan 30 forward selesai terbaru. `hasil_screener_otomatis.json` v2 menyimpan status yang sama dan semua kandidat preset Aktif pada sesi EOD. `jenis` (induk/varian/eksperimen) berbeda dari status `aktif`. Kandidat `SIAP` yang memenuhi pagar harian memiliki `siap_ai: true`; kandidat `PANTAU` tetap tampil. Breadth hanya informasi. `top` sengaja kosong karena Prioritas maksimal lima ditentukan AI pribadi pada perangkat, bukan dari skor teknikal server; data AI pribadi tidak dipublikasikan ke repo ini. Validasi sebelum penerbitan dengan `python3 validasi_screener.py hasil_screener_otomatis.json`. Feed v1 lama tetap arsip sampai data v2 mutakhir tersedia.
