@@ -1,8 +1,25 @@
 {
  "versi": 1,
- "data_sampai": "2026-11-26",
+ "data_sampai": "2026-11-27",
  "usulan": [],
  "kandidat": [
+  {
+   "id": "b_dt",
+   "n": 23,
+   "hari": 14,
+   "rata_r": -0.624,
+   "ci80_bawah": -0.908,
+   "tumpang": 0.115,
+   "backtest_lolos": false,
+   "lulus": false,
+   "alasan_gagal": [
+    "forward selesai 23 < 30",
+    "hari masuk berbeda 14 < 20",
+    "rata R forward tidak positif",
+    "batas bawah CI80 -0.908 <= -0.1",
+    "backtest kelayakan belum dihitung"
+   ]
+  },
   {
    "id": "b_bsjp",
    "n": 6,
@@ -17,23 +34,6 @@
     "hari masuk berbeda 4 < 20",
     "rata R forward tidak positif",
     "batas bawah CI80 -0.935 <= -0.1",
-    "backtest kelayakan belum dihitung"
-   ]
-  },
-  {
-   "id": "b_dt",
-   "n": 21,
-   "hari": 13,
-   "rata_r": -0.82,
-   "ci80_bawah": -0.989,
-   "tumpang": 0.125,
-   "backtest_lolos": false,
-   "lulus": false,
-   "alasan_gagal": [
-    "forward selesai 21 < 30",
-    "hari masuk berbeda 13 < 20",
-    "rata R forward tidak positif",
-    "batas bawah CI80 -0.989 <= -0.1",
     "backtest kelayakan belum dihitung"
    ]
   },
