@@ -1,0 +1,99 @@
+{
+ "versi": 1,
+ "data_sampai": "2026-11-26",
+ "usulan": [],
+ "kandidat": [
+  {
+   "id": "b_bsjp",
+   "n": 6,
+   "hari": 4,
+   "rata_r": -0.322,
+   "ci80_bawah": -0.935,
+   "tumpang": 0.0,
+   "backtest_lolos": false,
+   "lulus": false,
+   "alasan_gagal": [
+    "forward selesai 6 < 30",
+    "hari masuk berbeda 4 < 20",
+    "rata R forward tidak positif",
+    "batas bawah CI80 -0.935 <= -0.1",
+    "backtest kelayakan belum dihitung"
+   ]
+  },
+  {
+   "id": "b_dt",
+   "n": 21,
+   "hari": 13,
+   "rata_r": -0.82,
+   "ci80_bawah": -0.989,
+   "tumpang": 0.125,
+   "backtest_lolos": false,
+   "lulus": false,
+   "alasan_gagal": [
+    "forward selesai 21 < 30",
+    "hari masuk berbeda 13 < 20",
+    "rata R forward tidak positif",
+    "batas bawah CI80 -0.989 <= -0.1",
+    "backtest kelayakan belum dihitung"
+   ]
+  },
+  {
+   "id": "p_potensi_l20",
+   "n": 1,
+   "hari": 1,
+   "rata_r": -1.05,
+   "ci80_bawah": -1.05,
+   "tumpang": 0.0,
+   "backtest_lolos": false,
+   "lulus": false,
+   "alasan_gagal": [
+    "forward selesai 1 < 30",
+    "hari masuk berbeda 1 < 20",
+    "rata R forward tidak positif",
+    "batas bawah CI80 -1.05 <= -0.1",
+    "backtest kelayakan belum dihitung"
+   ]
+  },
+  {
+   "id": "n_lapis2_awal_tren",
+   "n": 1,
+   "hari": 1,
+   "rata_r": -1.1,
+   "ci80_bawah": -1.1,
+   "tumpang": 0.5,
+   "backtest_lolos": false,
+   "lulus": false,
+   "alasan_gagal": [
+    "forward selesai 1 < 30",
+    "hari masuk berbeda 1 < 20",
+    "rata R forward tidak positif",
+    "batas bawah CI80 -1.1 <= -0.1",
+    "backtest kelayakan belum dihitung"
+   ]
+  },
+  {
+   "id": "p_kuat_dd",
+   "n": 1,
+   "hari": 1,
+   "rata_r": -1.2,
+   "ci80_bawah": -1.2,
+   "tumpang": 0.0,
+   "backtest_lolos": false,
+   "lulus": false,
+   "alasan_gagal": [
+    "forward selesai 1 < 30",
+    "hari masuk berbeda 1 < 20",
+    "rata R forward tidak positif",
+    "batas bawah CI80 -1.2 <= -0.1",
+    "backtest kelayakan belum dihitung"
+   ]
+  }
+ ],
+ "syarat": {
+  "min_selesai": 30,
+  "min_hari": 20,
+  "batas_ci80": -0.1,
+  "maks_tumpang": 0.7,
+  "maks_usulan": 1
+ }
+}

@@ -1,22 +1,1243 @@
 {
- "diperbarui": "2026-11-22",
- "data_sampai": "2026-11-20",
+ "diperbarui": "2026-11-27",
+ "data_sampai": "2026-11-26",
  "situasi_kini": {
-  "tanggal": "2026-11-20",
-  "ihsg": "TURUN",
+  "tanggal": "2026-11-26",
+  "ihsg": "SAMPING",
   "breadth": "SEMPIT",
   "vol": "BERGEJOLAK",
   "bulan": "AKHIR",
   "laporan": "BIASA",
-  "hari": "JUMAT",
-  "breadth_pct": 18.9
+  "hari": "KAMIS",
+  "breadth_pct": 22.7
  },
  "keterangan": "Preset otomatis dari backtest mingguan (repo backtest-screener). jenis=varian: preset asli + satu syarat tambahan yang lolos uji walk-forward untuk satu situasi pasar (field situasi: dimensi ihsg/breadth/vol/bulan/laporan/hari; kondisi = kriteria induk + kondisi_tambahan). situasi_kini = situasi hari bursa terakhir. jenis=eksperimen: screener baru dirakit dari hipotesis trading (kondisi lengkap). Rumus SL/TP, skor, gaya, dan notifikasi mengikuti preset induk.",
  "preset": [
   {
+   "id": "o_sw_kor_naik",
+   "jenis": "varian",
+   "induk": "b_sw_kor",
+   "basis": "b_sw_kor",
+   "nama": "Swing · Beli Saat Koreksi · Uptrend+",
+   "ihsg": "NAIK",
+   "situasi": {
+    "dimensi": "ihsg",
+    "nilai": "NAIK",
+    "label": "IHSG uptrend"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    }
+   ],
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "lowMa20",
+     "op": "<=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": -2
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 4
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 40
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 60
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 50
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    }
+   ],
+   "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+   "syarat": "RSI (14) ≥ 55",
+   "alasan": "Saat IHSG uptrend, menambah syarat \"RSI (14) ≥ 55\" ke Swing · Beli Saat Koreksi memperbaiki rata-rata dari +0.08R menjadi +0.54R per trade di data uji 4 bulan terakhir (39 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "latih_dasar": 0.14,
+    "latih_filter": 0.45,
+    "n_latih": 203,
+    "uji_dasar": 0.08,
+    "uji_filter": 0.54,
+    "n_uji": 39
+   },
+   "backtest_12_bulan": {
+    "n": 86,
+    "win_rate": 30.2,
+    "rata_r": -0.22,
+    "profit_factor": 0.71
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 80,
+    "win_rate": 32.5,
+    "rata_r": -0.16,
+    "profit_factor": 0.78
+   }
+  },
+  {
+   "id": "o_sw_kor_breadth_lebar",
+   "jenis": "varian",
+   "induk": "b_sw_kor",
+   "basis": "b_sw_kor",
+   "nama": "Swing · Beli Saat Koreksi · Breadth lebar+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "breadth",
+    "nilai": "LEBAR",
+    "label": "breadth lebar"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    }
+   ],
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "lowMa20",
+     "op": "<=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": -2
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 4
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 40
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 60
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 50
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55.0
+    }
+   ],
+   "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+   "syarat": "RSI (14) ≥ 55",
+   "alasan": "Saat breadth lebar, menambah syarat \"RSI (14) ≥ 55\" ke Swing · Beli Saat Koreksi memperbaiki rata-rata dari -0.03R menjadi +0.47R per trade di data uji 4 bulan terakhir (52 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "latih_dasar": -0.15,
+    "latih_filter": 0.08,
+    "n_latih": 134,
+    "uji_dasar": -0.03,
+    "uji_filter": 0.47,
+    "n_uji": 52
+   },
+   "backtest_12_bulan": {
+    "n": 77,
+    "win_rate": 29.9,
+    "rata_r": -0.31,
+    "profit_factor": 0.55
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 74,
+    "win_rate": 29.7,
+    "rata_r": -0.33,
+    "profit_factor": 0.53
+   }
+  },
+  {
+   "id": "o_ftt_naik",
+   "jenis": "varian",
+   "induk": "b_ftt",
+   "basis": "b_ftt",
+   "nama": "Follow The Trend · Uptrend+",
+   "ihsg": "NAIK",
+   "situasi": {
+    "dimensi": "ihsg",
+    "nilai": "NAIK",
+    "label": "IHSG uptrend"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 18.0
+    }
+   ],
+   "kondisi": [
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "prevHigh",
+     "op": "<=",
+     "kananMetrik": "prevHigh20"
+    },
+    {
+     "kiri": "low150Pct",
+     "op": ">",
+     "kananNilai": 50
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 4
+    },
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 70
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 18.0
+    }
+   ],
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "syarat": "Rata nilai 20 hari (Rp M) ≤ 18",
+   "alasan": "Saat IHSG uptrend, menambah syarat \"Rata nilai 20 hari (Rp M) ≤ 18\" ke Follow The Trend memperbaiki rata-rata dari -0.11R menjadi +0.11R per trade di data uji 4 bulan terakhir (40 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "latih_dasar": 0.16,
+    "latih_filter": 0.27,
+    "n_latih": 109,
+    "uji_dasar": -0.11,
+    "uji_filter": 0.11,
+    "n_uji": 40
+   },
+   "backtest_12_bulan": {
+    "n": 60,
+    "win_rate": 20.0,
+    "rata_r": -0.25,
+    "profit_factor": 0.61
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 57,
+    "win_rate": 21.1,
+    "rata_r": -0.24,
+    "profit_factor": 0.64
+   }
+  },
+  {
+   "id": "o_ftt_breadth_lebar",
+   "jenis": "varian",
+   "induk": "b_ftt",
+   "basis": "b_ftt",
+   "nama": "Follow The Trend · Breadth lebar+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "breadth",
+    "nilai": "LEBAR",
+    "label": "breadth lebar"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 19.0
+    }
+   ],
+   "kondisi": [
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "prevHigh",
+     "op": "<=",
+     "kananMetrik": "prevHigh20"
+    },
+    {
+     "kiri": "low150Pct",
+     "op": ">",
+     "kananNilai": 50
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 4
+    },
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 70
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 19.0
+    }
+   ],
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "syarat": "Rata nilai 20 hari (Rp M) ≤ 19",
+   "alasan": "Saat breadth lebar, menambah syarat \"Rata nilai 20 hari (Rp M) ≤ 19\" ke Follow The Trend memperbaiki rata-rata dari -0.13R menjadi +0.04R per trade di data uji 4 bulan terakhir (51 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "latih_dasar": 0.07,
+    "latih_filter": 0.22,
+    "n_latih": 90,
+    "uji_dasar": -0.13,
+    "uji_filter": 0.04,
+    "n_uji": 51
+   },
+   "backtest_12_bulan": {
+    "n": 64,
+    "win_rate": 20.3,
+    "rata_r": -0.28,
+    "profit_factor": 0.53
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 62,
+    "win_rate": 17.7,
+    "rata_r": -0.34,
+    "profit_factor": 0.37
+   }
+  },
+  {
+   "id": "o_ma50_ftt_naik",
+   "jenis": "varian",
+   "induk": "b_ftt",
+   "basis": "p_ma50_ftt",
+   "nama": "Follow The Trend · IHSG > MA50 · Uptrend+",
+   "ihsg": "NAIK",
+   "situasi": {
+    "dimensi": "ihsg",
+    "nilai": "NAIK",
+    "label": "IHSG uptrend"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 18.0
+    }
+   ],
+   "kondisi": [
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "prevHigh",
+     "op": "<=",
+     "kananMetrik": "prevHigh20"
+    },
+    {
+     "kiri": "low150Pct",
+     "op": ">",
+     "kananNilai": 50
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 4
+    },
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 70
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 18.0
+    }
+   ],
+   "aturan_keluar": "SL support 20 hari · TP R:R 3 · hanya bila IHSG close > MA50",
+   "syarat": "Rata nilai 20 hari (Rp M) ≤ 18",
+   "alasan": "Saat IHSG uptrend, menambah syarat \"Rata nilai 20 hari (Rp M) ≤ 18\" ke Pantau · Follow The Trend · IHSG > MA50 memperbaiki rata-rata dari -0.11R menjadi +0.11R per trade di data uji 4 bulan terakhir (40 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "latih_dasar": 0.17,
+    "latih_filter": 0.3,
+    "n_latih": 111,
+    "uji_dasar": -0.11,
+    "uji_filter": 0.11,
+    "n_uji": 40
+   },
+   "backtest_12_bulan": {
+    "n": 60,
+    "win_rate": 20.0,
+    "rata_r": -0.25,
+    "profit_factor": 0.61
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 57,
+    "win_rate": 21.1,
+    "rata_r": -0.24,
+    "profit_factor": 0.64
+   }
+  },
+  {
+   "id": "o_ma50_ftt_vol_normal",
+   "jenis": "varian",
+   "induk": "b_ftt",
+   "basis": "p_ma50_ftt",
+   "nama": "Follow The Trend · IHSG > MA50 · Volatilitas IHSG normal+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "vol",
+    "nilai": "NORMAL",
+    "label": "volatilitas IHSG normal"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 15.0
+    }
+   ],
+   "kondisi": [
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "high",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "prevHigh",
+     "op": "<=",
+     "kananMetrik": "prevHigh20"
+    },
+    {
+     "kiri": "low150Pct",
+     "op": ">",
+     "kananNilai": 50
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 4
+    },
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 70
+    },
+    {
+     "kiri": "mcap",
+     "op": ">",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 15.0
+    }
+   ],
+   "aturan_keluar": "SL support 20 hari · TP R:R 3 · hanya bila IHSG close > MA50",
+   "syarat": "Rata nilai 20 hari (Rp M) ≤ 15",
+   "alasan": "Saat volatilitas IHSG normal, menambah syarat \"Rata nilai 20 hari (Rp M) ≤ 15\" ke Pantau · Follow The Trend · IHSG > MA50 memperbaiki rata-rata dari -0.11R menjadi +0.11R per trade di data uji 4 bulan terakhir (39 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "latih_dasar": 0.31,
+    "latih_filter": 0.59,
+    "n_latih": 38,
+    "uji_dasar": -0.11,
+    "uji_filter": 0.11,
+    "n_uji": 39
+   },
+   "backtest_12_bulan": {
+    "n": 35,
+    "win_rate": 20.0,
+    "rata_r": -0.26,
+    "profit_factor": 0.39
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 31,
+    "win_rate": 12.9,
+    "rata_r": -0.4,
+    "profit_factor": 0.19
+   }
+  },
+  {
+   "id": "o_pocket_pivot_hari_rabu",
+   "jenis": "varian",
+   "induk": "b_aseng",
+   "basis": "p_pocket_pivot",
+   "nama": "Pocket Pivot · keluar ala Aseng ACC · Hari Rabu+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "hari",
+    "nilai": "RABU",
+    "label": "hari Rabu"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 20.0
+    }
+   ],
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "pp10",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 20.0
+    }
+   ],
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2 · pocket pivot: naik, volume > volume terbesar hari turun 10 hari, close > MA50 · + IHSG > MA50",
+   "syarat": "Rata nilai 20 hari (Rp M) ≤ 20",
+   "alasan": "Saat hari Rabu, menambah syarat \"Rata nilai 20 hari (Rp M) ≤ 20\" ke Pantau · Pocket Pivot · keluar ala Aseng ACC memperbaiki rata-rata dari +0.12R menjadi +0.46R per trade di data uji 4 bulan terakhir (33 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "latih_dasar": -0.03,
+    "latih_filter": 0.18,
+    "n_latih": 80,
+    "uji_dasar": 0.12,
+    "uji_filter": 0.46,
+    "n_uji": 33
+   },
+   "backtest_12_bulan": {
+    "n": 34,
+    "win_rate": 41.2,
+    "rata_r": 0.12,
+    "profit_factor": 1.13
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 0,
+    "win_rate": null,
+    "rata_r": null,
+    "profit_factor": null
+   }
+  },
+  {
+   "id": "o_pocket_pivot_breadth_lebar",
+   "jenis": "varian",
+   "induk": "b_aseng",
+   "basis": "p_pocket_pivot",
+   "nama": "Pocket Pivot · keluar ala Aseng ACC · Breadth lebar+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "breadth",
+    "nilai": "LEBAR",
+    "label": "breadth lebar"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 92.0
+    }
+   ],
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "pp10",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ma20",
+     "op": ">=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 92.0
+    }
+   ],
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2 · pocket pivot: naik, volume > volume terbesar hari turun 10 hari, close > MA50 · + IHSG > MA50",
+   "syarat": "% dari high 52 minggu ≥ 92",
+   "alasan": "Saat breadth lebar, menambah syarat \"% dari high 52 minggu ≥ 92\" ke Pantau · Pocket Pivot · keluar ala Aseng ACC memperbaiki rata-rata dari +0.05R menjadi +0.45R per trade di data uji 4 bulan terakhir (36 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "latih_dasar": -0.05,
+    "latih_filter": 0.06,
+    "n_latih": 226,
+    "uji_dasar": 0.05,
+    "uji_filter": 0.45,
+    "n_uji": 36
+   },
+   "backtest_12_bulan": {
+    "n": 82,
+    "win_rate": 41.5,
+    "rata_r": -0.1,
+    "profit_factor": 0.67
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 75,
+    "win_rate": 41.3,
+    "rata_r": -0.08,
+    "profit_factor": 0.62
+   }
+  },
+  {
+   "id": "o_golden_cross_dasar_samping",
+   "jenis": "varian",
+   "induk": "b_ftt",
+   "basis": "p_golden_cross_dasar",
+   "nama": "Golden Cross MA20/50 dasar · Sideways+",
+   "ihsg": "SAMPING",
+   "situasi": {
+    "dimensi": "ihsg",
+    "nilai": "SAMPING",
+    "label": "IHSG sideways"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 11.0
+    }
+   ],
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 2
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "prevMA20",
+     "op": "<",
+     "kananMetrik": "prevMA50"
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 11.0
+    }
+   ],
+   "aturan_keluar": "Keluar ala FTT; pembanding forward saja",
+   "syarat": "Rata nilai 20 hari (Rp M) ≤ 11",
+   "alasan": "Saat IHSG sideways, menambah syarat \"Rata nilai 20 hari (Rp M) ≤ 11\" ke Pantau · Golden Cross MA20/50 dasar memperbaiki rata-rata dari +0.38R menjadi +0.58R per trade di data uji 4 bulan terakhir (36 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "latih_dasar": 0.08,
+    "latih_filter": 0.23,
+    "n_latih": 73,
+    "uji_dasar": 0.38,
+    "uji_filter": 0.58,
+    "n_uji": 36
+   },
+   "backtest_12_bulan": {
+    "n": 49,
+    "win_rate": 42.9,
+    "rata_r": 0.14,
+    "profit_factor": 2.04
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 47,
+    "win_rate": 42.6,
+    "rata_r": 0.15,
+    "profit_factor": 2.05
+   }
+  },
+  {
+   "id": "o_golden_cross_dasar_breadth_lebar",
+   "jenis": "varian",
+   "induk": "b_ftt",
+   "basis": "p_golden_cross_dasar",
+   "nama": "Golden Cross MA20/50 dasar · Breadth lebar+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "breadth",
+    "nilai": "LEBAR",
+    "label": "breadth lebar"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 17.0
+    }
+   ],
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilai",
+     "op": ">",
+     "kananNilai": 2
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "prevMA20",
+     "op": "<",
+     "kananMetrik": "prevMA50"
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": "<=",
+     "kananNilai": 17.0
+    }
+   ],
+   "aturan_keluar": "Keluar ala FTT; pembanding forward saja",
+   "syarat": "Rata nilai 20 hari (Rp M) ≤ 17",
+   "alasan": "Saat breadth lebar, menambah syarat \"Rata nilai 20 hari (Rp M) ≤ 17\" ke Pantau · Golden Cross MA20/50 dasar memperbaiki rata-rata dari +0.27R menjadi +0.46R per trade di data uji 4 bulan terakhir (46 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "latih_dasar": 0.0,
+    "latih_filter": 0.18,
+    "n_latih": 96,
+    "uji_dasar": 0.27,
+    "uji_filter": 0.46,
+    "n_uji": 46
+   },
+   "backtest_12_bulan": {
+    "n": 47,
+    "win_rate": 27.7,
+    "rata_r": 0.09,
+    "profit_factor": 1.58
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 42,
+    "win_rate": 28.6,
+    "rata_r": 0.07,
+    "profit_factor": 1.78
+   }
+  },
+  {
+   "id": "o_koreksi_reli20_breadth_lebar",
+   "jenis": "varian",
+   "induk": "b_sw_kor",
+   "basis": "p_koreksi_reli20",
+   "nama": "Koreksi setelah reli 20% · Breadth lebar+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "breadth",
+    "nilai": "LEBAR",
+    "label": "breadth lebar"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": 4.5
+    }
+   ],
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "chg20",
+     "op": ">=",
+     "kananNilai": 20
+    },
+    {
+     "kiri": "chg5",
+     "op": ">=",
+     "kananNilai": -10
+    },
+    {
+     "kiri": "chg5",
+     "op": "<=",
+     "kananNilai": -3
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": 4.5
+    }
+   ],
+   "aturan_keluar": "Naik ≥20% dalam 20 sesi lalu koreksi 3–10% dalam 5 sesi, masih di atas MA20 · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+   "syarat": "Jarak dari MA20 (%) ≥ 4,5",
+   "alasan": "Saat breadth lebar, menambah syarat \"Jarak dari MA20 (%) ≥ 4,5\" ke Pantau · Koreksi setelah reli 20% memperbaiki rata-rata dari +0.29R menjadi +0.42R per trade di data uji 4 bulan terakhir (40 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "latih_dasar": 0.54,
+    "latih_filter": 0.88,
+    "n_latih": 90,
+    "uji_dasar": 0.29,
+    "uji_filter": 0.42,
+    "n_uji": 40
+   },
+   "backtest_12_bulan": {
+    "n": 66,
+    "win_rate": 25.8,
+    "rata_r": -0.6,
+    "profit_factor": 0.83
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 62,
+    "win_rate": 27.4,
+    "rata_r": -0.41,
+    "profit_factor": 0.92
+   }
+  },
+  {
+   "id": "o_koreksi_reli20_vol_normal",
+   "jenis": "varian",
+   "induk": "b_sw_kor",
+   "basis": "p_koreksi_reli20",
+   "nama": "Koreksi setelah reli 20% · Volatilitas IHSG normal+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "vol",
+    "nilai": "NORMAL",
+    "label": "volatilitas IHSG normal"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 83.0
+    }
+   ],
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "chg20",
+     "op": ">=",
+     "kananNilai": 20
+    },
+    {
+     "kiri": "chg5",
+     "op": ">=",
+     "kananNilai": -10
+    },
+    {
+     "kiri": "chg5",
+     "op": "<=",
+     "kananNilai": -3
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": "<=",
+     "kananNilai": 83.0
+    }
+   ],
+   "aturan_keluar": "Naik ≥20% dalam 20 sesi lalu koreksi 3–10% dalam 5 sesi, masih di atas MA20 · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+   "syarat": "% dari high 52 minggu ≤ 83",
+   "alasan": "Saat volatilitas IHSG normal, menambah syarat \"% dari high 52 minggu ≤ 83\" ke Pantau · Koreksi setelah reli 20% memperbaiki rata-rata dari +0.15R menjadi +0.26R per trade di data uji 4 bulan terakhir (36 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "latih_dasar": 1.19,
+    "latih_filter": 2.15,
+    "n_latih": 34,
+    "uji_dasar": 0.15,
+    "uji_filter": 0.26,
+    "n_uji": 36
+   },
+   "backtest_12_bulan": {
+    "n": 35,
+    "win_rate": 34.3,
+    "rata_r": 0.33,
+    "profit_factor": 1.5
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 30,
+    "win_rate": 30.0,
+    "rata_r": 0.31,
+    "profit_factor": 1.44
+   }
+  },
+  {
+   "id": "o_lanjutan_lonjakan_breadth_lebar",
+   "jenis": "varian",
+   "induk": "b_sw_kor",
+   "basis": "p_lanjutan_lonjakan",
+   "nama": "Lanjutan sehari setelah lonjakan · Breadth lebar+",
+   "ihsg": null,
+   "situasi": {
+    "dimensi": "breadth",
+    "nilai": "LEBAR",
+    "label": "breadth lebar"
+   },
+   "kondisi_tambahan": [
+    {
+     "kiri": "posTutup",
+     "op": "<=",
+     "kananNilai": 79.0
+    }
+   ],
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ihsgAtasMa50",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "prevChg",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60
+    },
+    {
+     "kiri": "posTutup",
+     "op": "<=",
+     "kananNilai": 79.0
+    }
+   ],
+   "aturan_keluar": "Kemarin naik ≥5%, hari ini tidak turun dan tutup di 60% atas rentang · SL 2×ATR14 (3–10%) · tanpa TP · maks 20 sesi · IHSG > MA50",
+   "syarat": "Posisi tutup di rentang hari (%) ≤ 79",
+   "alasan": "Saat breadth lebar, menambah syarat \"Posisi tutup di rentang hari (%) ≤ 79\" ke Pantau · Lanjutan sehari setelah lonjakan memperbaiki rata-rata dari -0.01R menjadi +0.28R per trade di data uji 4 bulan terakhir (32 trade) — data yang tidak dipakai saat mencari filter.",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "latih_dasar": 0.51,
+    "latih_filter": 0.77,
+    "n_latih": 90,
+    "uji_dasar": -0.01,
+    "uji_filter": 0.28,
+    "n_uji": 32
+   },
+   "backtest_12_bulan": {
+    "n": 53,
+    "win_rate": 28.3,
+    "rata_r": -0.02,
+    "profit_factor": 0.94
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 51,
+    "win_rate": 27.5,
+    "rata_r": -0.09,
+    "profit_factor": 0.85
+   }
+  },
+  {
    "id": "n_lapis2_awal_tren",
    "jenis": "eksperimen",
    "induk": "b_bandar",
+   "basis": "b_bandar",
+   "independen": false,
+   "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W)",
    "nama": "Eksperimen · Lapis Kedua Awal Tren",
    "ihsg": null,
    "kondisi": [
@@ -72,36 +1293,2329 @@
     }
    ],
    "syarat": "Market cap kecil–menengah yang sudah naik ≥30% dari low tahunan, masih 75–90% dari high, volume naik.",
-   "alasan": "Dirakit dari ide: Market cap kecil–menengah yang sudah naik ≥30% dari low tahunan, masih 75–90% dari high, volume naik. Minggu ini tidak ada eksperimen yang lolos semua syarat, jadi ini yang PALING DEKAT lolos (gagal: trade uji 20 < 60; tidak positif di kedua paruh uji; 78% sinyalnya sama dengan preset lama). Diuji di semua kondisi IHSG: data uji 4 bulan terakhir rata +0.35R per trade (20 trade, win 30.0%); pilihan acak -0.14R. Pola keluar mengikuti Bandar (SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W)). Belum teruji forward test — pakai ukuran posisi kecil.",
+   "alasan": "Dirakit dari ide: Market cap kecil–menengah yang sudah naik ≥30% dari low tahunan, masih 75–90% dari high, volume naik. Minggu ini tidak ada eksperimen yang lolos semua syarat, jadi ini yang PALING DEKAT lolos (gagal: trade uji 20 < 60; tidak positif di kedua paruh uji; rata R latih tidak positif; 76% sinyalnya sama dengan preset lama). Diuji di semua kondisi IHSG: data uji 4 bulan terakhir rata +0.35R per trade (20 trade, win 30.0%); pilihan acak -0.50R. Pola keluar mengikuti Bandar (SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W)). Belum teruji forward test — pakai ukuran posisi kecil.",
    "dibuat": "2026-10-23",
    "uji": {
-    "n_latih": 62,
-    "r_latih": 0.17,
+    "n_latih": 59,
+    "r_latih": -0.08,
     "n_uji": 20,
     "r_uji": 0.35,
-    "r_uji_paruh1": 0.71,
-    "r_uji_paruh2": -1.11,
+    "r_uji_paruh1": 0.5,
+    "r_uji_paruh2": -1.08,
     "win_uji": 30.0,
-    "r_acak_uji": -0.14,
-    "tumpang_tindih": 0.78,
+    "r_acak_uji": -0.5,
+    "tumpang_tindih": 0.76,
     "terdekat": true,
     "alasan_gagal": [
      "trade uji 20 < 60",
      "tidak positif di kedua paruh uji",
-     "78% sinyalnya sama dengan preset lama"
+     "rata R latih tidak positif",
+     "76% sinyalnya sama dengan preset lama"
     ]
    },
    "backtest_12_bulan": {
-    "n": 82,
-    "win_rate": 19.5,
-    "rata_r": 0.21,
-    "profit_factor": 1.24
+    "n": 79,
+    "win_rate": 19.0,
+    "rata_r": 0.03,
+    "profit_factor": 1.06
    },
    "backtest_12_bulan_kondisi": {
-    "n": 82,
-    "win_rate": 19.5,
-    "rata_r": 0.21,
-    "profit_factor": 1.24
+    "n": 79,
+    "win_rate": 19.0,
+    "rata_r": 0.03,
+    "profit_factor": 1.06
+   }
+  },
+  {
+   "id": "n_pullback_dangkal",
+   "jenis": "eksperimen",
+   "induk": "b_aseng",
+   "basis": "b_aseng",
+   "independen": false,
+   "nama": "Eksperimen · Pullback Dangkal di Tren Kuat",
+   "ihsg": null,
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 3
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 50
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 65
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0
+    }
+   ],
+   "syarat": "Saham dalam tren naik yang baru turun tipis ke dekat MA20 lalu hijau lagi: pembeli masih menjaga tren.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; tidak cukup unggul dari pilihan acak (-0.30R)",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_pullback_dangkal",
+    "nama": "Eksperimen · Pullback Dangkal di Tren Kuat",
+    "logika": "Saham dalam tren naik yang baru turun tipis ke dekat MA20 lalu hijau lagi: pembeli masih menjaga tren.",
+    "induk": "b_aseng",
+    "ihsg": null,
+    "n_latih": 132,
+    "r_latih": -0.34,
+    "n_uji": 92,
+    "r_uji": -0.35,
+    "r_uji_paruh1": -0.38,
+    "r_uji_paruh2": -0.28,
+    "win_uji": 29.3,
+    "r_acak_uji": -0.3,
+    "tumpang_tindih": 0.49,
+    "lolos": false,
+    "alasan_gagal": [
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "tidak cukup unggul dari pilihan acak (-0.30R)"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 224,
+    "win_rate": 31.7,
+    "rata_r": -0.35,
+    "profit_factor": 0.54
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 224,
+    "win_rate": 31.7,
+    "rata_r": -0.35,
+    "profit_factor": 0.54
+   }
+  },
+  {
+   "id": "n_breakout_rapat",
+   "jenis": "eksperimen",
+   "induk": "b_sw_bo",
+   "basis": "b_sw_bo",
+   "independen": false,
+   "nama": "Eksperimen · Breakout Konsolidasi Rapat",
+   "ihsg": null,
+   "aturan_keluar": "Antre di level breakout (high 20 hari) +1% selama 5 hari · SL level −4% · TP harga masuk +12%",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "lebar20",
+     "op": "<=",
+     "kananNilai": 15
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 2
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 70
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    }
+   ],
+   "syarat": "Harga lama bergerak sempit lalu menembus high 20 hari dengan volume 2×: energi yang tertahan dilepas.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 19 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; 93% sinyalnya sama dengan preset lama",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_breakout_rapat",
+    "nama": "Eksperimen · Breakout Konsolidasi Rapat",
+    "logika": "Harga lama bergerak sempit lalu menembus high 20 hari dengan volume 2×: energi yang tertahan dilepas.",
+    "induk": "b_sw_bo",
+    "ihsg": null,
+    "n_latih": 25,
+    "r_latih": -0.44,
+    "n_uji": 19,
+    "r_uji": -0.16,
+    "r_uji_paruh1": 0.06,
+    "r_uji_paruh2": -1.35,
+    "win_uji": 42.1,
+    "r_acak_uji": -0.36,
+    "tumpang_tindih": 0.93,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 19 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "93% sinyalnya sama dengan preset lama"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 44,
+    "win_rate": 31.8,
+    "rata_r": -0.32,
+    "profit_factor": 0.55
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 44,
+    "win_rate": 31.8,
+    "rata_r": -0.32,
+    "profit_factor": 0.55
+   }
+  },
+  {
+   "id": "n_akumulasi_senyap",
+   "jenis": "eksperimen",
+   "induk": "b_ftt",
+   "basis": "b_ftt",
+   "independen": false,
+   "nama": "Eksperimen · Akumulasi Senyap Dekat Puncak",
+   "ihsg": null,
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 90
+    },
+    {
+     "kiri": "volRasio",
+     "op": "<=",
+     "kananNilai": 1.2
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 70
+    },
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 3
+    }
+   ],
+   "syarat": "Dekat high 52 minggu tetapi volume dan volatilitas tenang: penjual sudah habis, belum banyak yang melirik.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 35 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; tidak cukup unggul dari pilihan acak (-0.32R)",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_akumulasi_senyap",
+    "nama": "Eksperimen · Akumulasi Senyap Dekat Puncak",
+    "logika": "Dekat high 52 minggu tetapi volume dan volatilitas tenang: penjual sudah habis, belum banyak yang melirik.",
+    "induk": "b_ftt",
+    "ihsg": null,
+    "n_latih": 91,
+    "r_latih": -0.16,
+    "n_uji": 35,
+    "r_uji": -0.36,
+    "r_uji_paruh1": -0.29,
+    "r_uji_paruh2": -0.61,
+    "win_uji": 14.3,
+    "r_acak_uji": -0.32,
+    "tumpang_tindih": 0.31,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 35 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "tidak cukup unggul dari pilihan acak (-0.32R)"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 126,
+    "win_rate": 20.6,
+    "rata_r": -0.21,
+    "profit_factor": 0.49
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 126,
+    "win_rate": 20.6,
+    "rata_r": -0.21,
+    "profit_factor": 0.49
+   }
+  },
+  {
+   "id": "n_kuat_saat_lemah",
+   "jenis": "eksperimen",
+   "induk": "b_aseng",
+   "basis": "b_aseng",
+   "independen": false,
+   "nama": "Eksperimen · Kuat Saat IHSG Lemah",
+   "ihsg": "TURUN",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60
+    }
+   ],
+   "syarat": "Saat IHSG downtrend, saham yang tetap naik dan bertahan di atas MA20 menunjukkan kekuatan relatif.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 27 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; tidak cukup unggul dari pilihan acak (-0.55R)",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_kuat_saat_lemah",
+    "nama": "Eksperimen · Kuat Saat IHSG Lemah",
+    "logika": "Saat IHSG downtrend, saham yang tetap naik dan bertahan di atas MA20 menunjukkan kekuatan relatif.",
+    "induk": "b_aseng",
+    "ihsg": "TURUN",
+    "n_latih": 82,
+    "r_latih": -0.25,
+    "n_uji": 27,
+    "r_uji": -1.04,
+    "r_uji_paruh1": null,
+    "r_uji_paruh2": -1.04,
+    "win_uji": 7.4,
+    "r_acak_uji": -0.55,
+    "tumpang_tindih": 0.57,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 27 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "tidak cukup unggul dari pilihan acak (-0.55R)"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 106,
+    "win_rate": 30.2,
+    "rata_r": -0.3,
+    "profit_factor": 0.43
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 102,
+    "win_rate": 29.4,
+    "rata_r": -0.34,
+    "profit_factor": 0.42
+   }
+  },
+  {
+   "id": "n_rebound_tren_panjang",
+   "jenis": "eksperimen",
+   "induk": "b_aseng",
+   "basis": "b_aseng",
+   "independen": false,
+   "nama": "Eksperimen · Rebound di Tren Jangka Panjang",
+   "ihsg": null,
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ma50",
+     "op": ">",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "ma200Naik",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 40
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60
+    }
+   ],
+   "syarat": "Tren besar masih naik (MA50 > MA150, MA200 menanjak) tetapi RSI jenuh jual, lalu muncul candle hijau kuat.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 7 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; tidak cukup unggul dari pilihan acak (-0.30R)",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_rebound_tren_panjang",
+    "nama": "Eksperimen · Rebound di Tren Jangka Panjang",
+    "logika": "Tren besar masih naik (MA50 > MA150, MA200 menanjak) tetapi RSI jenuh jual, lalu muncul candle hijau kuat.",
+    "induk": "b_aseng",
+    "ihsg": null,
+    "n_latih": 23,
+    "r_latih": -0.52,
+    "n_uji": 7,
+    "r_uji": -0.37,
+    "r_uji_paruh1": 0.64,
+    "r_uji_paruh2": -1.13,
+    "win_uji": 28.6,
+    "r_acak_uji": -0.3,
+    "tumpang_tindih": 0.0,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 7 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "tidak cukup unggul dari pilihan acak (-0.30R)"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 30,
+    "win_rate": 23.3,
+    "rata_r": -0.49,
+    "profit_factor": 0.29
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 30,
+    "win_rate": 23.3,
+    "rata_r": -0.49,
+    "profit_factor": 0.29
+   }
+  },
+  {
+   "id": "n_momentum_moderat",
+   "jenis": "eksperimen",
+   "induk": "b_ftt",
+   "basis": "b_ftt",
+   "independen": false,
+   "nama": "Eksperimen · Momentum 20 Hari Moderat",
+   "ihsg": null,
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "chg20",
+     "op": ">=",
+     "kananNilai": 10
+    },
+    {
+     "kiri": "chg20",
+     "op": "<=",
+     "kananNilai": 25
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 8
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 70
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1
+    }
+   ],
+   "syarat": "Naik 10–25% dalam sebulan tanpa lari terlalu jauh dari MA20: tren sehat yang belum kepanasan.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_momentum_moderat",
+    "nama": "Eksperimen · Momentum 20 Hari Moderat",
+    "logika": "Naik 10–25% dalam sebulan tanpa lari terlalu jauh dari MA20: tren sehat yang belum kepanasan.",
+    "induk": "b_ftt",
+    "ihsg": null,
+    "n_latih": 122,
+    "r_latih": -0.18,
+    "n_uji": 65,
+    "r_uji": -0.2,
+    "r_uji_paruh1": -0.09,
+    "r_uji_paruh2": -0.81,
+    "win_uji": 16.9,
+    "r_acak_uji": -0.32,
+    "tumpang_tindih": 0.32,
+    "lolos": false,
+    "alasan_gagal": [
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 187,
+    "win_rate": 19.8,
+    "rata_r": -0.19,
+    "profit_factor": 0.57
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 187,
+    "win_rate": 19.8,
+    "rata_r": -0.19,
+    "profit_factor": 0.57
+   }
+  },
+  {
+   "id": "n_tren_tenang",
+   "jenis": "eksperimen",
+   "induk": "b_sw_kuat",
+   "basis": "b_sw_kuat",
+   "independen": false,
+   "nama": "Eksperimen · Tren Naik yang Tenang",
+   "ihsg": null,
+   "aturan_keluar": "SL bawah MA50 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 2
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0.5
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 85
+    }
+   ],
+   "syarat": "Tren naik dengan volatilitas rendah dan dekat high tahunan: kenaikan teratur, jarang dibanting.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; rata R uji tidak positif; tidak positif di kedua paruh uji",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_tren_tenang",
+    "nama": "Eksperimen · Tren Naik yang Tenang",
+    "logika": "Tren naik dengan volatilitas rendah dan dekat high tahunan: kenaikan teratur, jarang dibanting.",
+    "induk": "b_sw_kuat",
+    "ihsg": null,
+    "n_latih": 149,
+    "r_latih": 0.02,
+    "n_uji": 64,
+    "r_uji": -0.26,
+    "r_uji_paruh1": 0.17,
+    "r_uji_paruh2": -1.07,
+    "win_uji": 40.6,
+    "r_acak_uji": -0.47,
+    "tumpang_tindih": 0.37,
+    "lolos": false,
+    "alasan_gagal": [
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 213,
+    "win_rate": 41.3,
+    "rata_r": -0.06,
+    "profit_factor": 1.04
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 213,
+    "win_rate": 41.3,
+    "rata_r": -0.06,
+    "profit_factor": 1.04
+   }
+  },
+  {
+   "id": "n_higher_low",
+   "jenis": "eksperimen",
+   "induk": "b_aseng",
+   "basis": "b_aseng",
+   "independen": false,
+   "nama": "Eksperimen · Higher Low Setelah Koreksi",
+   "ihsg": null,
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "lowMa20",
+     "op": "<=",
+     "kananNilai": 2
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.2
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0
+    }
+   ],
+   "syarat": "Sempat menyentuh MA20 dalam 3 hari lalu naik ≥1% dengan volume di atas rata-rata: pantulan yang dikonfirmasi.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; tidak cukup unggul dari pilihan acak (-0.30R)",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_higher_low",
+    "nama": "Eksperimen · Higher Low Setelah Koreksi",
+    "logika": "Sempat menyentuh MA20 dalam 3 hari lalu naik ≥1% dengan volume di atas rata-rata: pantulan yang dikonfirmasi.",
+    "induk": "b_aseng",
+    "ihsg": null,
+    "n_latih": 195,
+    "r_latih": -0.2,
+    "n_uji": 101,
+    "r_uji": -0.2,
+    "r_uji_paruh1": 0.04,
+    "r_uji_paruh2": -0.72,
+    "win_uji": 34.7,
+    "r_acak_uji": -0.3,
+    "tumpang_tindih": 0.7,
+    "lolos": false,
+    "alasan_gagal": [
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "tidak cukup unggul dari pilihan acak (-0.30R)"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 296,
+    "win_rate": 33.8,
+    "rata_r": -0.2,
+    "profit_factor": 0.72
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 296,
+    "win_rate": 33.8,
+    "rata_r": -0.2,
+    "profit_factor": 0.72
+   }
+  },
+  {
+   "id": "n_bigcap_tertinggal",
+   "jenis": "eksperimen",
+   "induk": "b_aseng",
+   "basis": "b_aseng",
+   "independen": false,
+   "nama": "Eksperimen · Big Cap Tertinggal",
+   "ihsg": null,
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 50
+    },
+    {
+     "kiri": "chg5",
+     "op": "<=",
+     "kananNilai": -3
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 35
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 50
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0
+    }
+   ],
+   "syarat": "Saham besar (≥ Rp50 T) yang turun seminggu terakhir tetapi tren panjangnya masih utuh, mulai memantul.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 6 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; tidak cukup unggul dari pilihan acak (-0.30R)",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_bigcap_tertinggal",
+    "nama": "Eksperimen · Big Cap Tertinggal",
+    "logika": "Saham besar (≥ Rp50 T) yang turun seminggu terakhir tetapi tren panjangnya masih utuh, mulai memantul.",
+    "induk": "b_aseng",
+    "ihsg": null,
+    "n_latih": 25,
+    "r_latih": -0.42,
+    "n_uji": 6,
+    "r_uji": -0.42,
+    "r_uji_paruh1": -0.71,
+    "r_uji_paruh2": 0.17,
+    "win_uji": 16.7,
+    "r_acak_uji": -0.3,
+    "tumpang_tindih": 0.03,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 6 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "tidak cukup unggul dari pilihan acak (-0.30R)"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 31,
+    "win_rate": 32.3,
+    "rata_r": -0.42,
+    "profit_factor": 0.41
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 31,
+    "win_rate": 32.3,
+    "rata_r": -0.42,
+    "profit_factor": 0.41
+   }
+  },
+  {
+   "id": "n_tembus_high52",
+   "jenis": "eksperimen",
+   "induk": "b_ftt",
+   "basis": "b_ftt",
+   "independen": false,
+   "nama": "Eksperimen · Tembus High 52 Minggu",
+   "ihsg": null,
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 99
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 70
+    }
+   ],
+   "syarat": "Harga di puncak setahun dengan volume 1,5× dan tutup kuat: tidak ada lagi penjual nyangkut di atas.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 18 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; tidak cukup unggul dari pilihan acak (-0.32R); 80% sinyalnya sama dengan preset lama",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_tembus_high52",
+    "nama": "Eksperimen · Tembus High 52 Minggu",
+    "logika": "Harga di puncak setahun dengan volume 1,5× dan tutup kuat: tidak ada lagi penjual nyangkut di atas.",
+    "induk": "b_ftt",
+    "ihsg": null,
+    "n_latih": 71,
+    "r_latih": -0.15,
+    "n_uji": 18,
+    "r_uji": -0.36,
+    "r_uji_paruh1": -0.25,
+    "r_uji_paruh2": -0.93,
+    "win_uji": 22.2,
+    "r_acak_uji": -0.32,
+    "tumpang_tindih": 0.8,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 18 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "tidak cukup unggul dari pilihan acak (-0.32R)",
+     "80% sinyalnya sama dengan preset lama"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 89,
+    "win_rate": 21.3,
+    "rata_r": -0.2,
+    "profit_factor": 0.51
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 89,
+    "win_rate": 21.3,
+    "rata_r": -0.2,
+    "profit_factor": 0.51
+   }
+  },
+  {
+   "id": "n_pantul_range",
+   "jenis": "eksperimen",
+   "induk": "b_aseng",
+   "basis": "b_aseng",
+   "independen": false,
+   "nama": "Eksperimen · Pantulan Bawah Range",
+   "ihsg": "SAMPING",
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "lebar20",
+     "op": "<=",
+     "kananNilai": 20
+    },
+    {
+     "kiri": "lowMa20",
+     "op": "<=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "chg",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 60
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 40
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 55
+    }
+   ],
+   "syarat": "Saat IHSG sideways, saham yang bergerak di range sempit dan memantul dari MA20 cenderung kembali ke atas range.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 54 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; tidak cukup unggul dari pilihan acak (-0.29R)",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_pantul_range",
+    "nama": "Eksperimen · Pantulan Bawah Range",
+    "logika": "Saat IHSG sideways, saham yang bergerak di range sempit dan memantul dari MA20 cenderung kembali ke atas range.",
+    "induk": "b_aseng",
+    "ihsg": "SAMPING",
+    "n_latih": 63,
+    "r_latih": -0.2,
+    "n_uji": 54,
+    "r_uji": -0.4,
+    "r_uji_paruh1": -0.48,
+    "r_uji_paruh2": -0.24,
+    "win_uji": 22.2,
+    "r_acak_uji": -0.29,
+    "tumpang_tindih": 0.26,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 54 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "tidak cukup unggul dari pilihan acak (-0.29R)"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 121,
+    "win_rate": 29.8,
+    "rata_r": -0.28,
+    "profit_factor": 0.56
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 108,
+    "win_rate": 29.6,
+    "rata_r": -0.31,
+    "profit_factor": 0.56
+   }
+  },
+  {
+   "id": "n_lonjakan_nilai_awal",
+   "jenis": "eksperimen",
+   "induk": "b_aseng",
+   "basis": "b_aseng",
+   "independen": false,
+   "nama": "Eksperimen · Lonjakan Nilai Transaksi Awal",
+   "ihsg": null,
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "valRasio5",
+     "op": ">=",
+     "kananNilai": 2
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2
+    },
+    {
+     "kiri": "chg",
+     "op": "<=",
+     "kananNilai": 6
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 65
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 6
+    }
+   ],
+   "syarat": "Nilai transaksi melonjak 2× rata-rata 5 hari dengan kenaikan wajar (2–6%), belum jauh dari MA20.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 37 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; tidak cukup unggul dari pilihan acak (-0.30R)",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_lonjakan_nilai_awal",
+    "nama": "Eksperimen · Lonjakan Nilai Transaksi Awal",
+    "logika": "Nilai transaksi melonjak 2× rata-rata 5 hari dengan kenaikan wajar (2–6%), belum jauh dari MA20.",
+    "induk": "b_aseng",
+    "ihsg": null,
+    "n_latih": 71,
+    "r_latih": -0.25,
+    "n_uji": 37,
+    "r_uji": -0.4,
+    "r_uji_paruh1": -0.13,
+    "r_uji_paruh2": -1.55,
+    "win_uji": 29.7,
+    "r_acak_uji": -0.3,
+    "tumpang_tindih": 0.43,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 37 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "tidak cukup unggul dari pilihan acak (-0.30R)"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 108,
+    "win_rate": 30.6,
+    "rata_r": -0.3,
+    "profit_factor": 0.57
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 108,
+    "win_rate": 30.6,
+    "rata_r": -0.3,
+    "profit_factor": 0.57
+   }
+  },
+  {
+   "id": "n_rsi_kuat",
+   "jenis": "eksperimen",
+   "induk": "b_sw_kuat",
+   "basis": "b_sw_kuat",
+   "independen": false,
+   "nama": "Eksperimen · Momentum RSI Kuat",
+   "ihsg": null,
+   "aturan_keluar": "SL bawah MA50 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 65
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 10
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1
+    }
+   ],
+   "syarat": "RSI ≥ 65 di tren naik dengan volume normal: momentum kuat cenderung berlanjut beberapa hari.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_rsi_kuat",
+    "nama": "Eksperimen · Momentum RSI Kuat",
+    "logika": "RSI ≥ 65 di tren naik dengan volume normal: momentum kuat cenderung berlanjut beberapa hari.",
+    "induk": "b_sw_kuat",
+    "ihsg": null,
+    "n_latih": 94,
+    "r_latih": -0.19,
+    "n_uji": 65,
+    "r_uji": -0.21,
+    "r_uji_paruh1": -0.07,
+    "r_uji_paruh2": -0.81,
+    "win_uji": 35.4,
+    "r_acak_uji": -0.47,
+    "tumpang_tindih": 0.51,
+    "lolos": false,
+    "alasan_gagal": [
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 159,
+    "win_rate": 34.0,
+    "rata_r": -0.2,
+    "profit_factor": 0.57
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 159,
+    "win_rate": 34.0,
+    "rata_r": -0.2,
+    "profit_factor": 0.57
+   }
+  },
+  {
+   "id": "n_tenang_sebelum_lanjut",
+   "jenis": "eksperimen",
+   "induk": "b_sw_bo",
+   "basis": "b_sw_bo",
+   "independen": false,
+   "nama": "Eksperimen · Tenang Sebelum Lanjut",
+   "ihsg": null,
+   "aturan_keluar": "Antre di level breakout (high 20 hari) +1% selama 5 hari · SL level −4% · TP harga masuk +12%",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 2.5
+    },
+    {
+     "kiri": "lebar20",
+     "op": "<=",
+     "kananNilai": 12
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    }
+   ],
+   "syarat": "Volatilitas dan rentang 20 hari sangat sempit di atas MA20 dalam tren naik: jeda sebelum langkah berikutnya.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_tenang_sebelum_lanjut",
+    "nama": "Eksperimen · Tenang Sebelum Lanjut",
+    "logika": "Volatilitas dan rentang 20 hari sangat sempit di atas MA20 dalam tren naik: jeda sebelum langkah berikutnya.",
+    "induk": "b_sw_bo",
+    "ihsg": null,
+    "n_latih": 90,
+    "r_latih": -0.25,
+    "n_uji": 74,
+    "r_uji": -0.2,
+    "r_uji_paruh1": -0.06,
+    "r_uji_paruh2": -1.11,
+    "win_uji": 32.4,
+    "r_acak_uji": -0.36,
+    "tumpang_tindih": 0.35,
+    "lolos": false,
+    "alasan_gagal": [
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 164,
+    "win_rate": 32.3,
+    "rata_r": -0.23,
+    "profit_factor": 0.63
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 164,
+    "win_rate": 32.3,
+    "rata_r": -0.23,
+    "profit_factor": 0.63
+   }
+  },
+  {
+   "id": "n_pemimpin_tenang_turun",
+   "jenis": "eksperimen",
+   "induk": "b_ftt",
+   "basis": "b_ftt",
+   "independen": false,
+   "nama": "Eksperimen · Pemimpin Tenang Saat IHSG Turun",
+   "ihsg": "TURUN",
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "pctHigh52",
+     "op": ">=",
+     "kananNilai": 85
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 3
+    }
+   ],
+   "syarat": "Saat IHSG downtrend, saham yang tetap dekat high tahunan dengan MA50 menanjak dan volatilitas rendah adalah pemimpin relatif yang biasanya lebih dulu naik saat pasar pulih.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 10 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_pemimpin_tenang_turun",
+    "nama": "Eksperimen · Pemimpin Tenang Saat IHSG Turun",
+    "logika": "Saat IHSG downtrend, saham yang tetap dekat high tahunan dengan MA50 menanjak dan volatilitas rendah adalah pemimpin relatif yang biasanya lebih dulu naik saat pasar pulih.",
+    "induk": "b_ftt",
+    "ihsg": "TURUN",
+    "n_latih": 62,
+    "r_latih": -0.19,
+    "n_uji": 10,
+    "r_uji": -0.28,
+    "r_uji_paruh1": null,
+    "r_uji_paruh2": -0.28,
+    "win_uji": 0.0,
+    "r_acak_uji": -0.73,
+    "tumpang_tindih": 0.31,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 10 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 91,
+    "win_rate": 18.7,
+    "rata_r": -0.36,
+    "profit_factor": 0.27
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 86,
+    "win_rate": 17.4,
+    "rata_r": -0.38,
+    "profit_factor": 0.22
+   }
+  },
+  {
+   "id": "n_koreksi_volume_kering",
+   "jenis": "eksperimen",
+   "induk": "b_sw_kor",
+   "basis": "b_sw_kor",
+   "independen": false,
+   "nama": "Eksperimen · Koreksi dengan Volume Kering",
+   "ihsg": null,
+   "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": -3
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "volRasio",
+     "op": "<=",
+     "kananNilai": 0.8
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 40
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 55
+    }
+   ],
+   "syarat": "Tren naik yang terkoreksi tipis ke bawah MA20 dengan volume di bawah rata-rata: tekanan jual lemah, bukan distribusi.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; rata R uji tidak positif; tidak positif di kedua paruh uji; tidak cukup unggul dari pilihan acak (-0.61R)",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_koreksi_volume_kering",
+    "nama": "Eksperimen · Koreksi dengan Volume Kering",
+    "logika": "Tren naik yang terkoreksi tipis ke bawah MA20 dengan volume di bawah rata-rata: tekanan jual lemah, bukan distribusi.",
+    "induk": "b_sw_kor",
+    "ihsg": null,
+    "n_latih": 91,
+    "r_latih": 0.46,
+    "n_uji": 79,
+    "r_uji": -0.63,
+    "r_uji_paruh1": -0.47,
+    "r_uji_paruh2": -1.08,
+    "win_uji": 17.7,
+    "r_acak_uji": -0.61,
+    "tumpang_tindih": 0.23,
+    "lolos": false,
+    "alasan_gagal": [
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "tidak cukup unggul dari pilihan acak (-0.61R)"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 170,
+    "win_rate": 23.5,
+    "rata_r": -0.04,
+    "profit_factor": 0.67
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 170,
+    "win_rate": 23.5,
+    "rata_r": -0.04,
+    "profit_factor": 0.67
+   }
+  },
+  {
+   "id": "n_ai_rebound_volume_spike_dari_ma50",
+   "jenis": "eksperimen",
+   "induk": "b_sw_kor",
+   "basis": "b_sw_kor",
+   "independen": false,
+   "nama": "Eksperimen · Rebound Volume Spike dari MA50",
+   "ihsg": null,
+   "aturan_keluar": "SL MA50 / −5% · tanpa TP — jual hari ke-15 bila SL tidak kena (acuan high 20D)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "harga",
+     "op": "<=",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "lowMa20",
+     "op": "<=",
+     "kananNilai": -2
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 2
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    }
+   ],
+   "syarat": "Harga sempat menyentuh MA50 lalu memantul dengan lonjakan volume 2× menunjukkan pembeli agresif membela support kuat.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 4 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; tidak cukup unggul dari pilihan acak (-0.61R)",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_ai_rebound_volume_spike_dari_ma50",
+    "nama": "Eksperimen · Rebound Volume Spike dari MA50",
+    "logika": "Harga sempat menyentuh MA50 lalu memantul dengan lonjakan volume 2× menunjukkan pembeli agresif membela support kuat.",
+    "induk": "b_sw_kor",
+    "ihsg": null,
+    "n_latih": 5,
+    "r_latih": -1.07,
+    "n_uji": 4,
+    "r_uji": -1.07,
+    "r_uji_paruh1": -1.07,
+    "r_uji_paruh2": null,
+    "win_uji": 0.0,
+    "r_acak_uji": -0.61,
+    "tumpang_tindih": 0.56,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 4 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "tidak cukup unggul dari pilihan acak (-0.61R)"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 9,
+    "win_rate": 0.0,
+    "rata_r": -1.07,
+    "profit_factor": 0.0
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 9,
+    "win_rate": 0.0,
+    "rata_r": -1.07,
+    "profit_factor": 0.0
+   }
+  },
+  {
+   "id": "n_ai_breakout_likuiditas_tinggi",
+   "jenis": "eksperimen",
+   "induk": "b_sw_bo",
+   "basis": "b_sw_bo",
+   "independen": false,
+   "nama": "Eksperimen · Breakout Likuiditas Tinggi",
+   "ihsg": null,
+   "aturan_keluar": "Antre di level breakout (high 20 hari) +1% selama 5 hari · SL level −4% · TP harga masuk +12%",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "high20"
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 20
+    },
+    {
+     "kiri": "valRasio5",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 75
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 75
+    }
+   ],
+   "syarat": "Saham likuid menembus resistance 20 hari dengan nilai transaksi besar menandakan institutional buying yang serius.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 29 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; 87% sinyalnya sama dengan preset lama",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_ai_breakout_likuiditas_tinggi",
+    "nama": "Eksperimen · Breakout Likuiditas Tinggi",
+    "logika": "Saham likuid menembus resistance 20 hari dengan nilai transaksi besar menandakan institutional buying yang serius.",
+    "induk": "b_sw_bo",
+    "ihsg": null,
+    "n_latih": 79,
+    "r_latih": -0.19,
+    "n_uji": 29,
+    "r_uji": -0.04,
+    "r_uji_paruh1": 0.12,
+    "r_uji_paruh2": -1.08,
+    "win_uji": 34.5,
+    "r_acak_uji": -0.36,
+    "tumpang_tindih": 0.87,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 29 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "87% sinyalnya sama dengan preset lama"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 108,
+    "win_rate": 30.6,
+    "rata_r": -0.15,
+    "profit_factor": 0.82
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 108,
+    "win_rate": 30.6,
+    "rata_r": -0.15,
+    "profit_factor": 0.82
+   }
+  },
+  {
+   "id": "n_ai_konsolidasi_ketat_di_zona_aman",
+   "jenis": "eksperimen",
+   "induk": "b_ftt",
+   "basis": "b_ftt",
+   "independen": false,
+   "nama": "Eksperimen · Konsolidasi Ketat di Zona Aman",
+   "ihsg": null,
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "volatil5",
+     "op": "<=",
+     "kananNilai": 2
+    },
+    {
+     "kiri": "lebar20",
+     "op": "<=",
+     "kananNilai": 10
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "ma50",
+     "op": ">",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "dariMa20",
+     "op": ">=",
+     "kananNilai": -5
+    },
+    {
+     "kiri": "dariMa20",
+     "op": "<=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 45
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 60
+    }
+   ],
+   "syarat": "Volatilitas rendah dan range sempit saat harga jauh di atas MA150 menandakan akumulasi tenang sebelum kelanjutan tren.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 15 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; tidak cukup unggul dari pilihan acak (-0.32R)",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_ai_konsolidasi_ketat_di_zona_aman",
+    "nama": "Eksperimen · Konsolidasi Ketat di Zona Aman",
+    "logika": "Volatilitas rendah dan range sempit saat harga jauh di atas MA150 menandakan akumulasi tenang sebelum kelanjutan tren.",
+    "induk": "b_ftt",
+    "ihsg": null,
+    "n_latih": 71,
+    "r_latih": -0.09,
+    "n_uji": 15,
+    "r_uji": -0.25,
+    "r_uji_paruh1": 0.44,
+    "r_uji_paruh2": -1.03,
+    "win_uji": 40.0,
+    "r_acak_uji": -0.32,
+    "tumpang_tindih": 0.18,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 15 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "tidak cukup unggul dari pilihan acak (-0.32R)"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 86,
+    "win_rate": 24.4,
+    "rata_r": -0.12,
+    "profit_factor": 0.86
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 86,
+    "win_rate": 24.4,
+    "rata_r": -0.12,
+    "profit_factor": 0.86
+   }
+  },
+  {
+   "id": "n_ai_momentum_awal_pasca_basing",
+   "jenis": "eksperimen",
+   "induk": "b_bandar",
+   "basis": "b_bandar",
+   "independen": false,
+   "nama": "Eksperimen · Momentum Awal Pasca Basing",
+   "ihsg": null,
+   "aturan_keluar": "SL −5% / MA20 · tanpa TP — keluar saat patah tren / maks 20 hari bursa (acuan high 52W)",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "dariLow52",
+     "op": ">=",
+     "kananNilai": 15
+    },
+    {
+     "kiri": "dariLow52",
+     "op": "<=",
+     "kananNilai": 40
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50",
+     "op": "<=",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.3
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 50
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 65
+    }
+   ],
+   "syarat": "Saham mulai naik dari low 52W dengan MA20 baru memotong MA50 ke atas dan volume meningkat: awal fase akumulasi yang masih fresh.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 33 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_ai_momentum_awal_pasca_basing",
+    "nama": "Eksperimen · Momentum Awal Pasca Basing",
+    "logika": "Saham mulai naik dari low 52W dengan MA20 baru memotong MA50 ke atas dan volume meningkat: awal fase akumulasi yang masih fresh.",
+    "induk": "b_bandar",
+    "ihsg": null,
+    "n_latih": 16,
+    "r_latih": -0.4,
+    "n_uji": 33,
+    "r_uji": -0.32,
+    "r_uji_paruh1": -0.3,
+    "r_uji_paruh2": -1.07,
+    "win_uji": 24.2,
+    "r_acak_uji": -0.5,
+    "tumpang_tindih": 0.59,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 33 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 49,
+    "win_rate": 24.5,
+    "rata_r": -0.35,
+    "profit_factor": 0.51
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 49,
+    "win_rate": 24.5,
+    "rata_r": -0.35,
+    "profit_factor": 0.51
+   }
+  },
+  {
+   "id": "n_ai_pullback_ringan_zona_momentum",
+   "jenis": "eksperimen",
+   "induk": "b_aseng",
+   "basis": "b_aseng",
+   "independen": false,
+   "nama": "Eksperimen · Pullback Ringan Zona Momentum",
+   "ihsg": null,
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 45
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 55
+    },
+    {
+     "kiri": "chg20",
+     "op": ">=",
+     "kananNilai": 8
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma5"
+    },
+    {
+     "kiri": "ma5",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 0
+    }
+   ],
+   "syarat": "RSI turun ke 45–55 setelah rally tetapi harga masih di atas MA5 dan MA20 menanjak: koreksi sehat di tren kuat siap lanjut.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 4 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_ai_pullback_ringan_zona_momentum",
+    "nama": "Eksperimen · Pullback Ringan Zona Momentum",
+    "logika": "RSI turun ke 45–55 setelah rally tetapi harga masih di atas MA5 dan MA20 menanjak: koreksi sehat di tren kuat siap lanjut.",
+    "induk": "b_aseng",
+    "ihsg": null,
+    "n_latih": 19,
+    "r_latih": -0.13,
+    "n_uji": 4,
+    "r_uji": -0.12,
+    "r_uji_paruh1": -0.12,
+    "r_uji_paruh2": null,
+    "win_uji": 50.0,
+    "r_acak_uji": -0.3,
+    "tumpang_tindih": 0.52,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 4 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 23,
+    "win_rate": 39.1,
+    "rata_r": -0.13,
+    "profit_factor": 0.6
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 23,
+    "win_rate": 39.1,
+    "rata_r": -0.13,
+    "profit_factor": 0.6
+   }
+  },
+  {
+   "id": "n_ai_kenaikan_stabil_dengan_likuidi",
+   "jenis": "eksperimen",
+   "induk": "b_aseng",
+   "basis": "b_aseng",
+   "independen": false,
+   "nama": "Eksperimen · Kenaikan Stabil Dengan Likuiditas",
+   "ihsg": null,
+   "aturan_keluar": "SL bawah MA20 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "chg",
+     "op": "<=",
+     "kananNilai": 3
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 70
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 15
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 50
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 70
+    }
+   ],
+   "syarat": "Naik moderat 1-3% dengan nilai transaksi besar dan tutup kuat menandakan akumulasi institusi yang terukur.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; tidak cukup unggul dari pilihan acak (-0.30R)",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_ai_kenaikan_stabil_dengan_likuidi",
+    "nama": "Eksperimen · Kenaikan Stabil Dengan Likuiditas",
+    "logika": "Naik moderat 1-3% dengan nilai transaksi besar dan tutup kuat menandakan akumulasi institusi yang terukur.",
+    "induk": "b_aseng",
+    "ihsg": null,
+    "n_latih": 187,
+    "r_latih": -0.19,
+    "n_uji": 87,
+    "r_uji": -0.43,
+    "r_uji_paruh1": -0.37,
+    "r_uji_paruh2": -0.57,
+    "win_uji": 26.4,
+    "r_acak_uji": -0.3,
+    "tumpang_tindih": 0.23,
+    "lolos": false,
+    "alasan_gagal": [
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "tidak cukup unggul dari pilihan acak (-0.30R)"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 274,
+    "win_rate": 31.4,
+    "rata_r": -0.27,
+    "profit_factor": 0.59
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 274,
+    "win_rate": 31.4,
+    "rata_r": -0.27,
+    "profit_factor": 0.59
+   }
+  },
+  {
+   "id": "n_ai_bounce_ma150_volume_konfirmasi",
+   "jenis": "eksperimen",
+   "induk": "b_ftt",
+   "basis": "b_ftt",
+   "independen": false,
+   "nama": "Eksperimen · Bounce MA150 Volume Konfirmasi",
+   "ihsg": null,
+   "aturan_keluar": "SL support 20 hari · TP R:R 3",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "harga",
+     "op": ">",
+     "kananMetrik": "ma150"
+    },
+    {
+     "kiri": "harga",
+     "op": "<=",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma150",
+     "op": "<",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 2
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1.5
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 40
+    },
+    {
+     "kiri": "rsi",
+     "op": "<=",
+     "kananNilai": 55
+    }
+   ],
+   "syarat": "Harga menyentuh support kuat MA150 lalu memantul dengan volume 1.5× menandakan pembeli masuk di zona value jangka panjang.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 9 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif; tidak cukup unggul dari pilihan acak (-0.32R)",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_ai_bounce_ma150_volume_konfirmasi",
+    "nama": "Eksperimen · Bounce MA150 Volume Konfirmasi",
+    "logika": "Harga menyentuh support kuat MA150 lalu memantul dengan volume 1.5× menandakan pembeli masuk di zona value jangka panjang.",
+    "induk": "b_ftt",
+    "ihsg": null,
+    "n_latih": 71,
+    "r_latih": -0.04,
+    "n_uji": 9,
+    "r_uji": -0.43,
+    "r_uji_paruh1": 0.09,
+    "r_uji_paruh2": -0.49,
+    "win_uji": 33.3,
+    "r_acak_uji": -0.32,
+    "tumpang_tindih": 0.23,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 9 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif",
+     "tidak cukup unggul dari pilihan acak (-0.32R)"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 80,
+    "win_rate": 33.8,
+    "rata_r": -0.09,
+    "profit_factor": 0.63
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 80,
+    "win_rate": 33.8,
+    "rata_r": -0.09,
+    "profit_factor": 0.63
+   }
+  },
+  {
+   "id": "n_ai_kenaikan_bertahap_strong_trend",
+   "jenis": "eksperimen",
+   "induk": "b_sw_kuat",
+   "basis": "b_sw_kuat",
+   "independen": false,
+   "nama": "Eksperimen · Kenaikan Bertahap Strong Trend",
+   "ihsg": null,
+   "aturan_keluar": "SL bawah MA50 · TP R:R 2",
+   "kondisi": [
+    {
+     "kiri": "harga",
+     "op": ">=",
+     "kananNilai": 100
+    },
+    {
+     "kiri": "nilaiAvg20",
+     "op": ">=",
+     "kananNilai": 5
+    },
+    {
+     "kiri": "mcap",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "chg",
+     "op": ">=",
+     "kananNilai": 0
+    },
+    {
+     "kiri": "chg",
+     "op": "<=",
+     "kananNilai": 2
+    },
+    {
+     "kiri": "posTutup",
+     "op": ">=",
+     "kananNilai": 75
+    },
+    {
+     "kiri": "ma5",
+     "op": ">",
+     "kananMetrik": "ma20"
+    },
+    {
+     "kiri": "ma20",
+     "op": ">",
+     "kananMetrik": "ma50"
+    },
+    {
+     "kiri": "ma50Naik",
+     "op": ">",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "volRasio",
+     "op": ">=",
+     "kananNilai": 1
+    },
+    {
+     "kiri": "rsi",
+     "op": ">=",
+     "kananNilai": 55
+    }
+   ],
+   "syarat": "Naik kecil 0-2% dengan posisi tutup tinggi di tren kuat menunjukkan akumulasi berkelanjutan tanpa euphoria.",
+   "alasan": "Eksperimen Nonaktif untuk paper/forward; trade uji 48 < 60; rata R uji tidak positif; tidak positif di kedua paruh uji; rata R latih tidak positif",
+   "dibuat": "2026-11-26",
+   "uji": {
+    "id": "n_ai_kenaikan_bertahap_strong_trend",
+    "nama": "Eksperimen · Kenaikan Bertahap Strong Trend",
+    "logika": "Naik kecil 0-2% dengan posisi tutup tinggi di tren kuat menunjukkan akumulasi berkelanjutan tanpa euphoria.",
+    "induk": "b_sw_kuat",
+    "ihsg": null,
+    "n_latih": 48,
+    "r_latih": -0.15,
+    "n_uji": 48,
+    "r_uji": -0.03,
+    "r_uji_paruh1": 0.09,
+    "r_uji_paruh2": -0.67,
+    "win_uji": 45.8,
+    "r_acak_uji": -0.47,
+    "tumpang_tindih": 0.32,
+    "lolos": false,
+    "alasan_gagal": [
+     "trade uji 48 < 60",
+     "rata R uji tidak positif",
+     "tidak positif di kedua paruh uji",
+     "rata R latih tidak positif"
+    ]
+   },
+   "backtest_12_bulan": {
+    "n": 96,
+    "win_rate": 40.6,
+    "rata_r": -0.09,
+    "profit_factor": 1.11
+   },
+   "backtest_12_bulan_kondisi": {
+    "n": 96,
+    "win_rate": 40.6,
+    "rata_r": -0.09,
+    "profit_factor": 1.11
    }
   }
  ]
